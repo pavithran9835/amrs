@@ -1,0 +1,2464 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>AMRS || About</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Place favicon.ico in the root directory -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"> -->
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/plugins/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/vendor/odometer.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/vendor/spacing.css" />
+    <link rel="stylesheet" href="assets/css/vendor/remixicon.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .rs-banner-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.15) 0%,
+          rgba(234, 85, 1, 0.1) 100%
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .rs-banner-bg-thumb {
+        position: relative;
+        filter: brightness(1.2) contrast(1.1);
+      }
+
+      .rs-banner-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Fixed height for service cards */
+      .rs-services-item {
+        height: 500px !important;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .rs-services-thumb {
+        height: 200px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .rs-services-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .rs-services-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 25px 20px 20px 20px;
+        background: #fff;
+      }
+
+      .rs-services-title {
+        margin-bottom: 15px;
+        flex-shrink: 0;
+        min-height: 50px;
+        display: flex;
+        align-items: center;
+      }
+
+      .rs-services-content .descrip {
+        flex: 1;
+        margin-bottom: 20px;
+        min-height: 60px;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .rs-services-btn-wrapper {
+        margin-top: auto;
+        flex-shrink: 0;
+        padding-top: 10px;
+      }
+
+      .rs-services-number {
+        display: none;
+      }
+
+      /* Service Details Styles */
+      .rs-service-details-area {
+        background: #f8f9fa;
+      }
+
+      .rs-service-details-thumb {
+        margin-bottom: 40px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .rs-service-details-thumb img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+
+      .rs-service-details-content {
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      .rs-service-details-title {
+        font-size: 32px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+        line-height: 1.3;
+      }
+
+      .rs-service-details-description {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 40px;
+      }
+
+      .rs-service-features,
+      .rs-service-process,
+      .rs-service-specifications {
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .rs-service-features:last-child,
+      .rs-service-process:last-child,
+      .rs-service-specifications:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+
+      .rs-service-features h3,
+      .rs-service-process h3,
+      .rs-service-specifications h3 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 25px;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .rs-service-features h3::before,
+      .rs-service-process h3::before,
+      .rs-service-specifications h3::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 30px;
+        background: #EA5501;
+        border-radius: 2px;
+      }
+
+      .rs-service-feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .rs-service-feature-list li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 0;
+        font-size: 15px;
+        color: #333;
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .rs-service-feature-list li:last-child {
+        border-bottom: none;
+      }
+
+      .rs-service-feature-list li i {
+        color: #EA5501;
+        font-size: 16px;
+        flex-shrink: 0;
+      }
+
+      .rs-process-steps {
+        display: grid;
+        gap: 20px;
+      }
+
+      .rs-process-step {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        border-left: 4px solid #EA5501;
+      }
+
+      .rs-process-step-number {
+        width: 40px;
+        height: 40px;
+        background: #EA5501;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .rs-process-step-content h4 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 8px;
+      }
+
+      .rs-process-step-content p {
+        font-size: 14px;
+        color: #666;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .rs-specifications-content {
+        background: #f8f9fa;
+        padding: 25px;
+        border-radius: 8px;
+      }
+
+      .rs-specifications-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+      }
+
+      .rs-specifications-content li {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid #e0e0e0;
+        font-size: 14px;
+      }
+
+      .rs-specifications-content li:last-child {
+        border-bottom: none;
+      }
+
+      .rs-specifications-content li strong {
+        color: #1a1a1a;
+        font-weight: 600;
+      }
+
+      .rs-specifications-content li span {
+        color: #666;
+      }
+
+      /* Sidebar Styles */
+      .rs-service-sidebar {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .rs-sidebar-widget {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      .rs-sidebar-widget-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #EA5501;
+      }
+
+      .rs-sidebar-service-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .rs-sidebar-service-list li {
+        border-bottom: 1px solid #f0f0f0;
+      }
+
+      .rs-sidebar-service-list li:last-child {
+        border-bottom: none;
+      }
+
+      .rs-sidebar-service-list a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+        color: #333;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .rs-sidebar-service-list a:hover {
+        color: #EA5501;
+        padding-left: 10px;
+      }
+
+      .rs-sidebar-service-list a i {
+        color: #EA5501;
+        font-size: 14px;
+      }
+
+      .rs-contact-widget {
+        background: linear-gradient(135deg, #EA5501 0%, #ff6b1a 100%) !important;
+        color: white;
+      }
+
+      .rs-contact-widget .rs-sidebar-widget-title {
+        color: white;
+        border-bottom-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .rs-contact-widget h4 {
+        color: white;
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+
+      .rs-contact-widget p {
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 25px;
+      }
+
+      .rs-contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 25px;
+      }
+
+      .rs-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .rs-contact-item i {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+      }
+
+      .rs-contact-item div span {
+        display: block;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 4px;
+      }
+
+      .rs-contact-item div a {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+      }
+
+      .rs-related-services {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .rs-related-service-item {
+        display: flex;
+        gap: 15px;
+        padding: 15px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+      }
+
+      .rs-related-service-item:hover {
+        background: #EA5501;
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .rs-related-service-thumb {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+
+      .rs-related-service-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .rs-related-service-content h5 {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        line-height: 1.3;
+      }
+
+      .rs-related-service-content p {
+        font-size: 12px;
+        margin: 0;
+        opacity: 0.8;
+        line-height: 1.4;
+      }
+
+      /* Breadcrumb Styles */
+      .rs-banner-breadcrumb {
+        margin-top: 20px;
+      }
+
+      .breadcrumb {
+        background: none;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+      }
+
+      .breadcrumb-item {
+        font-size: 14px;
+      }
+
+      .breadcrumb-item a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+      }
+
+      .breadcrumb-item a:hover {
+        color: white;
+      }
+
+      .breadcrumb-item.active {
+        color: #EA5501;
+      }
+
+      .breadcrumb-item + .breadcrumb-item::before {
+        content: ">";
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .rs-service-details-content {
+          padding: 25px 20px;
+        }
+
+        .rs-service-details-title {
+          font-size: 24px;
+        }
+
+        .rs-service-features h3,
+        .rs-service-process h3,
+        .rs-service-specifications h3 {
+          font-size: 20px;
+        }
+
+        .rs-specifications-content ul {
+          grid-template-columns: 1fr;
+        }
+
+        .rs-process-step {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .rs-sidebar-widget {
+          padding: 20px;
+        }
+      }
+
+      /* Header Responsive Styles */
+      .rs-header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
+      }
+
+      .rs-header-logo a {
+        text-decoration: none;
+      }
+
+      .rs-logo-text {
+        color: #ea5501;
+        font-weight: 700;
+        font-size: 28px;
+        margin: 0;
+        transition: all 0.3s ease;
+      }
+
+      .rs-logo-text:hover {
+        color: #333;
+      }
+
+      .rs-header-menu {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .multipage-menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 40px;
+      }
+
+      .multipage-menu li a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 10px 0;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .multipage-menu li a:hover,
+      .multipage-menu li.active a {
+        color: #ea5501;
+      }
+
+      .multipage-menu li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #ea5501;
+        transition: width 0.3s ease;
+      }
+
+      .multipage-menu li a:hover::after,
+      .multipage-menu li.active a::after {
+        width: 100%;
+      }
+
+      .rs-header-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .rs-header-phone {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .rs-header-phone:hover {
+        color: #ea5501;
+      }
+
+      .rs-header-phone i {
+        color: #ea5501;
+        font-size: 16px;
+      }
+
+      .rs-mobile-menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 4px;
+      }
+
+      .rs-mobile-menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: #333;
+        transition: all 0.3s ease;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 991px) {
+        .rs-header-menu {
+          display: none;
+        }
+
+        .rs-header-contact {
+          display: none;
+        }
+
+        .rs-mobile-menu-toggle {
+          display: flex;
+        }
+
+        .multipage-menu {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .rs-logo-text {
+          font-size: 24px;
+        }
+
+        .rs-header-inner {
+          padding: 12px 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="rs-smoother-yes">
+    <!-- preloader start -->
+    <div id="pre-load">
+      <div id="loader" class="loader">
+        <div class="loader-container">
+          <div class="loader-icon">
+            <img src="assets/images/favicon.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- preloader end -->
+
+    <!-- preloader start -->
+
+    <div id="rs-mouse">
+      <div id="cursor-ball"></div>
+    </div>
+
+    <!-- preloader end -->
+
+    <!-- Header area start -->
+    <header>
+      <div class="rs-header-area rs-header-one" id="header-sticky">
+        <div class="container">
+          <div class="rs-header-inner">
+            <div class="rs-header-left">
+              <div class="rs-header-logo">
+                <a href="index.html">
+                  <h3 class="rs-logo-text">AMRS</h3>
+                </a>
+              </div>
+            </div>
+            <div class="rs-header-menu">
+              <nav id="mobile-menu" class="main-menu">
+                <ul class="multipage-menu">
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                    <a href="about.html">About</a>
+                  </li>
+                  <li class="active">
+                    <a href="services.html">Services</a>
+                  </li>
+                  <li>
+                    <a href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="rs-header-right">
+              <div class="rs-header-contact">
+                <a href="tel:+998765456321" class="rs-header-phone">
+                  <i class="fa-solid fa-phone"></i>
+                  <span>+998 765 456 321</span>
+                </a>
+              </div>
+              <div class="rs-header-btn d-none d-lg-block">
+                <a
+                  class="rs-btn has-theme-orange has-icon has-bg"
+                  href="contact.html"
+                >
+                  Get Quote
+                  <span class="icon-box">
+                    <svg
+                      class="icon-first"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="10"
+                      viewBox="0 0 12 10"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z"
+                        fill="#fff"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="icon-second"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="10"
+                      viewBox="0 0 12 10"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z"
+                        fill="#fff"
+                      ></path>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+              <div class="rs-mobile-menu-toggle d-lg-none">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- banner area start -->
+      <section class="rs-banner-area rs-banner-one rs-banner-style-two">
+        <div class="rs-banner-item-wrapper">
+          <div
+            class="rs-banner-bg-thumb"
+            data-background="assets/images/bg/hero-maritime.jpg"
+          >
+            <div class="rs-banner-overlay"></div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-xxl-12">
+                <div class="rs-banner-item">
+                  <div class="rs-banner-content text-center">
+                    <h1 class="rs-banner-title" id="service-title">Service Details</h1>
+                    <div class="rs-banner-breadcrumb">
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item"><a href="services.html">Services</a></li>
+                          <li class="breadcrumb-item active" id="breadcrumb-service" aria-current="page">Service Details</li>
+                        </ol>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner area end -->
+
+      <!-- service details area start -->
+      <section class="rs-service-details-area section-space">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-xl-8 col-lg-8">
+              <div class="rs-service-details-wrapper">
+                <!-- Service Image -->
+                <div class="rs-service-details-thumb">
+                  <img id="service-image" src="assets/images/services/service1.jpg" alt="Service Image" />
+                </div>
+
+                <!-- Service Content -->
+                <div class="rs-service-details-content">
+                  <h2 class="rs-service-details-title" id="service-details-title">Service Title</h2>
+                  <p class="rs-service-details-description" id="service-description">
+                    Service description will be loaded here...
+                  </p>
+
+                  <!-- Service Features -->
+                  <div class="rs-service-features">
+                    <h3>Key Features & Benefits</h3>
+                    <div class="row g-4">
+                      <div class="col-md-6">
+                        <ul class="rs-service-feature-list" id="service-features">
+                          <!-- Features will be loaded dynamically -->
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <ul class="rs-service-feature-list" id="service-benefits">
+                          <!-- Benefits will be loaded dynamically -->
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Service Process -->
+                  <div class="rs-service-process">
+                    <h3>Our Process</h3>
+                    <div class="rs-process-steps" id="service-process">
+                      <!-- Process steps will be loaded dynamically -->
+                    </div>
+                  </div>
+
+                  <!-- Technical Specifications -->
+                  <div class="rs-service-specifications">
+                    <h3>Technical Specifications</h3>
+                    <div class="rs-specifications-content" id="service-specifications">
+                      <!-- Specifications will be loaded dynamically -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-xl-4 col-lg-4">
+              <div class="rs-service-sidebar">
+                <!-- All Services List -->
+                <div class="rs-sidebar-widget">
+                  <h4 class="rs-sidebar-widget-title">All Services</h4>
+                  <div class="rs-sidebar-service-list">
+                    <ul id="all-services-list">
+                      <!-- Services list will be loaded dynamically -->
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Contact Widget -->
+                <div class="rs-sidebar-widget rs-contact-widget">
+                  <div class="rs-contact-widget-content">
+                    <h4>Need Expert Help?</h4>
+                    <p>Contact our marine specialists for technical assistance and quotes.</p>
+                    <div class="rs-contact-info">
+                      <div class="rs-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                          <span>Call Us</span>
+                          <a href="tel:+998765456321">+998 765 456 321</a>
+                        </div>
+                      </div>
+                      <div class="rs-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                          <span>Email Us</span>
+                          <a href="mailto:amrs@support.com">amrs@support.com</a>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="contact.html" class="rs-btn has-theme-orange has-icon has-bg">
+                      Get Quote
+                      <span class="icon-box">
+                        <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z" fill="#fff"></path>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Related Services -->
+                <div class="rs-sidebar-widget">
+                  <h4 class="rs-sidebar-widget-title">Related Services</h4>
+                  <div class="rs-related-services" id="related-services">
+                    <!-- Related services will be loaded dynamically -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- service details area end -->
+    </main>
+    <!-- Body main wrapper end -->
+
+    <!-- footer area start -->
+    <footer>
+      <div
+        class="rs-footer-area rs-footer-two has-space has-theme-orange has-bg-thumb"
+      >
+        <div
+          class="rs-footer-bg-thumb"
+          data-background="assets/images/bg/footer-bg-06.png"
+        ></div>
+        <div class="rs-footer-top">
+          <div class="container">
+            <div class="row g-5">
+              <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="rs-footer-widget footer-2-col-1">
+                  <h5 class="rs-footer-widget-title">About Company</h5>
+                  <div class="rs-footer-widget-content">
+                    <p class="rs-footer-widget-description">
+                      We undertake ship repairs at all Major Ports in India. Our
+                      well qualified Engineers & workers are well equipped to
+                      undertake & execute all types of major & minor repairs on
+                      ships at economical charges.
+                    </p>
+                    <div class="rs-footer-widget-stroke-text">
+                      <h3 class="rs-footer-stroke-text">Since 1996</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="rs-footer-widget footer-2-col-2">
+                  <h5 class="rs-footer-widget-title">Useful Links</h5>
+                  <div class="rs-footer-widget-content">
+                    <div class="rs-footer-widget-links">
+                      <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#">Contact Us</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="rs-footer-widget footer-2-col-3">
+                  <h5 class="rs-footer-widget-title">Office Address</h5>
+                  <div class="rs-footer-widget-content">
+                    <div class="rs-footer-widget-meta">
+                      <div class="rs-footer-widget-address">
+                        <a target="_blank" href="https://www.google.com/maps"
+                          >1200 Harbor Drive, Atlantic Ship Repairs & Services,
+                          Miami, FL, USA</a
+                        >
+                      </div>
+                      <h5 class="rs-footer-widget-title">Email Address</h5>
+                      <p>Interested in working with us?</p>
+                      <div class="rs-footer-widget-email">
+                        <a href="mailto:industrie@gmail.com"
+                          >amrs@support.com</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                <div class="rs-footer-widget footer-2-col-4">
+                  <h5 class="rs-footer-widget-title">Phone Number</h5>
+                  <div class="rs-footer-widget-content">
+                    <div class="rs-footer-widget-contact-info">
+                      <div class="rs-footer-widget-number">
+                        <span>
+                          <a href="tel:971551579261">+998 765 456 321</a>
+                        </span>
+                        <span>
+                          <a href="tel:971551579261">+998 765 456 321</a>
+                        </span>
+                      </div>
+                    </div>
+                    <h5 class="rs-footer-widget-title">Follow Us</h5>
+                    <div class="rs-footer-widget-social">
+                      <div class="rs-theme-social">
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rs-footer-copyright-area rs-copyright-one">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-xl-12">
+                <div class="rs-footer-copyright has-theme-orange text-center">
+                  <p class="underline">
+                    © <span id="year">2025</span> All Rights Reserved by
+                    <a href="https://rstheme.com/">AMRS</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer area end -->
+
+    <!-- back to top -->
+    <!-- Backtotop start -->
+    <div class="backtotop-wrap cursor-pointer">
+      <svg
+        class="backtotop-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- Backtotop end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/plugins/waypoints.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/meanmenu.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/plugins/wow.min.js"></script>
+    <script src="assets/js/vendor/magnific-popup.min.js"></script>
+    <script src="assets/js/vendor/isotope.pkgd.min.js"></script>
+    <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <script src="assets/js/plugins/jarallax.min.js"></script>
+    <script src="assets/js/vendor/ajax-form.js"></script>
+    <script src="assets/js/plugins/easypie.js"></script>
+    <script src="assets/js/plugins/headding-title.js"></script>
+    <script src="assets/js/plugins/lenis.min.js"></script>
+    <script src="assets/js/plugins/gsap.min.js"></script>
+    <script src="assets/js/plugins/rs-anim-int.js"></script>
+    <script src="assets/js/plugins/rs-scroll-trigger.min.js"></script>
+    <script src="assets/js/plugins/rs-splitText.min.js"></script>
+    <script src="assets/js/plugins/jquery.lettering.js"></script>
+    <script src="assets/js/plugins/parallax-effect.min.js"></script>
+    <script src="assets/js/plugins/jquery.appear.min.js"></script>
+    <script src="assets/js/plugins/marquee.min.js"></script>
+    <script src="assets/js/plugins/chart.umd.min.js"></script>
+    <script src="assets/js/plugins/nouislider.min.js"></script>
+    <script src="assets/js/vendor/purecounter.js"></script>
+    <script src="assets/js/vendor/odometer.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Service Details JavaScript -->
+    <script>
+      // Service data object containing all service information
+      const serviceData = {
+        'ship-repairs': {
+          title: 'Ship Repairs',
+          description: 'Comprehensive ship repair services covering all aspects of marine vessel maintenance and restoration. Our experienced team handles everything from minor repairs to major overhauls, ensuring your vessel meets all maritime safety standards and operational requirements.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Hull inspection and repair',
+            'Engine overhaul and maintenance',
+            'Electrical system repairs',
+            'Propeller and shaft alignment',
+            'Welding and fabrication services'
+          ],
+          benefits: [
+            'Reduced downtime',
+            'Cost-effective solutions',
+            'Certified marine technicians',
+            'Quality assurance',
+            '24/7 emergency support'
+          ],
+          process: [
+            {
+              title: 'Initial Assessment',
+              description: 'Comprehensive vessel inspection to identify repair requirements and scope of work.'
+            },
+            {
+              title: 'Repair Planning',
+              description: 'Detailed planning and scheduling of repair activities with timeline and resource allocation.'
+            },
+            {
+              title: 'Execution',
+              description: 'Professional repair work carried out by certified marine technicians using quality materials.'
+            },
+            {
+              title: 'Quality Check',
+              description: 'Thorough testing and quality assurance to ensure all repairs meet maritime standards.'
+            }
+          ],
+          specifications: [
+            { label: 'Service Type', value: 'Marine Vessel Repair' },
+            { label: 'Vessel Types', value: 'All Commercial & Industrial' },
+            { label: 'Response Time', value: '24/7 Emergency Service' },
+            { label: 'Certification', value: 'ISO 9001:2015 Certified' },
+            { label: 'Experience', value: '25+ Years in Marine Industry' },
+            { label: 'Coverage', value: 'Global Port Network' }
+          ]
+        },
+        'tug-barge-repairs': {
+          title: 'Tug & Barge Repairs',
+          description: 'Specialized repair and maintenance services for tugs and barges. Our expertise covers propulsion systems, deck equipment, and structural repairs to keep your fleet operational and efficient.',
+          image: 'assets/images/services/service2.jpg',
+          features: [
+            'Propulsion system overhaul',
+            'Deck machinery repair',
+            'Hull structural work',
+            'Winch and capstan service',
+            'Towing equipment maintenance'
+          ],
+          benefits: [
+            'Specialized tug expertise',
+            'Quick turnaround time',
+            'Fleet management support',
+            'Preventive maintenance programs',
+            'Emergency repair services'
+          ],
+          process: [
+            {
+              title: 'Fleet Assessment',
+              description: 'Evaluation of tug and barge condition with detailed inspection reports.'
+            },
+            {
+              title: 'Maintenance Planning',
+              description: 'Strategic planning for repairs and maintenance to minimize operational disruption.'
+            },
+            {
+              title: 'Specialized Repairs',
+              description: 'Expert repair work on propulsion, deck equipment, and structural components.'
+            },
+            {
+              title: 'Performance Testing',
+              description: 'Comprehensive testing to ensure optimal performance and safety compliance.'
+            }
+          ],
+          specifications: [
+            { label: 'Specialization', value: 'Tugs & Barges' },
+            { label: 'Propulsion Types', value: 'Diesel, Electric, Hybrid' },
+            { label: 'Capacity Range', value: '500 HP - 6000 HP' },
+            { label: 'Service Areas', value: 'Coastal & Inland Waters' },
+            { label: 'Crew Training', value: 'Certified Marine Engineers' },
+            { label: 'Parts Inventory', value: 'OEM & Aftermarket Parts' }
+          ]
+        },
+        'fabrication-erection': {
+          title: 'Fabrication & Erection',
+          description: 'Expert fabrication and erection services for marine structures, equipment, and custom installations. We provide precision metalwork and structural solutions for ports, shipyards, and offshore facilities.',
+          image: 'assets/images/services/service3.jpg',
+          features: [
+            'Custom steel fabrication',
+            'Structural erection services',
+            'Precision welding work',
+            'Marine equipment installation',
+            'Offshore structure assembly'
+          ],
+          benefits: [
+            'Custom design capabilities',
+            'High-quality materials',
+            'Experienced fabricators',
+            'On-site installation',
+            'Project management support'
+          ],
+          process: [
+            {
+              title: 'Design & Engineering',
+              description: 'Custom design and engineering solutions based on client specifications and requirements.'
+            },
+            {
+              title: 'Material Procurement',
+              description: 'Sourcing of high-quality materials and components from certified suppliers.'
+            },
+            {
+              title: 'Fabrication',
+              description: 'Precision fabrication in our fully equipped workshop using advanced machinery.'
+            },
+            {
+              title: 'Installation & Erection',
+              description: 'Professional on-site installation and erection with safety compliance.'
+            }
+          ],
+          specifications: [
+            { label: 'Materials', value: 'Marine Grade Steel, Aluminum' },
+            { label: 'Welding Standards', value: 'AWS D1.1, D1.5' },
+            { label: 'Capacity', value: 'Up to 500 Tons' },
+            { label: 'Workshop Size', value: '10,000 sq ft' },
+            { label: 'Crane Capacity', value: '50 Ton Mobile Crane' },
+            { label: 'Quality Control', value: 'NDT Testing Available' }
+          ]
+        },
+        'industrial-jobs': {
+          title: 'Industrial Jobs',
+          description: 'Comprehensive industrial maintenance and repair services for manufacturing plants, refineries, and processing facilities. Our team handles complex industrial projects with precision and safety.',
+          image: 'assets/images/services/service4.jpg',
+          features: [
+            'Plant maintenance services',
+            'Equipment overhaul',
+            'Piping system installation',
+            'Structural modifications',
+            'Safety system upgrades'
+          ],
+          benefits: [
+            'Industrial expertise',
+            'Safety-first approach',
+            'Minimal production downtime',
+            'Compliance assurance',
+            'Preventive maintenance programs'
+          ],
+          process: [
+            {
+              title: 'Site Survey',
+              description: 'Detailed assessment of industrial facility and equipment condition.'
+            },
+            {
+              title: 'Project Planning',
+              description: 'Comprehensive planning to minimize production impact and ensure safety.'
+            },
+            {
+              title: 'Implementation',
+              description: 'Professional execution of industrial maintenance and repair work.'
+            },
+            {
+              title: 'Commissioning',
+              description: 'Testing and commissioning to ensure optimal performance and safety.'
+            }
+          ],
+          specifications: [
+            { label: 'Industries Served', value: 'Oil & Gas, Chemical, Power' },
+            { label: 'Safety Standards', value: 'OSHA, API, ASME' },
+            { label: 'Project Size', value: 'Small to Large Scale' },
+            { label: 'Shutdown Services', value: 'Planned & Emergency' },
+            { label: 'Certifications', value: 'ISNetworld, Avetta' },
+            { label: 'Response Time', value: '24/7 Emergency Service' }
+          ]
+        },
+        'storage-tanks': {
+          title: 'Storage Tanks',
+          description: 'Professional storage tank construction, repair, and maintenance services. We handle all types of storage tanks including fuel, water, chemical, and specialized storage solutions.',
+          image: 'assets/images/services/service5.jpg',
+          features: [
+            'Tank construction and installation',
+            'Leak detection and repair',
+            'Coating and lining services',
+            'Tank cleaning and inspection',
+            'Compliance testing'
+          ],
+          benefits: [
+            'API 653 certified inspectors',
+            'Environmental compliance',
+            'Cost-effective solutions',
+            'Extended tank life',
+            'Safety assurance'
+          ],
+          process: [
+            {
+              title: 'Tank Inspection',
+              description: 'Comprehensive inspection using advanced NDT methods and API standards.'
+            },
+            {
+              title: 'Repair Planning',
+              description: 'Detailed planning for repairs, modifications, or new construction.'
+            },
+            {
+              title: 'Construction/Repair',
+              description: 'Professional tank construction or repair work with quality materials.'
+            },
+            {
+              title: 'Testing & Certification',
+              description: 'Hydrostatic testing and certification to ensure compliance and safety.'
+            }
+          ],
+          specifications: [
+            { label: 'Tank Types', value: 'AST, UST, Pressure Vessels' },
+            { label: 'Capacity Range', value: '1,000 - 10,000,000 gallons' },
+            { label: 'Standards', value: 'API 650, API 653, UL 142' },
+            { label: 'Materials', value: 'Carbon Steel, Stainless Steel' },
+            { label: 'Coatings', value: 'Epoxy, Polyurethane, FRP' },
+            { label: 'Testing Methods', value: 'UT, RT, PT, MT' }
+          ]
+        },
+        'automation-control-systems': {
+          title: 'Automation & Control Systems',
+          description: 'Advanced automation and control system solutions for marine and industrial applications. We provide PLC programming, SCADA systems, and integrated control solutions.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'PLC programming and installation',
+            'SCADA system development',
+            'HMI design and implementation',
+            'Control panel fabrication',
+            'System integration services'
+          ],
+          benefits: [
+            'Improved operational efficiency',
+            'Reduced manual intervention',
+            'Real-time monitoring',
+            'Enhanced safety systems',
+            'Remote control capabilities'
+          ],
+          process: [
+            {
+              title: 'System Analysis',
+              description: 'Analysis of existing systems and automation requirements.'
+            },
+            {
+              title: 'Design & Programming',
+              description: 'Custom design and programming of control systems and interfaces.'
+            },
+            {
+              title: 'Installation & Testing',
+              description: 'Professional installation and comprehensive system testing.'
+            },
+            {
+              title: 'Training & Support',
+              description: 'Operator training and ongoing technical support services.'
+            }
+          ],
+          specifications: [
+            { label: 'PLC Brands', value: 'Siemens, Allen Bradley, Schneider' },
+            { label: 'SCADA Software', value: 'WinCC, FactoryTalk, Citect' },
+            { label: 'Communication', value: 'Ethernet, Profibus, Modbus' },
+            { label: 'Programming Languages', value: 'Ladder, SCL, FBD' },
+            { label: 'Panel Ratings', value: 'IP65, NEMA 4X' },
+            { label: 'Certification', value: 'UL Listed Components' }
+          ]
+        },
+        'hydraulic-systems': {
+          title: 'Hydraulic Systems',
+          description: 'Complete hydraulic system services including design, installation, repair, and maintenance for marine and industrial applications. Our expertise covers all types of hydraulic equipment and components.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Hydraulic pump repair and overhaul',
+            'Cylinder rebuilding and testing',
+            'Valve calibration and service',
+            'System pressure testing',
+            'Filtration system maintenance'
+          ],
+          benefits: [
+            'Improved system reliability',
+            'Reduced maintenance costs',
+            'Extended equipment life',
+            'Enhanced performance',
+            'Emergency repair services'
+          ],
+          process: [
+            {
+              title: 'System Inspection',
+              description: 'Comprehensive hydraulic system analysis and performance evaluation.'
+            },
+            {
+              title: 'Component Testing',
+              description: 'Individual component testing and condition assessment.'
+            },
+            {
+              title: 'Repair & Rebuild',
+              description: 'Professional repair and rebuilding of hydraulic components.'
+            },
+            {
+              title: 'System Testing',
+              description: 'Complete system testing and performance verification.'
+            }
+          ],
+          specifications: [
+            { label: 'Pressure Range', value: '500 - 5000 PSI' },
+            { label: 'Fluid Types', value: 'Mineral, Synthetic, Bio-degradable' },
+            { label: 'Component Brands', value: 'Parker, Bosch Rexroth, Eaton' },
+            { label: 'Testing Equipment', value: 'Pressure, Flow, Temperature' },
+            { label: 'Certifications', value: 'ISO 4406 Cleanliness Standards' },
+            { label: 'Service Response', value: '24/7 Emergency Support' }
+          ]
+        },
+        'pneumatic-systems': {
+          title: 'Pneumatic Systems',
+          description: 'Professional pneumatic system services for compressed air systems, actuators, and control valves. We provide installation, maintenance, and repair services for all pneumatic applications.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Compressed air system design',
+            'Pneumatic actuator service',
+            'Air treatment equipment',
+            'Valve and fitting installation',
+            'System leak detection'
+          ],
+          benefits: [
+            'Energy efficient solutions',
+            'Reduced air consumption',
+            'Improved system performance',
+            'Lower operating costs',
+            'Preventive maintenance programs'
+          ],
+          process: [
+            {
+              title: 'Air System Analysis',
+              description: 'Complete analysis of compressed air system efficiency and performance.'
+            },
+            {
+              title: 'Component Service',
+              description: 'Service and maintenance of pneumatic components and actuators.'
+            },
+            {
+              title: 'System Optimization',
+              description: 'Optimization of air consumption and system efficiency.'
+            },
+            {
+              title: 'Performance Testing',
+              description: 'Testing and verification of system performance and reliability.'
+            }
+          ],
+          specifications: [
+            { label: 'Pressure Range', value: '80 - 250 PSI' },
+            { label: 'Air Quality', value: 'ISO 8573 Standards' },
+            { label: 'Actuator Types', value: 'Linear, Rotary, Multi-position' },
+            { label: 'Valve Types', value: 'Solenoid, Manual, Pilot' },
+            { label: 'Filtration', value: 'Particulate, Coalescing, Adsorption' },
+            { label: 'Monitoring', value: 'Pressure, Flow, Dewpoint' }
+          ]
+        },
+        'navigation-equipment': {
+          title: 'Navigation Equipment',
+          description: 'Comprehensive navigation equipment services including GPS, radar, ECDIS, and communication systems. We provide installation, calibration, and maintenance for all marine navigation equipment.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'GPS system installation and service',
+            'Radar calibration and repair',
+            'ECDIS software updates',
+            'Communication equipment service',
+            'Compass adjustment and calibration'
+          ],
+          benefits: [
+            'Enhanced navigation safety',
+            'Regulatory compliance',
+            'Improved operational efficiency',
+            'Reduced navigation errors',
+            'Expert technical support'
+          ],
+          process: [
+            {
+              title: 'Equipment Assessment',
+              description: 'Comprehensive assessment of navigation equipment condition and performance.'
+            },
+            {
+              title: 'Calibration & Testing',
+              description: 'Precision calibration and testing of navigation instruments.'
+            },
+            {
+              title: 'Software Updates',
+              description: 'Installation of latest software updates and chart corrections.'
+            },
+            {
+              title: 'Certification',
+              description: 'Certification and documentation for regulatory compliance.'
+            }
+          ],
+          specifications: [
+            { label: 'Equipment Types', value: 'GPS, Radar, ECDIS, AIS, VHF' },
+            { label: 'Standards', value: 'IMO, IEC, ITU Compliance' },
+            { label: 'Brands Serviced', value: 'Furuno, JRC, Sperry Marine' },
+            { label: 'Calibration', value: 'Factory Certified Procedures' },
+            { label: 'Documentation', value: 'Full Compliance Certificates' },
+            { label: 'Support', value: '24/7 Technical Assistance' }
+          ]
+        },
+        'pipes-piping-systems': {
+          title: 'Pipes & Piping Systems',
+          description: 'Complete piping system services including design, installation, repair, and maintenance for marine and industrial applications. We handle all types of piping materials and systems.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Piping system design and layout',
+            'Pipe installation and fitting',
+            'Leak detection and repair',
+            'Pipe insulation services',
+            'Pressure testing and certification'
+          ],
+          benefits: [
+            'Custom piping solutions',
+            'Quality materials and fittings',
+            'Code compliant installations',
+            'Leak-free systems',
+            'Extended system life'
+          ],
+          process: [
+            {
+              title: 'System Design',
+              description: 'Custom piping system design based on application requirements.'
+            },
+            {
+              title: 'Material Selection',
+              description: 'Selection of appropriate materials and fittings for the application.'
+            },
+            {
+              title: 'Installation',
+              description: 'Professional installation with proper support and routing.'
+            },
+            {
+              title: 'Testing & Commissioning',
+              description: 'Pressure testing and system commissioning for safe operation.'
+            }
+          ],
+          specifications: [
+            { label: 'Materials', value: 'Steel, Stainless Steel, Copper, PVC' },
+            { label: 'Pipe Sizes', value: '1/2" to 48" Diameter' },
+            { label: 'Pressure Ratings', value: 'Up to 2500 PSI' },
+            { label: 'Standards', value: 'ASME B31.1, B31.3, B31.4' },
+            { label: 'Welding', value: 'ASME IX Certified Welders' },
+            { label: 'Testing', value: 'Hydrostatic, Pneumatic, NDT' }
+          ]
+        },
+        'painting-surface-preparation': {
+          title: 'Painting & Surface Preparation',
+          description: 'Professional painting and surface preparation services for marine and industrial applications. We provide complete coating solutions including surface preparation, primer, and finish coats.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Abrasive blasting services',
+            'Surface preparation and cleaning',
+            'Primer and coating application',
+            'Protective coating systems',
+            'Quality control and inspection'
+          ],
+          benefits: [
+            'Extended asset life',
+            'Corrosion protection',
+            'Improved appearance',
+            'Environmental compliance',
+            'Cost-effective solutions'
+          ],
+          process: [
+            {
+              title: 'Surface Assessment',
+              description: 'Assessment of surface condition and coating requirements.'
+            },
+            {
+              title: 'Surface Preparation',
+              description: 'Professional surface preparation including blasting and cleaning.'
+            },
+            {
+              title: 'Coating Application',
+              description: 'Application of primer and finish coats using proper techniques.'
+            },
+            {
+              title: 'Quality Inspection',
+              description: 'Quality control inspection and coating thickness verification.'
+            }
+          ],
+          specifications: [
+            { label: 'Blast Media', value: 'Steel Grit, Garnet, Glass Beads' },
+            { label: 'Surface Prep', value: 'SSPC-SP6 to SP10 Standards' },
+            { label: 'Coating Types', value: 'Epoxy, Polyurethane, Zinc Rich' },
+            { label: 'Application Methods', value: 'Spray, Brush, Roller' },
+            { label: 'Thickness Control', value: 'Digital Thickness Gauges' },
+            { label: 'Environmental', value: 'VOC Compliant Coatings' }
+          ]
+        },
+        'reconditioning-engine-parts': {
+          title: 'Reconditioning Engine Parts',
+          description: 'Expert reconditioning services for marine engine components including pistons, cylinders, crankshafts, and other critical engine parts. We restore components to OEM specifications.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Cylinder head reconditioning',
+            'Piston and ring replacement',
+            'Crankshaft grinding and balancing',
+            'Valve seat cutting and grinding',
+            'Engine block machining'
+          ],
+          benefits: [
+            'Cost-effective alternative to new parts',
+            'OEM specification restoration',
+            'Extended engine life',
+            'Improved performance',
+            'Warranty on reconditioned parts'
+          ],
+          process: [
+            {
+              title: 'Component Inspection',
+              description: 'Detailed inspection and assessment of engine component condition.'
+            },
+            {
+              title: 'Machining & Repair',
+              description: 'Precision machining and repair to restore original specifications.'
+            },
+            {
+              title: 'Quality Testing',
+              description: 'Comprehensive testing to ensure component meets OEM standards.'
+            },
+            {
+              title: 'Assembly & Delivery',
+              description: 'Professional assembly and delivery with warranty coverage.'
+            }
+          ],
+          specifications: [
+            { label: 'Engine Types', value: 'Diesel, Gas, Marine Engines' },
+            { label: 'Machining Tolerance', value: '±0.001" Precision' },
+            { label: 'Testing Equipment', value: 'CMM, Surface Roughness' },
+            { label: 'Materials', value: 'OEM Equivalent Components' },
+            { label: 'Warranty', value: '12 Month Parts Warranty' },
+            { label: 'Turnaround', value: '5-10 Business Days' }
+          ]
+        },
+        'diving-underwater-services': {
+          title: 'Diving & Underwater Services',
+          description: 'Professional commercial diving and underwater services for marine construction, inspection, and repair. Our certified divers provide safe and efficient underwater solutions.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Underwater hull inspection',
+            'Propeller and rudder repair',
+            'Underwater welding and cutting',
+            'Salvage and recovery operations',
+            'Marine growth removal'
+          ],
+          benefits: [
+            'Certified commercial divers',
+            'Advanced diving equipment',
+            'Safety-first approach',
+            'Reduced dry dock time',
+            'Emergency response capability'
+          ],
+          process: [
+            {
+              title: 'Dive Planning',
+              description: 'Comprehensive dive planning and safety assessment.'
+            },
+            {
+              title: 'Underwater Inspection',
+              description: 'Detailed underwater inspection and documentation.'
+            },
+            {
+              title: 'Repair Operations',
+              description: 'Professional underwater repair and maintenance work.'
+            },
+            {
+              title: 'Quality Verification',
+              description: 'Post-work inspection and quality verification.'
+            }
+          ],
+          specifications: [
+            { label: 'Diving Depth', value: 'Up to 200 feet' },
+            { label: 'Certifications', value: 'ADCI, IMCA Certified' },
+            { label: 'Equipment', value: 'Surface Supply, Mixed Gas' },
+            { label: 'Welding', value: 'Underwater Wet/Dry Welding' },
+            { label: 'Safety', value: 'Full Dive Team Support' },
+            { label: 'Documentation', value: 'Video/Photo Reports' }
+          ]
+        },
+        'insulation-lagging': {
+          title: 'Insulation & Lagging',
+          description: 'Professional insulation and lagging services for marine and industrial applications. We provide thermal insulation, acoustic insulation, and protective lagging systems.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Thermal insulation installation',
+            'Acoustic insulation systems',
+            'Pipe and equipment lagging',
+            'Fire-resistant insulation',
+            'Removable insulation covers'
+          ],
+          benefits: [
+            'Energy efficiency improvement',
+            'Temperature control',
+            'Noise reduction',
+            'Fire protection',
+            'Condensation prevention'
+          ],
+          process: [
+            {
+              title: 'Thermal Analysis',
+              description: 'Analysis of thermal requirements and insulation specifications.'
+            },
+            {
+              title: 'Material Selection',
+              description: 'Selection of appropriate insulation materials for the application.'
+            },
+            {
+              title: 'Installation',
+              description: 'Professional installation of insulation and protective covering.'
+            },
+            {
+              title: 'Performance Testing',
+              description: 'Testing and verification of insulation performance.'
+            }
+          ],
+          specifications: [
+            { label: 'Materials', value: 'Mineral Wool, Ceramic Fiber, Foam' },
+            { label: 'Temperature Range', value: '-200°F to 2000°F' },
+            { label: 'Thickness', value: '1" to 6" Standard' },
+            { label: 'Cladding', value: 'Aluminum, Stainless Steel' },
+            { label: 'Fire Rating', value: 'A1, A2 Non-Combustible' },
+            { label: 'Standards', value: 'ASTM, IMO SOLAS Compliant' }
+          ]
+        },
+        'accommodation-sanitary': {
+          title: 'Accommodation & Sanitary Works',
+          description: 'Complete accommodation and sanitary system services for marine vessels including cabin refurbishment, plumbing, and sanitary equipment installation and repair.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Cabin refurbishment and renovation',
+            'Plumbing system installation',
+            'Sanitary equipment repair',
+            'Water system maintenance',
+            'Waste management systems'
+          ],
+          benefits: [
+            'Improved crew comfort',
+            'Regulatory compliance',
+            'Hygienic conditions',
+            'Water conservation',
+            'Modern amenities'
+          ],
+          process: [
+            {
+              title: 'Space Assessment',
+              description: 'Assessment of accommodation spaces and sanitary requirements.'
+            },
+            {
+              title: 'Design & Planning',
+              description: 'Design and planning of accommodation and sanitary improvements.'
+            },
+            {
+              title: 'Installation & Renovation',
+              description: 'Professional installation and renovation work.'
+            },
+            {
+              title: 'Testing & Commissioning',
+              description: 'System testing and commissioning for proper operation.'
+            }
+          ],
+          specifications: [
+            { label: 'Cabin Types', value: 'Officer, Crew, Guest Cabins' },
+            { label: 'Plumbing', value: 'Fresh Water, Grey Water, Black Water' },
+            { label: 'Fixtures', value: 'Marine Grade Sanitary Ware' },
+            { label: 'Standards', value: 'IMO, Flag State Requirements' },
+            { label: 'Materials', value: 'Corrosion Resistant, Fire Safe' },
+            { label: 'Ventilation', value: 'HVAC Integration Available' }
+          ]
+        },
+        'bwts': {
+          title: 'BWTS (Ballast Water Treatment Systems)',
+          description: 'Ballast Water Treatment System installation, commissioning, and maintenance services. We ensure compliance with IMO BWM Convention requirements for all vessel types.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'BWTS system installation',
+            'Commissioning and testing',
+            'Maintenance and service',
+            'Compliance documentation',
+            'Crew training programs'
+          ],
+          benefits: [
+            'IMO BWM Convention compliance',
+            'Environmental protection',
+            'Regulatory approval',
+            'Operational efficiency',
+            'Technical support'
+          ],
+          process: [
+            {
+              title: 'System Selection',
+              description: 'Selection of appropriate BWTS based on vessel requirements.'
+            },
+            {
+              title: 'Installation Planning',
+              description: 'Detailed installation planning and engineering design.'
+            },
+            {
+              title: 'Installation & Integration',
+              description: 'Professional installation and system integration.'
+            },
+            {
+              title: 'Commissioning & Certification',
+              description: 'System commissioning and regulatory certification.'
+            }
+          ],
+          specifications: [
+            { label: 'System Types', value: 'UV, Electrochlorination, Ozone' },
+            { label: 'Capacity Range', value: '50 - 5000 m³/h' },
+            { label: 'Compliance', value: 'IMO BWM Convention' },
+            { label: 'Certification', value: 'Type Approval Certificate' },
+            { label: 'Monitoring', value: 'Automated Control Systems' },
+            { label: 'Maintenance', value: 'Scheduled Service Programs' }
+          ]
+        },
+        'egcs': {
+          title: 'EGCS (Exhaust Gas Cleaning Systems)',
+          description: 'Exhaust Gas Cleaning System (Scrubber) installation, maintenance, and compliance services. We ensure SOx emission compliance with IMO 2020 sulfur regulations.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Scrubber system installation',
+            'Open/closed loop systems',
+            'Maintenance and service',
+            'Compliance monitoring',
+            'Water treatment systems'
+          ],
+          benefits: [
+            'IMO 2020 compliance',
+            'Fuel cost savings',
+            'Environmental compliance',
+            'Operational flexibility',
+            'Technical expertise'
+          ],
+          process: [
+            {
+              title: 'Feasibility Study',
+              description: 'Technical and economic feasibility study for scrubber installation.'
+            },
+            {
+              title: 'System Design',
+              description: 'Custom system design and engineering for vessel integration.'
+            },
+            {
+              title: 'Installation',
+              description: 'Professional installation and system commissioning.'
+            },
+            {
+              title: 'Compliance Testing',
+              description: 'Emission testing and regulatory compliance verification.'
+            }
+          ],
+          specifications: [
+            { label: 'System Types', value: 'Open Loop, Closed Loop, Hybrid' },
+            { label: 'Engine Power', value: '1 MW to 50+ MW' },
+            { label: 'Compliance', value: 'IMO MARPOL Annex VI' },
+            { label: 'Efficiency', value: '>98% SOx Removal' },
+            { label: 'Monitoring', value: 'Continuous Emission Monitoring' },
+            { label: 'Certification', value: 'Type Approval & EIAPP' }
+          ]
+        },
+        'anchor-windlass-winches': {
+          title: 'Anchor & Windlass Winches',
+          description: 'Complete overhaul, brake system repair, and load testing of mooring and anchor equipment. OEM parts sourcing for reliability and performance.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Windlass overhaul and repair',
+            'Brake system maintenance',
+            'Chain and anchor inspection',
+            'Load testing services',
+            'Motor and gearbox service'
+          ],
+          benefits: [
+            'Reliable anchoring systems',
+            'Enhanced safety',
+            'Reduced maintenance costs',
+            'Extended equipment life',
+            'OEM parts availability'
+          ],
+          process: [
+            {
+              title: 'Equipment Inspection',
+              description: 'Comprehensive inspection of windlass and anchor equipment.'
+            },
+            {
+              title: 'Component Service',
+              description: 'Service and repair of motors, gearboxes, and brake systems.'
+            },
+            {
+              title: 'Load Testing',
+              description: 'Load testing to verify safe working load capacity.'
+            },
+            {
+              title: 'Certification',
+              description: 'Certification and documentation for regulatory compliance.'
+            }
+          ],
+          specifications: [
+            { label: 'Windlass Types', value: 'Electric, Hydraulic, Manual' },
+            { label: 'Load Capacity', value: '1 ton to 50+ tons' },
+            { label: 'Chain Sizes', value: '12mm to 120mm diameter' },
+            { label: 'Testing', value: '125% SWL Load Testing' },
+            { label: 'Standards', value: 'ABS, DNV, LR Classification' },
+            { label: 'Parts', value: 'OEM and Approved Equivalent' }
+          ]
+        },
+        'auxiliary-machinery-pumps': {
+          title: 'Auxiliary Machinery – Pumps Division',
+          description: 'Overhaul, seal replacement, and performance testing for cargo, ballast, bilge, and fire pumps. Flow and pressure calibration to OEM specifications.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Centrifugal pump overhaul',
+            'Seal and bearing replacement',
+            'Impeller balancing',
+            'Performance testing',
+            'Alignment and coupling service'
+          ],
+          benefits: [
+            'Improved pump efficiency',
+            'Reduced energy consumption',
+            'Extended pump life',
+            'Reliable operation',
+            'OEM specification compliance'
+          ],
+          process: [
+            {
+              title: 'Pump Assessment',
+              description: 'Complete assessment of pump condition and performance.'
+            },
+            {
+              title: 'Disassembly & Inspection',
+              description: 'Careful disassembly and detailed component inspection.'
+            },
+            {
+              title: 'Repair & Rebuild',
+              description: 'Professional repair and rebuilding to OEM standards.'
+            },
+            {
+              title: 'Testing & Commissioning',
+              description: 'Performance testing and system commissioning.'
+            }
+          ],
+          specifications: [
+            { label: 'Pump Types', value: 'Centrifugal, Positive Displacement' },
+            { label: 'Flow Range', value: '10 GPM to 10,000 GPM' },
+            { label: 'Head Range', value: '10 ft to 1000 ft' },
+            { label: 'Materials', value: 'Cast Iron, Bronze, Stainless Steel' },
+            { label: 'Testing', value: 'Flow, Pressure, Efficiency' },
+            { label: 'Standards', value: 'API 610, ISO 5199' }
+          ]
+        },
+        'auxiliary-machinery-purifiers': {
+          title: 'Auxiliary Machinery – Purifiers & Separators',
+          description: 'Servicing of fuel and lube oil purifiers. Bowl balancing, spindle renewal, and automation checks. Ensures clean fuel supply and engine protection.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Centrifuge overhaul',
+            'Bowl balancing service',
+            'Spindle and bearing replacement',
+            'Automation system service',
+            'Performance optimization'
+          ],
+          benefits: [
+            'Clean fuel and oil supply',
+            'Engine protection',
+            'Improved separation efficiency',
+            'Reduced maintenance costs',
+            'Extended equipment life'
+          ],
+          process: [
+            {
+              title: 'Purifier Inspection',
+              description: 'Detailed inspection of purifier condition and performance.'
+            },
+            {
+              title: 'Component Service',
+              description: 'Service of bowl, spindle, and drive components.'
+            },
+            {
+              title: 'Balancing & Testing',
+              description: 'Precision balancing and performance testing.'
+            },
+            {
+              title: 'Automation Check',
+              description: 'Automation system check and calibration.'
+            }
+          ],
+          specifications: [
+            { label: 'Purifier Types', value: 'Fuel Oil, Lube Oil, Bilge Water' },
+            { label: 'Capacity Range', value: '500 L/h to 10,000 L/h' },
+            { label: 'Brands Serviced', value: 'Alfa Laval, Mitsubishi, GEA' },
+            { label: 'Balancing', value: 'Dynamic Balancing Equipment' },
+            { label: 'Automation', value: 'PLC and Control System Service' },
+            { label: 'Testing', value: 'Separation Efficiency Testing' }
+          ]
+        },
+        'ac-refrigeration': {
+          title: 'AC & Refrigeration',
+          description: 'Complete air conditioning and refrigeration services for marine and industrial applications. We provide installation, maintenance, and repair of HVAC systems.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'HVAC system installation',
+            'Refrigeration unit service',
+            'Compressor overhaul',
+            'Ductwork installation',
+            'Temperature control systems'
+          ],
+          benefits: [
+            'Comfortable working environment',
+            'Energy efficient systems',
+            'Reliable temperature control',
+            'Improved air quality',
+            'Reduced operating costs'
+          ],
+          process: [
+            {
+              title: 'System Assessment',
+              description: 'Assessment of HVAC and refrigeration system requirements.'
+            },
+            {
+              title: 'Design & Planning',
+              description: 'System design and installation planning.'
+            },
+            {
+              title: 'Installation',
+              description: 'Professional installation of equipment and ductwork.'
+            },
+            {
+              title: 'Commissioning',
+              description: 'System commissioning and performance testing.'
+            }
+          ],
+          specifications: [
+            { label: 'System Types', value: 'Split, Central, Package Units' },
+            { label: 'Capacity Range', value: '1 TR to 500 TR' },
+            { label: 'Refrigerants', value: 'R134a, R410A, R404A' },
+            { label: 'Controls', value: 'Digital, Programmable Thermostats' },
+            { label: 'Efficiency', value: 'High SEER Rating Systems' },
+            { label: 'Maintenance', value: 'Preventive Maintenance Programs' }
+          ]
+        },
+        'instrumentation': {
+          title: 'Instrumentation',
+          description: 'Professional instrumentation services including calibration, installation, and maintenance of measuring and control instruments for marine and industrial applications.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Instrument calibration',
+            'Sensor installation',
+            'Control loop testing',
+            'Data acquisition systems',
+            'Safety instrumented systems'
+          ],
+          benefits: [
+            'Accurate measurements',
+            'Process optimization',
+            'Safety compliance',
+            'Regulatory compliance',
+            'Improved efficiency'
+          ],
+          process: [
+            {
+              title: 'Instrument Survey',
+              description: 'Survey of existing instrumentation and calibration requirements.'
+            },
+            {
+              title: 'Calibration',
+              description: 'Precision calibration using certified reference standards.'
+            },
+            {
+              title: 'Installation',
+              description: 'Professional installation of new instruments and sensors.'
+            },
+            {
+              title: 'Documentation',
+              description: 'Complete calibration certificates and documentation.'
+            }
+          ],
+          specifications: [
+            { label: 'Instrument Types', value: 'Pressure, Temperature, Flow, Level' },
+            { label: 'Accuracy', value: '±0.1% to ±0.01% of Reading' },
+            { label: 'Standards', value: 'NIST Traceable Calibration' },
+            { label: 'Communication', value: '4-20mA, HART, Fieldbus' },
+            { label: 'Certification', value: 'ISO 17025 Accredited Lab' },
+            { label: 'Documentation', value: 'Digital Calibration Certificates' }
+          ]
+        },
+        'tank-cleaning': {
+          title: 'Tank Cleaning',
+          description: 'Professional tank cleaning services for cargo tanks, fuel tanks, and storage vessels. We provide safe and efficient cleaning using specialized equipment and procedures.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Cargo tank cleaning',
+            'Fuel tank cleaning',
+            'Chemical tank cleaning',
+            'Tank inspection services',
+            'Waste disposal management'
+          ],
+          benefits: [
+            'Safe cleaning procedures',
+            'Environmental compliance',
+            'Contamination removal',
+            'Tank inspection capability',
+            'Waste management services'
+          ],
+          process: [
+            {
+              title: 'Tank Assessment',
+              description: 'Assessment of tank condition and cleaning requirements.'
+            },
+            {
+              title: 'Safety Planning',
+              description: 'Comprehensive safety planning and risk assessment.'
+            },
+            {
+              title: 'Cleaning Operations',
+              description: 'Professional cleaning using appropriate methods and equipment.'
+            },
+            {
+              title: 'Inspection & Certification',
+              description: 'Post-cleaning inspection and certification.'
+            }
+          ],
+          specifications: [
+            { label: 'Tank Types', value: 'Cargo, Fuel, Ballast, Fresh Water' },
+            { label: 'Cleaning Methods', value: 'High Pressure, Chemical, Steam' },
+            { label: 'Safety', value: 'Confined Space Entry Certified' },
+            { label: 'Waste Management', value: 'Licensed Waste Disposal' },
+            { label: 'Inspection', value: 'Visual, NDT, Gas Testing' },
+            { label: 'Certification', value: 'Tank Cleanliness Certificates' }
+          ]
+        },
+        'fire-safety-systems': {
+          title: 'Fire & Safety Systems',
+          description: 'Complete fire and safety system services including installation, testing, and maintenance of fire detection, suppression, and emergency systems.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Fire detection system installation',
+            'Suppression system service',
+            'Emergency lighting systems',
+            'Safety equipment inspection',
+            'Compliance testing'
+          ],
+          benefits: [
+            'Life safety protection',
+            'Property protection',
+            'Regulatory compliance',
+            'Insurance compliance',
+            'Peace of mind'
+          ],
+          process: [
+            {
+              title: 'Safety Assessment',
+              description: 'Comprehensive fire and safety system assessment.'
+            },
+            {
+              title: 'System Design',
+              description: 'Design of fire detection and suppression systems.'
+            },
+            {
+              title: 'Installation',
+              description: 'Professional installation of safety systems.'
+            },
+            {
+              title: 'Testing & Certification',
+              description: 'System testing and regulatory certification.'
+            }
+          ],
+          specifications: [
+            { label: 'Detection Types', value: 'Smoke, Heat, Flame, Gas' },
+            { label: 'Suppression', value: 'Water, Foam, CO2, Clean Agent' },
+            { label: 'Standards', value: 'NFPA, IMO SOLAS, Local Codes' },
+            { label: 'Control Panels', value: 'Addressable, Conventional' },
+            { label: 'Testing', value: 'Annual, Semi-annual Inspections' },
+            { label: 'Certification', value: 'Authority Having Jurisdiction' }
+          ]
+        },
+        'lifeboats-davits': {
+          title: 'Lifeboats & Davits',
+          description: 'Lifeboat and davit system maintenance, testing, and certification services. We ensure compliance with SOLAS requirements for life-saving appliances.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Lifeboat overhaul and service',
+            'Davit system maintenance',
+            'Load testing services',
+            'Engine and equipment service',
+            'Safety equipment inspection'
+          ],
+          benefits: [
+            'SOLAS compliance',
+            'Life safety assurance',
+            'Regulatory certification',
+            'Reliable operation',
+            'Emergency preparedness'
+          ],
+          process: [
+            {
+              title: 'System Inspection',
+              description: 'Comprehensive inspection of lifeboats and davit systems.'
+            },
+            {
+              title: 'Maintenance & Repair',
+              description: 'Professional maintenance and repair of equipment.'
+            },
+            {
+              title: 'Load Testing',
+              description: 'Load testing of davits and launching systems.'
+            },
+            {
+              title: 'Certification',
+              description: 'Certification and documentation for compliance.'
+            }
+          ],
+          specifications: [
+            { label: 'Lifeboat Types', value: 'Open, Enclosed, Free-fall' },
+            { label: 'Capacity', value: '6 to 150 persons' },
+            { label: 'Davit Types', value: 'Gravity, Luffing, Free-fall' },
+            { label: 'Testing', value: '5-year Overhaul, Annual Inspection' },
+            { label: 'Standards', value: 'IMO SOLAS, LSA Code' },
+            { label: 'Certification', value: 'Class Society Approved' }
+          ]
+        },
+        'valves-mechanical-seals': {
+          title: 'Valves & Mechanical Seals',
+          description: 'Professional valve and mechanical seal services including repair, replacement, and maintenance for marine and industrial applications.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Valve repair and overhaul',
+            'Mechanical seal replacement',
+            'Valve testing and calibration',
+            'Seat and disc machining',
+            'Actuator service'
+          ],
+          benefits: [
+            'Leak-free operation',
+            'Extended service life',
+            'Improved reliability',
+            'Reduced maintenance costs',
+            'Enhanced performance'
+          ],
+          process: [
+            {
+              title: 'Component Assessment',
+              description: 'Assessment of valve and seal condition and performance.'
+            },
+            {
+              title: 'Repair & Machining',
+              description: 'Professional repair and precision machining services.'
+            },
+            {
+              title: 'Assembly & Testing',
+              description: 'Careful assembly and comprehensive testing.'
+            },
+            {
+              title: 'Installation',
+              description: 'Professional installation and commissioning.'
+            }
+          ],
+          specifications: [
+            { label: 'Valve Types', value: 'Gate, Globe, Ball, Butterfly, Check' },
+            { label: 'Size Range', value: '1/2" to 48" diameter' },
+            { label: 'Pressure Rating', value: '150# to 2500# ANSI' },
+            { label: 'Materials', value: 'Carbon Steel, Stainless, Bronze' },
+            { label: 'Seal Types', value: 'Single, Double, Cartridge' },
+            { label: 'Testing', value: 'Hydrostatic, Seat Leakage' }
+          ]
+        },
+        'boiler-repair': {
+          title: 'Boiler Repair',
+          description: 'Complete boiler repair and maintenance services including tube replacement, refractory repair, and efficiency optimization for marine and industrial boilers.',
+          image: 'assets/images/services/service1.jpg',
+          features: [
+            'Boiler tube replacement',
+            'Refractory repair',
+            'Burner service and adjustment',
+            'Control system maintenance',
+            'Efficiency testing'
+          ],
+          benefits: [
+            'Improved efficiency',
+            'Reduced fuel consumption',
+            'Extended boiler life',
+            'Safety compliance',
+            'Reliable operation'
+          ],
+          process: [
+            {
+              title: 'Boiler Inspection',
+              description: 'Comprehensive boiler inspection and condition assessment.'
+            },
+            {
+              title: 'Repair Planning',
+              description: 'Detailed planning of repair work and material requirements.'
+            },
+            {
+              title: 'Repair Execution',
+              description: 'Professional repair work including welding and refractory.'
+            },
+            {
+              title: 'Testing & Commissioning',
+              description: 'Pressure testing and performance commissioning.'
+            }
+          ],
+          specifications: [
+            { label: 'Boiler Types', value: 'Fire Tube, Water Tube, Steam' },
+            { label: 'Capacity Range', value: '10 HP to 1000 HP' },
+            { label: 'Pressure Range', value: '15 PSI to 600 PSI' },
+            { label: 'Fuel Types', value: 'Gas, Oil, Dual Fuel' },
+            { label: 'Standards', value: 'ASME Section I, IV' },
+            { label: 'Testing', value: 'Hydrostatic, Efficiency Testing' }
+          ]
+        }
+      };
+
+      // Get all services for sidebar
+      const allServices = [
+        { id: 'ship-repairs', title: 'Ship Repairs' },
+        { id: 'tug-barge-repairs', title: 'Tug & Barge Repairs' },
+        { id: 'fabrication-erection', title: 'Fabrication & Erection' },
+        { id: 'industrial-jobs', title: 'Industrial Jobs' },
+        { id: 'storage-tanks', title: 'Storage Tanks' },
+        { id: 'automation-control-systems', title: 'Automation & Control Systems' },
+        { id: 'hydraulic-systems', title: 'Hydraulic Systems' },
+        { id: 'pneumatic-systems', title: 'Pneumatic Systems' },
+        { id: 'navigation-equipment', title: 'Navigation Equipment' },
+        { id: 'pipes-piping-systems', title: 'Pipes & Piping Systems' },
+        { id: 'painting-surface-preparation', title: 'Painting & Surface Preparation' },
+        { id: 'reconditioning-engine-parts', title: 'Reconditioning Engine Parts' },
+        { id: 'diving-underwater-services', title: 'Diving & Underwater Services' },
+        { id: 'insulation-lagging', title: 'Insulation & Lagging' },
+        { id: 'accommodation-sanitary', title: 'Accommodation & Sanitary' },
+        { id: 'bwts', title: 'BWTS (Ballast Water Treatment Systems)' },
+        { id: 'egcs', title: 'EGCS (Exhaust Gas Cleaning Systems)' },
+        { id: 'anchor-windlass-winches', title: 'Anchor & Windlass Winches' },
+        { id: 'auxiliary-machinery-pumps', title: 'Auxiliary Machinery – Pumps Division' },
+        { id: 'auxiliary-machinery-purifiers', title: 'Auxiliary Machinery – Purifiers & Separators' },
+        { id: 'ac-refrigeration', title: 'AC & Refrigeration' },
+        { id: 'instrumentation', title: 'Instrumentation' },
+        { id: 'tank-cleaning', title: 'Tank Cleaning' },
+        { id: 'fire-safety-systems', title: 'Fire & Safety Systems' },
+        { id: 'lifeboats-davits', title: 'Lifeboats & Davits' },
+        { id: 'valves-mechanical-seals', title: 'Valves & Mechanical Seals' },
+        { id: 'boiler-repair', title: 'Boiler Repair' }
+      ];
+
+      // Function to get URL parameter
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        const results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+
+      // Function to load service content
+      function loadServiceContent(serviceId) {
+        const service = serviceData[serviceId];
+        
+        if (!service) {
+          // If service not found, show default content
+          document.getElementById('service-title').textContent = 'Service Not Found';
+          document.getElementById('service-details-title').textContent = 'Service Not Found';
+          document.getElementById('breadcrumb-service').textContent = 'Service Not Found';
+          document.getElementById('service-description').textContent = 'The requested service could not be found. Please select a service from the list below.';
+          return;
+        }
+
+        // Update page title and breadcrumb
+        document.getElementById('service-title').textContent = service.title;
+        document.getElementById('service-details-title').textContent = service.title;
+        document.getElementById('breadcrumb-service').textContent = service.title;
+        document.title = `AMRS || ${service.title}`;
+
+        // Update service image
+        document.getElementById('service-image').src = service.image;
+        document.getElementById('service-image').alt = service.title;
+
+        // Update description
+        document.getElementById('service-description').textContent = service.description;
+
+        // Update features
+        const featuresContainer = document.getElementById('service-features');
+        featuresContainer.innerHTML = '';
+        service.features.forEach(feature => {
+          const li = document.createElement('li');
+          li.innerHTML = `<i class="fa-regular fa-check"></i> ${feature}`;
+          featuresContainer.appendChild(li);
+        });
+
+        // Update benefits
+        const benefitsContainer = document.getElementById('service-benefits');
+        benefitsContainer.innerHTML = '';
+        service.benefits.forEach(benefit => {
+          const li = document.createElement('li');
+          li.innerHTML = `<i class="fa-regular fa-star"></i> ${benefit}`;
+          benefitsContainer.appendChild(li);
+        });
+
+        // Update process steps
+        const processContainer = document.getElementById('service-process');
+        processContainer.innerHTML = '';
+        service.process.forEach((step, index) => {
+          const stepDiv = document.createElement('div');
+          stepDiv.className = 'rs-process-step';
+          stepDiv.innerHTML = `
+            <div class="rs-process-step-number">${index + 1}</div>
+            <div class="rs-process-step-content">
+              <h4>${step.title}</h4>
+              <p>${step.description}</p>
+            </div>
+          `;
+          processContainer.appendChild(stepDiv);
+        });
+
+        // Update specifications
+        const specificationsContainer = document.getElementById('service-specifications');
+        specificationsContainer.innerHTML = '<ul></ul>';
+        const specsList = specificationsContainer.querySelector('ul');
+        service.specifications.forEach(spec => {
+          const li = document.createElement('li');
+          li.innerHTML = `<strong>${spec.label}:</strong> <span>${spec.value}</span>`;
+          specsList.appendChild(li);
+        });
+      }
+
+      // Function to load all services in sidebar
+      function loadAllServices() {
+        const servicesList = document.getElementById('all-services-list');
+        servicesList.innerHTML = '';
+        
+        allServices.forEach(service => {
+          const li = document.createElement('li');
+          li.innerHTML = `
+            <a href="services-details.html?service=${service.id}">
+              ${service.title}
+              <i class="fa-regular fa-arrow-right"></i>
+            </a>
+          `;
+          servicesList.appendChild(li);
+        });
+      }
+
+      // Function to load related services
+      function loadRelatedServices(currentServiceId) {
+        const relatedContainer = document.getElementById('related-services');
+        relatedContainer.innerHTML = '';
+        
+        // Get 3 random services excluding current one
+        const otherServices = allServices.filter(s => s.id !== currentServiceId);
+        const shuffled = otherServices.sort(() => 0.5 - Math.random());
+        const related = shuffled.slice(0, 3);
+        
+        related.forEach(service => {
+          const serviceDiv = document.createElement('a');
+          serviceDiv.className = 'rs-related-service-item';
+          serviceDiv.href = `services-details.html?service=${service.id}`;
+          serviceDiv.innerHTML = `
+            <div class="rs-related-service-thumb">
+              <img src="assets/images/services/service1.jpg" alt="${service.title}">
+            </div>
+            <div class="rs-related-service-content">
+              <h5>${service.title}</h5>
+              <p>Professional ${service.title.toLowerCase()} services</p>
+            </div>
+          `;
+          relatedContainer.appendChild(serviceDiv);
+        });
+      }
+
+      // Initialize page when DOM is loaded
+      document.addEventListener('DOMContentLoaded', function() {
+        const serviceId = getUrlParameter('service') || 'ship-repairs';
+        
+        loadServiceContent(serviceId);
+        loadAllServices();
+        loadRelatedServices(serviceId);
+      });
+    </script>
+  </body>
+
+  <!-- Mirrored from industrie.rstheme.com/html/robotic.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 Sep 2025 18:46:15 GMT -->
+</html>
