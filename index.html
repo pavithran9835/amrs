@@ -467,6 +467,166 @@
           padding: 12px 0;
         }
       }
+
+      /* Simple Organization Structure Styles */
+      .rs-organization-area {
+        background: #f8f9fa;
+        padding: 100px 0;
+      }
+
+      .rs-org-simple-wrapper {
+        margin-top: 60px;
+      }
+
+      .rs-org-simple-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 40px 30px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .rs-org-simple-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .rs-org-simple-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #EA5501, #FF6B1A);
+      }
+
+      .rs-org-simple-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        font-size: 32px;
+        transition: all 0.3s ease;
+      }
+
+      .rs-org-simple-card h4 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      .rs-org-simple-card p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 0;
+        color: #666;
+      }
+
+      /* Card Color Variations */
+      .rs-org-board .rs-org-simple-icon {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #EA5501;
+      }
+
+      .rs-org-director .rs-org-simple-icon {
+        background: linear-gradient(135deg, #004B87 0%, #0066CC 100%);
+        color: white;
+      }
+
+      .rs-org-coo .rs-org-simple-icon {
+        background: linear-gradient(135deg, #1A936F 0%, #2ECC71 100%);
+        color: white;
+      }
+
+      .rs-org-consultants .rs-org-simple-icon {
+        background: linear-gradient(135deg, #E68A00 0%, #FFA500 100%);
+        color: white;
+      }
+
+      .rs-org-engineers .rs-org-simple-icon {
+        background: linear-gradient(135deg, #C0392B 0%, #E74C3C 100%);
+        color: white;
+      }
+
+      .rs-org-masters .rs-org-simple-icon {
+        background: linear-gradient(135deg, #7F8C8D 0%, #95A5A6 100%);
+        color: white;
+      }
+
+      .rs-org-team .rs-org-simple-icon {
+        background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 100%);
+        color: white;
+      }
+
+      .rs-org-team {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border: 2px solid #dee2e6;
+      }
+
+      .rs-org-team:hover {
+        border-color: #EA5501;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 991px) {
+        .rs-organization-area {
+          padding: 80px 0;
+        }
+
+        .rs-org-simple-card {
+          padding: 30px 25px;
+        }
+
+        .rs-org-simple-icon {
+          width: 65px;
+          height: 65px;
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
+
+        .rs-org-simple-card h4 {
+          font-size: 20px;
+        }
+
+        .rs-org-simple-card p {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .rs-organization-area {
+          padding: 60px 0;
+        }
+
+        .rs-org-simple-card {
+          padding: 25px 20px;
+        }
+
+        .rs-org-simple-icon {
+          width: 60px;
+          height: 60px;
+          font-size: 24px;
+          margin-bottom: 15px;
+        }
+
+        .rs-org-simple-card h4 {
+          font-size: 18px;
+        }
+
+        .rs-org-simple-card p {
+          font-size: 13px;
+        }
+      }
     </style>
   </head>
 
@@ -2997,6 +3157,115 @@
         </div>
       </section>
       <!-- work process area end -->
+
+      <!-- organization structure area start -->
+      <section id="org-chart" class="rs-organization-area section-space">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-10 text-center">
+              <div class="rs-section-title-wrapper">
+                <span class="rs-section-subtitle has-theme-orange justify-content-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="15" viewBox="0 0 11 15" fill="none">
+                    <path d="M3.14286 10L0 15L8.78104e-07 0L3.14286 5V10Z" fill="#EA5501"></path>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.28571 10L3.14286 15L3.14286 10L4.71428 7.5L3.14286 5L3.14286 0L6.28571 5L6.28571 10ZM6.28571 10L7.85714 7.5L6.28571 5V0L11 7.5L6.28571 15V10Z" fill="#EA5501"></path>
+                  </svg>
+                  Organization Structure
+                </span>
+                <h2 class="rs-section-title rs-split-text-enable split-in-fade">
+                  Our <span class="rs-theme-orange">Team</span> Structure
+                </h2>
+                <p class="descrip">
+                  A streamlined organizational hierarchy ensuring efficient operations and clear accountability across all levels.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Organization Structure -->
+          <div class="rs-org-simple-wrapper">
+            <div class="row g-4 justify-content-center">
+              <!-- Board of Directors -->
+              <div class="col-lg-4 col-md-6">
+                <div class="rs-org-simple-card rs-org-board">
+                  <div class="rs-org-simple-icon">
+                    <i class="fa-solid fa-crown"></i>
+                  </div>
+                  <h4>Board of Directors</h4>
+                  <p>Strategic oversight and governance</p>
+                </div>
+              </div>
+
+              <!-- Director -->
+              <div class="col-lg-4 col-md-6">
+                <div class="rs-org-simple-card rs-org-director">
+                  <div class="rs-org-simple-icon">
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <h4>Director</h4>
+                  <p>Executive leadership and decision making</p>
+                </div>
+              </div>
+
+              <!-- COO -->
+              <div class="col-lg-4 col-md-6">
+                <div class="rs-org-simple-card rs-org-coo">
+                  <div class="rs-org-simple-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                  </div>
+                  <h4>COO</h4>
+                  <p>Chief Operating Officer - daily operations</p>
+                </div>
+              </div>
+
+              <!-- Consultants -->
+              <div class="col-lg-4 col-md-6">
+                <div class="rs-org-simple-card rs-org-consultants">
+                  <div class="rs-org-simple-icon">
+                    <i class="fa-solid fa-user-graduate"></i>
+                  </div>
+                  <h4>Consultants</h4>
+                  <p>Expert advisory and specialized guidance</p>
+                </div>
+              </div>
+
+              <!-- Chief Engineers -->
+              <div class="col-lg-4 col-md-6">
+                <div class="rs-org-simple-card rs-org-engineers">
+                  <div class="rs-org-simple-icon">
+                    <i class="fa-solid fa-hard-hat"></i>
+                  </div>
+                  <h4>Chief Engineers</h4>
+                  <p>Technical leadership and engineering oversight</p>
+                </div>
+              </div>
+
+              <!-- Masters -->
+              <div class="col-lg-4 col-md-6">
+                <div class="rs-org-simple-card rs-org-masters">
+                  <div class="rs-org-simple-icon">
+                    <i class="fa-solid fa-ship"></i>
+                  </div>
+                  <h4>Masters</h4>
+                  <p>Vessel operations and maritime expertise</p>
+                </div>
+              </div>
+
+              <!-- Working Team -->
+              <div class="col-lg-12">
+                <div class="rs-org-simple-card rs-org-team">
+                  <div class="rs-org-simple-icon">
+                    <i class="fa-solid fa-users"></i>
+                  </div>
+                  <h4>Working Team</h4>
+                  <p>Skilled professionals executing daily operations and maintenance tasks</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- organization structure area end -->
+      
     </main>
     <!-- Body main wrapper end -->
 
