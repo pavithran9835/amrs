@@ -171,14 +171,14 @@
       .rs-service-features h3::before,
       .rs-service-process h3::before,
       .rs-service-specifications h3::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         top: 50%;
         transform: translateY(-50%);
         width: 4px;
         height: 30px;
-        background: #EA5501;
+        background: #ea5501;
         border-radius: 2px;
       }
 
@@ -203,7 +203,7 @@
       }
 
       .rs-service-feature-list li i {
-        color: #EA5501;
+        color: #ea5501;
         font-size: 16px;
         flex-shrink: 0;
       }
@@ -219,13 +219,13 @@
         padding: 20px;
         background: #f8f9fa;
         border-radius: 8px;
-        border-left: 4px solid #EA5501;
+        border-left: 4px solid #ea5501;
       }
 
       .rs-process-step-number {
         width: 40px;
         height: 40px;
-        background: #EA5501;
+        background: #ea5501;
         color: white;
         border-radius: 50%;
         display: flex;
@@ -305,7 +305,7 @@
         color: #1a1a1a;
         margin-bottom: 20px;
         padding-bottom: 15px;
-        border-bottom: 2px solid #EA5501;
+        border-bottom: 2px solid #ea5501;
       }
 
       .rs-sidebar-service-list ul {
@@ -335,17 +335,21 @@
       }
 
       .rs-sidebar-service-list a:hover {
-        color: #EA5501;
+        color: #ea5501;
         padding-left: 10px;
       }
 
       .rs-sidebar-service-list a i {
-        color: #EA5501;
+        color: #ea5501;
         font-size: 14px;
       }
 
       .rs-contact-widget {
-        background: linear-gradient(135deg, #EA5501 0%, #ff6b1a 100%) !important;
+        background: linear-gradient(
+          135deg,
+          #ea5501 0%,
+          #ff6b1a 100%
+        ) !important;
         color: white;
       }
 
@@ -422,7 +426,7 @@
       }
 
       .rs-related-service-item:hover {
-        background: #EA5501;
+        background: #ea5501;
         color: white;
         transform: translateY(-2px);
       }
@@ -481,7 +485,7 @@
       }
 
       .breadcrumb-item.active {
-        color: #EA5501;
+        color: #ea5501;
       }
 
       .breadcrumb-item + .breadcrumb-item::before {
@@ -771,34 +775,22 @@
     <main>
       <!-- banner area start -->
       <section class="rs-banner-area rs-banner-one rs-banner-style-two">
-        <div class="rs-banner-item-wrapper">
-          <div
-            class="rs-banner-bg-thumb"
-            data-background="assets/images/bg/hero-maritime.jpg"
-          >
-            <div class="rs-banner-overlay"></div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-xxl-12">
-                <div class="rs-banner-item">
-                  <div class="rs-banner-content text-center">
-                    <h1 class="rs-banner-title" id="service-title">Service Details</h1>
-                    <div class="rs-banner-breadcrumb">
-                      <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                          <li class="breadcrumb-item"><a href="services.html">Services</a></li>
-                          <li class="breadcrumb-item active" id="breadcrumb-service" aria-current="page">Service Details</li>
-                        </ol>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h1 class="rs-banner-title" id="service-title">Service Details</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="services.html">Services</a>
+            </li>
+            <li
+              class="breadcrumb-item active"
+              id="breadcrumb-service"
+              aria-current="page"
+            >
+              Service Details
+            </li>
+          </ol>
+        </nav>
       </section>
       <!-- banner area end -->
 
@@ -810,13 +802,25 @@
               <div class="rs-service-details-wrapper">
                 <!-- Service Image -->
                 <div class="rs-service-details-thumb">
-                  <img id="service-image" src="assets/images/services/service1.jpg" alt="Service Image" />
+                  <img
+                    id="service-image"
+                    src="assets/images/services/service1.jpg"
+                    alt="Service Image"
+                  />
                 </div>
 
                 <!-- Service Content -->
                 <div class="rs-service-details-content">
-                  <h2 class="rs-service-details-title" id="service-details-title">Service Title</h2>
-                  <p class="rs-service-details-description" id="service-description">
+                  <h2
+                    class="rs-service-details-title"
+                    id="service-details-title"
+                  >
+                    Service Title
+                  </h2>
+                  <p
+                    class="rs-service-details-description"
+                    id="service-description"
+                  >
                     Service description will be loaded here...
                   </p>
 
@@ -825,12 +829,18 @@
                     <h3>Key Features & Benefits</h3>
                     <div class="row g-4">
                       <div class="col-md-6">
-                        <ul class="rs-service-feature-list" id="service-features">
+                        <ul
+                          class="rs-service-feature-list"
+                          id="service-features"
+                        >
                           <!-- Features will be loaded dynamically -->
                         </ul>
                       </div>
                       <div class="col-md-6">
-                        <ul class="rs-service-feature-list" id="service-benefits">
+                        <ul
+                          class="rs-service-feature-list"
+                          id="service-benefits"
+                        >
                           <!-- Benefits will be loaded dynamically -->
                         </ul>
                       </div>
@@ -848,7 +858,10 @@
                   <!-- Technical Specifications -->
                   <div class="rs-service-specifications">
                     <h3>Technical Specifications</h3>
-                    <div class="rs-specifications-content" id="service-specifications">
+                    <div
+                      class="rs-specifications-content"
+                      id="service-specifications"
+                    >
                       <!-- Specifications will be loaded dynamically -->
                     </div>
                   </div>
@@ -873,7 +886,10 @@
                 <div class="rs-sidebar-widget rs-contact-widget">
                   <div class="rs-contact-widget-content">
                     <h4>Need Expert Help?</h4>
-                    <p>Contact our marine specialists for technical assistance and quotes.</p>
+                    <p>
+                      Contact our marine specialists for technical assistance
+                      and quotes.
+                    </p>
                     <div class="rs-contact-info">
                       <div class="rs-contact-item">
                         <i class="fa-solid fa-phone"></i>
@@ -890,11 +906,26 @@
                         </div>
                       </div>
                     </div>
-                    <a href="contact.html" class="rs-btn has-theme-orange has-icon has-bg">
+                    <a
+                      href="contact.html"
+                      class="rs-btn has-theme-orange has-icon has-bg"
+                    >
                       Get Quote
                       <span class="icon-box">
-                        <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z" fill="#fff"></path>
+                        <svg
+                          class="icon-first"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="12"
+                          height="10"
+                          viewBox="0 0 12 10"
+                          fill="none"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z"
+                            fill="#fff"
+                          ></path>
                         </svg>
                       </span>
                     </a>
@@ -934,10 +965,12 @@
                   <h5 class="rs-footer-widget-title">About Company</h5>
                   <div class="rs-footer-widget-content">
                     <p class="rs-footer-widget-description">
-                      We undertake ship repairs at all Major Ports in India. Our
-                      well qualified Engineers & workers are well equipped to
-                      undertake & execute all types of major & minor repairs on
-                      ships at economical charges.
+                      We provide end-to-end solutions in repairs, projects, and
+                      retrofit works, including dry dock attendance, steel
+                      renewal, automation, electrical, and naval architecture.
+                      Our expertise also covers engine repairs, hydraulics,
+                      pneumatics, instrumentation, inspections, cleaning, tank
+                      and boiler works, and air conditioning services.
                     </p>
                     <div class="rs-footer-widget-stroke-text">
                       <h3 class="rs-footer-stroke-text">Since 1996</h3>
@@ -976,7 +1009,14 @@
                       <p>Interested in working with us?</p>
                       <div class="rs-footer-widget-email">
                         <a href="mailto:industrie@gmail.com"
-                          >amrs@support.com</a
+                          >technical@amrs.com</a
+                        >
+                        <a href="mailto:industrie@gmail.com">spares@amrs.com</a>
+                        <a href="mailto:industrie@gmail.com"
+                          >service@amrs.com</a
+                        >
+                        <a href="mailto:industrie@gmail.com"
+                          >support@amrs.com</a
                         >
                       </div>
                     </div>
@@ -1073,1317 +1113,1496 @@
     <script src="assets/js/vendor/purecounter.js"></script>
     <script src="assets/js/vendor/odometer.min.js"></script>
     <script src="assets/js/main.js"></script>
-    
+
     <!-- Service Details JavaScript -->
     <script>
       // Service data object containing all service information
       const serviceData = {
-        'ship-repairs': {
-          title: 'Ship Repairs',
-          description: 'Comprehensive ship repair services covering all aspects of marine vessel maintenance and restoration. Our experienced team handles everything from minor repairs to major overhauls, ensuring your vessel meets all maritime safety standards and operational requirements.',
-          image: 'assets/images/services/service1.jpg',
+        "ship-repairs": {
+          title: "Ship Repairs",
+          description:
+            "Comprehensive ship repair services covering all aspects of marine vessel maintenance and restoration. Our experienced team handles everything from minor repairs to major overhauls, ensuring your vessel meets all maritime safety standards and operational requirements.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Hull inspection and repair',
-            'Engine overhaul and maintenance',
-            'Electrical system repairs',
-            'Propeller and shaft alignment',
-            'Welding and fabrication services'
+            "Hull inspection and repair",
+            "Engine overhaul and maintenance",
+            "Electrical system repairs",
+            "Propeller and shaft alignment",
+            "Welding and fabrication services",
           ],
           benefits: [
-            'Reduced downtime',
-            'Cost-effective solutions',
-            'Certified marine technicians',
-            'Quality assurance',
-            '24/7 emergency support'
+            "Reduced downtime",
+            "Cost-effective solutions",
+            "Certified marine technicians",
+            "Quality assurance",
+            "24/7 emergency support",
           ],
           process: [
             {
-              title: 'Initial Assessment',
-              description: 'Comprehensive vessel inspection to identify repair requirements and scope of work.'
+              title: "Initial Assessment",
+              description:
+                "Comprehensive vessel inspection to identify repair requirements and scope of work.",
             },
             {
-              title: 'Repair Planning',
-              description: 'Detailed planning and scheduling of repair activities with timeline and resource allocation.'
+              title: "Repair Planning",
+              description:
+                "Detailed planning and scheduling of repair activities with timeline and resource allocation.",
             },
             {
-              title: 'Execution',
-              description: 'Professional repair work carried out by certified marine technicians using quality materials.'
+              title: "Execution",
+              description:
+                "Professional repair work carried out by certified marine technicians using quality materials.",
             },
             {
-              title: 'Quality Check',
-              description: 'Thorough testing and quality assurance to ensure all repairs meet maritime standards.'
-            }
+              title: "Quality Check",
+              description:
+                "Thorough testing and quality assurance to ensure all repairs meet maritime standards.",
+            },
           ],
           specifications: [
-            { label: 'Service Type', value: 'Marine Vessel Repair' },
-            { label: 'Vessel Types', value: 'All Commercial & Industrial' },
-            { label: 'Response Time', value: '24/7 Emergency Service' },
-            { label: 'Certification', value: 'ISO 9001:2015 Certified' },
-            { label: 'Experience', value: '25+ Years in Marine Industry' },
-            { label: 'Coverage', value: 'Global Port Network' }
-          ]
+            { label: "Service Type", value: "Marine Vessel Repair" },
+            { label: "Vessel Types", value: "All Commercial & Industrial" },
+            { label: "Response Time", value: "24/7 Emergency Service" },
+            { label: "Certification", value: "ISO 9001:2015 Certified" },
+            { label: "Experience", value: "25+ Years in Marine Industry" },
+            { label: "Coverage", value: "Global Port Network" },
+          ],
         },
-        'tug-barge-repairs': {
-          title: 'Tug & Barge Repairs',
-          description: 'Specialized repair and maintenance services for tugs and barges. Our expertise covers propulsion systems, deck equipment, and structural repairs to keep your fleet operational and efficient.',
-          image: 'assets/images/services/service2.jpg',
+        "tug-barge-repairs": {
+          title: "Tug & Barge Repairs",
+          description:
+            "Specialized repair and maintenance services for tugs and barges. Our expertise covers propulsion systems, deck equipment, and structural repairs to keep your fleet operational and efficient.",
+          image: "assets/images/services/service2.jpg",
           features: [
-            'Propulsion system overhaul',
-            'Deck machinery repair',
-            'Hull structural work',
-            'Winch and capstan service',
-            'Towing equipment maintenance'
+            "Propulsion system overhaul",
+            "Deck machinery repair",
+            "Hull structural work",
+            "Winch and capstan service",
+            "Towing equipment maintenance",
           ],
           benefits: [
-            'Specialized tug expertise',
-            'Quick turnaround time',
-            'Fleet management support',
-            'Preventive maintenance programs',
-            'Emergency repair services'
+            "Specialized tug expertise",
+            "Quick turnaround time",
+            "Fleet management support",
+            "Preventive maintenance programs",
+            "Emergency repair services",
           ],
           process: [
             {
-              title: 'Fleet Assessment',
-              description: 'Evaluation of tug and barge condition with detailed inspection reports.'
+              title: "Fleet Assessment",
+              description:
+                "Evaluation of tug and barge condition with detailed inspection reports.",
             },
             {
-              title: 'Maintenance Planning',
-              description: 'Strategic planning for repairs and maintenance to minimize operational disruption.'
+              title: "Maintenance Planning",
+              description:
+                "Strategic planning for repairs and maintenance to minimize operational disruption.",
             },
             {
-              title: 'Specialized Repairs',
-              description: 'Expert repair work on propulsion, deck equipment, and structural components.'
+              title: "Specialized Repairs",
+              description:
+                "Expert repair work on propulsion, deck equipment, and structural components.",
             },
             {
-              title: 'Performance Testing',
-              description: 'Comprehensive testing to ensure optimal performance and safety compliance.'
-            }
+              title: "Performance Testing",
+              description:
+                "Comprehensive testing to ensure optimal performance and safety compliance.",
+            },
           ],
           specifications: [
-            { label: 'Specialization', value: 'Tugs & Barges' },
-            { label: 'Propulsion Types', value: 'Diesel, Electric, Hybrid' },
-            { label: 'Capacity Range', value: '500 HP - 6000 HP' },
-            { label: 'Service Areas', value: 'Coastal & Inland Waters' },
-            { label: 'Crew Training', value: 'Certified Marine Engineers' },
-            { label: 'Parts Inventory', value: 'OEM & Aftermarket Parts' }
-          ]
+            { label: "Specialization", value: "Tugs & Barges" },
+            { label: "Propulsion Types", value: "Diesel, Electric, Hybrid" },
+            { label: "Capacity Range", value: "500 HP - 6000 HP" },
+            { label: "Service Areas", value: "Coastal & Inland Waters" },
+            { label: "Crew Training", value: "Certified Marine Engineers" },
+            { label: "Parts Inventory", value: "OEM & Aftermarket Parts" },
+          ],
         },
-        'fabrication-erection': {
-          title: 'Fabrication & Erection',
-          description: 'Expert fabrication and erection services for marine structures, equipment, and custom installations. We provide precision metalwork and structural solutions for ports, shipyards, and offshore facilities.',
-          image: 'assets/images/services/service3.jpg',
+        "fabrication-erection": {
+          title: "Fabrication & Erection",
+          description:
+            "Expert fabrication and erection services for marine structures, equipment, and custom installations. We provide precision metalwork and structural solutions for ports, shipyards, and offshore facilities.",
+          image: "assets/images/services/service3.jpg",
           features: [
-            'Custom steel fabrication',
-            'Structural erection services',
-            'Precision welding work',
-            'Marine equipment installation',
-            'Offshore structure assembly'
+            "Custom steel fabrication",
+            "Structural erection services",
+            "Precision welding work",
+            "Marine equipment installation",
+            "Offshore structure assembly",
           ],
           benefits: [
-            'Custom design capabilities',
-            'High-quality materials',
-            'Experienced fabricators',
-            'On-site installation',
-            'Project management support'
+            "Custom design capabilities",
+            "High-quality materials",
+            "Experienced fabricators",
+            "On-site installation",
+            "Project management support",
           ],
           process: [
             {
-              title: 'Design & Engineering',
-              description: 'Custom design and engineering solutions based on client specifications and requirements.'
+              title: "Design & Engineering",
+              description:
+                "Custom design and engineering solutions based on client specifications and requirements.",
             },
             {
-              title: 'Material Procurement',
-              description: 'Sourcing of high-quality materials and components from certified suppliers.'
+              title: "Material Procurement",
+              description:
+                "Sourcing of high-quality materials and components from certified suppliers.",
             },
             {
-              title: 'Fabrication',
-              description: 'Precision fabrication in our fully equipped workshop using advanced machinery.'
+              title: "Fabrication",
+              description:
+                "Precision fabrication in our fully equipped workshop using advanced machinery.",
             },
             {
-              title: 'Installation & Erection',
-              description: 'Professional on-site installation and erection with safety compliance.'
-            }
+              title: "Installation & Erection",
+              description:
+                "Professional on-site installation and erection with safety compliance.",
+            },
           ],
           specifications: [
-            { label: 'Materials', value: 'Marine Grade Steel, Aluminum' },
-            { label: 'Welding Standards', value: 'AWS D1.1, D1.5' },
-            { label: 'Capacity', value: 'Up to 500 Tons' },
-            { label: 'Workshop Size', value: '10,000 sq ft' },
-            { label: 'Crane Capacity', value: '50 Ton Mobile Crane' },
-            { label: 'Quality Control', value: 'NDT Testing Available' }
-          ]
+            { label: "Materials", value: "Marine Grade Steel, Aluminum" },
+            { label: "Welding Standards", value: "AWS D1.1, D1.5" },
+            { label: "Capacity", value: "Up to 500 Tons" },
+            { label: "Workshop Size", value: "10,000 sq ft" },
+            { label: "Crane Capacity", value: "50 Ton Mobile Crane" },
+            { label: "Quality Control", value: "NDT Testing Available" },
+          ],
         },
-        'industrial-jobs': {
-          title: 'Industrial Jobs',
-          description: 'Comprehensive industrial maintenance and repair services for manufacturing plants, refineries, and processing facilities. Our team handles complex industrial projects with precision and safety.',
-          image: 'assets/images/services/service4.jpg',
+        "industrial-jobs": {
+          title: "Industrial Jobs",
+          description:
+            "Comprehensive industrial maintenance and repair services for manufacturing plants, refineries, and processing facilities. Our team handles complex industrial projects with precision and safety.",
+          image: "assets/images/services/service4.jpg",
           features: [
-            'Plant maintenance services',
-            'Equipment overhaul',
-            'Piping system installation',
-            'Structural modifications',
-            'Safety system upgrades'
+            "Plant maintenance services",
+            "Equipment overhaul",
+            "Piping system installation",
+            "Structural modifications",
+            "Safety system upgrades",
           ],
           benefits: [
-            'Industrial expertise',
-            'Safety-first approach',
-            'Minimal production downtime',
-            'Compliance assurance',
-            'Preventive maintenance programs'
+            "Industrial expertise",
+            "Safety-first approach",
+            "Minimal production downtime",
+            "Compliance assurance",
+            "Preventive maintenance programs",
           ],
           process: [
             {
-              title: 'Site Survey',
-              description: 'Detailed assessment of industrial facility and equipment condition.'
+              title: "Site Survey",
+              description:
+                "Detailed assessment of industrial facility and equipment condition.",
             },
             {
-              title: 'Project Planning',
-              description: 'Comprehensive planning to minimize production impact and ensure safety.'
+              title: "Project Planning",
+              description:
+                "Comprehensive planning to minimize production impact and ensure safety.",
             },
             {
-              title: 'Implementation',
-              description: 'Professional execution of industrial maintenance and repair work.'
+              title: "Implementation",
+              description:
+                "Professional execution of industrial maintenance and repair work.",
             },
             {
-              title: 'Commissioning',
-              description: 'Testing and commissioning to ensure optimal performance and safety.'
-            }
+              title: "Commissioning",
+              description:
+                "Testing and commissioning to ensure optimal performance and safety.",
+            },
           ],
           specifications: [
-            { label: 'Industries Served', value: 'Oil & Gas, Chemical, Power' },
-            { label: 'Safety Standards', value: 'OSHA, API, ASME' },
-            { label: 'Project Size', value: 'Small to Large Scale' },
-            { label: 'Shutdown Services', value: 'Planned & Emergency' },
-            { label: 'Certifications', value: 'ISNetworld, Avetta' },
-            { label: 'Response Time', value: '24/7 Emergency Service' }
-          ]
+            { label: "Industries Served", value: "Oil & Gas, Chemical, Power" },
+            { label: "Safety Standards", value: "OSHA, API, ASME" },
+            { label: "Project Size", value: "Small to Large Scale" },
+            { label: "Shutdown Services", value: "Planned & Emergency" },
+            { label: "Certifications", value: "ISNetworld, Avetta" },
+            { label: "Response Time", value: "24/7 Emergency Service" },
+          ],
         },
-        'storage-tanks': {
-          title: 'Storage Tanks',
-          description: 'Professional storage tank construction, repair, and maintenance services. We handle all types of storage tanks including fuel, water, chemical, and specialized storage solutions.',
-          image: 'assets/images/services/service5.jpg',
+        "storage-tanks": {
+          title: "Storage Tanks",
+          description:
+            "Professional storage tank construction, repair, and maintenance services. We handle all types of storage tanks including fuel, water, chemical, and specialized storage solutions.",
+          image: "assets/images/services/service5.jpg",
           features: [
-            'Tank construction and installation',
-            'Leak detection and repair',
-            'Coating and lining services',
-            'Tank cleaning and inspection',
-            'Compliance testing'
+            "Tank construction and installation",
+            "Leak detection and repair",
+            "Coating and lining services",
+            "Tank cleaning and inspection",
+            "Compliance testing",
           ],
           benefits: [
-            'API 653 certified inspectors',
-            'Environmental compliance',
-            'Cost-effective solutions',
-            'Extended tank life',
-            'Safety assurance'
+            "API 653 certified inspectors",
+            "Environmental compliance",
+            "Cost-effective solutions",
+            "Extended tank life",
+            "Safety assurance",
           ],
           process: [
             {
-              title: 'Tank Inspection',
-              description: 'Comprehensive inspection using advanced NDT methods and API standards.'
+              title: "Tank Inspection",
+              description:
+                "Comprehensive inspection using advanced NDT methods and API standards.",
             },
             {
-              title: 'Repair Planning',
-              description: 'Detailed planning for repairs, modifications, or new construction.'
+              title: "Repair Planning",
+              description:
+                "Detailed planning for repairs, modifications, or new construction.",
             },
             {
-              title: 'Construction/Repair',
-              description: 'Professional tank construction or repair work with quality materials.'
+              title: "Construction/Repair",
+              description:
+                "Professional tank construction or repair work with quality materials.",
             },
             {
-              title: 'Testing & Certification',
-              description: 'Hydrostatic testing and certification to ensure compliance and safety.'
-            }
+              title: "Testing & Certification",
+              description:
+                "Hydrostatic testing and certification to ensure compliance and safety.",
+            },
           ],
           specifications: [
-            { label: 'Tank Types', value: 'AST, UST, Pressure Vessels' },
-            { label: 'Capacity Range', value: '1,000 - 10,000,000 gallons' },
-            { label: 'Standards', value: 'API 650, API 653, UL 142' },
-            { label: 'Materials', value: 'Carbon Steel, Stainless Steel' },
-            { label: 'Coatings', value: 'Epoxy, Polyurethane, FRP' },
-            { label: 'Testing Methods', value: 'UT, RT, PT, MT' }
-          ]
+            { label: "Tank Types", value: "AST, UST, Pressure Vessels" },
+            { label: "Capacity Range", value: "1,000 - 10,000,000 gallons" },
+            { label: "Standards", value: "API 650, API 653, UL 142" },
+            { label: "Materials", value: "Carbon Steel, Stainless Steel" },
+            { label: "Coatings", value: "Epoxy, Polyurethane, FRP" },
+            { label: "Testing Methods", value: "UT, RT, PT, MT" },
+          ],
         },
-        'automation-control-systems': {
-          title: 'Automation & Control Systems',
-          description: 'Advanced automation and control system solutions for marine and industrial applications. We provide PLC programming, SCADA systems, and integrated control solutions.',
-          image: 'assets/images/services/service1.jpg',
+        "automation-control-systems": {
+          title: "Automation & Control Systems",
+          description:
+            "Advanced automation and control system solutions for marine and industrial applications. We provide PLC programming, SCADA systems, and integrated control solutions.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'PLC programming and installation',
-            'SCADA system development',
-            'HMI design and implementation',
-            'Control panel fabrication',
-            'System integration services'
+            "PLC programming and installation",
+            "SCADA system development",
+            "HMI design and implementation",
+            "Control panel fabrication",
+            "System integration services",
           ],
           benefits: [
-            'Improved operational efficiency',
-            'Reduced manual intervention',
-            'Real-time monitoring',
-            'Enhanced safety systems',
-            'Remote control capabilities'
+            "Improved operational efficiency",
+            "Reduced manual intervention",
+            "Real-time monitoring",
+            "Enhanced safety systems",
+            "Remote control capabilities",
           ],
           process: [
             {
-              title: 'System Analysis',
-              description: 'Analysis of existing systems and automation requirements.'
+              title: "System Analysis",
+              description:
+                "Analysis of existing systems and automation requirements.",
             },
             {
-              title: 'Design & Programming',
-              description: 'Custom design and programming of control systems and interfaces.'
+              title: "Design & Programming",
+              description:
+                "Custom design and programming of control systems and interfaces.",
             },
             {
-              title: 'Installation & Testing',
-              description: 'Professional installation and comprehensive system testing.'
+              title: "Installation & Testing",
+              description:
+                "Professional installation and comprehensive system testing.",
             },
             {
-              title: 'Training & Support',
-              description: 'Operator training and ongoing technical support services.'
-            }
+              title: "Training & Support",
+              description:
+                "Operator training and ongoing technical support services.",
+            },
           ],
           specifications: [
-            { label: 'PLC Brands', value: 'Siemens, Allen Bradley, Schneider' },
-            { label: 'SCADA Software', value: 'WinCC, FactoryTalk, Citect' },
-            { label: 'Communication', value: 'Ethernet, Profibus, Modbus' },
-            { label: 'Programming Languages', value: 'Ladder, SCL, FBD' },
-            { label: 'Panel Ratings', value: 'IP65, NEMA 4X' },
-            { label: 'Certification', value: 'UL Listed Components' }
-          ]
+            { label: "PLC Brands", value: "Siemens, Allen Bradley, Schneider" },
+            { label: "SCADA Software", value: "WinCC, FactoryTalk, Citect" },
+            { label: "Communication", value: "Ethernet, Profibus, Modbus" },
+            { label: "Programming Languages", value: "Ladder, SCL, FBD" },
+            { label: "Panel Ratings", value: "IP65, NEMA 4X" },
+            { label: "Certification", value: "UL Listed Components" },
+          ],
         },
-        'hydraulic-systems': {
-          title: 'Hydraulic Systems',
-          description: 'Complete hydraulic system services including design, installation, repair, and maintenance for marine and industrial applications. Our expertise covers all types of hydraulic equipment and components.',
-          image: 'assets/images/services/service1.jpg',
+        "hydraulic-systems": {
+          title: "Hydraulic Systems",
+          description:
+            "Complete hydraulic system services including design, installation, repair, and maintenance for marine and industrial applications. Our expertise covers all types of hydraulic equipment and components.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Hydraulic pump repair and overhaul',
-            'Cylinder rebuilding and testing',
-            'Valve calibration and service',
-            'System pressure testing',
-            'Filtration system maintenance'
+            "Hydraulic pump repair and overhaul",
+            "Cylinder rebuilding and testing",
+            "Valve calibration and service",
+            "System pressure testing",
+            "Filtration system maintenance",
           ],
           benefits: [
-            'Improved system reliability',
-            'Reduced maintenance costs',
-            'Extended equipment life',
-            'Enhanced performance',
-            'Emergency repair services'
+            "Improved system reliability",
+            "Reduced maintenance costs",
+            "Extended equipment life",
+            "Enhanced performance",
+            "Emergency repair services",
           ],
           process: [
             {
-              title: 'System Inspection',
-              description: 'Comprehensive hydraulic system analysis and performance evaluation.'
+              title: "System Inspection",
+              description:
+                "Comprehensive hydraulic system analysis and performance evaluation.",
             },
             {
-              title: 'Component Testing',
-              description: 'Individual component testing and condition assessment.'
+              title: "Component Testing",
+              description:
+                "Individual component testing and condition assessment.",
             },
             {
-              title: 'Repair & Rebuild',
-              description: 'Professional repair and rebuilding of hydraulic components.'
+              title: "Repair & Rebuild",
+              description:
+                "Professional repair and rebuilding of hydraulic components.",
             },
             {
-              title: 'System Testing',
-              description: 'Complete system testing and performance verification.'
-            }
+              title: "System Testing",
+              description:
+                "Complete system testing and performance verification.",
+            },
           ],
           specifications: [
-            { label: 'Pressure Range', value: '500 - 5000 PSI' },
-            { label: 'Fluid Types', value: 'Mineral, Synthetic, Bio-degradable' },
-            { label: 'Component Brands', value: 'Parker, Bosch Rexroth, Eaton' },
-            { label: 'Testing Equipment', value: 'Pressure, Flow, Temperature' },
-            { label: 'Certifications', value: 'ISO 4406 Cleanliness Standards' },
-            { label: 'Service Response', value: '24/7 Emergency Support' }
-          ]
+            { label: "Pressure Range", value: "500 - 5000 PSI" },
+            {
+              label: "Fluid Types",
+              value: "Mineral, Synthetic, Bio-degradable",
+            },
+            {
+              label: "Component Brands",
+              value: "Parker, Bosch Rexroth, Eaton",
+            },
+            {
+              label: "Testing Equipment",
+              value: "Pressure, Flow, Temperature",
+            },
+            {
+              label: "Certifications",
+              value: "ISO 4406 Cleanliness Standards",
+            },
+            { label: "Service Response", value: "24/7 Emergency Support" },
+          ],
         },
-        'pneumatic-systems': {
-          title: 'Pneumatic Systems',
-          description: 'Professional pneumatic system services for compressed air systems, actuators, and control valves. We provide installation, maintenance, and repair services for all pneumatic applications.',
-          image: 'assets/images/services/service1.jpg',
+        "pneumatic-systems": {
+          title: "Pneumatic Systems",
+          description:
+            "Professional pneumatic system services for compressed air systems, actuators, and control valves. We provide installation, maintenance, and repair services for all pneumatic applications.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Compressed air system design',
-            'Pneumatic actuator service',
-            'Air treatment equipment',
-            'Valve and fitting installation',
-            'System leak detection'
+            "Compressed air system design",
+            "Pneumatic actuator service",
+            "Air treatment equipment",
+            "Valve and fitting installation",
+            "System leak detection",
           ],
           benefits: [
-            'Energy efficient solutions',
-            'Reduced air consumption',
-            'Improved system performance',
-            'Lower operating costs',
-            'Preventive maintenance programs'
+            "Energy efficient solutions",
+            "Reduced air consumption",
+            "Improved system performance",
+            "Lower operating costs",
+            "Preventive maintenance programs",
           ],
           process: [
             {
-              title: 'Air System Analysis',
-              description: 'Complete analysis of compressed air system efficiency and performance.'
+              title: "Air System Analysis",
+              description:
+                "Complete analysis of compressed air system efficiency and performance.",
             },
             {
-              title: 'Component Service',
-              description: 'Service and maintenance of pneumatic components and actuators.'
+              title: "Component Service",
+              description:
+                "Service and maintenance of pneumatic components and actuators.",
             },
             {
-              title: 'System Optimization',
-              description: 'Optimization of air consumption and system efficiency.'
+              title: "System Optimization",
+              description:
+                "Optimization of air consumption and system efficiency.",
             },
             {
-              title: 'Performance Testing',
-              description: 'Testing and verification of system performance and reliability.'
-            }
+              title: "Performance Testing",
+              description:
+                "Testing and verification of system performance and reliability.",
+            },
           ],
           specifications: [
-            { label: 'Pressure Range', value: '80 - 250 PSI' },
-            { label: 'Air Quality', value: 'ISO 8573 Standards' },
-            { label: 'Actuator Types', value: 'Linear, Rotary, Multi-position' },
-            { label: 'Valve Types', value: 'Solenoid, Manual, Pilot' },
-            { label: 'Filtration', value: 'Particulate, Coalescing, Adsorption' },
-            { label: 'Monitoring', value: 'Pressure, Flow, Dewpoint' }
-          ]
+            { label: "Pressure Range", value: "80 - 250 PSI" },
+            { label: "Air Quality", value: "ISO 8573 Standards" },
+            {
+              label: "Actuator Types",
+              value: "Linear, Rotary, Multi-position",
+            },
+            { label: "Valve Types", value: "Solenoid, Manual, Pilot" },
+            {
+              label: "Filtration",
+              value: "Particulate, Coalescing, Adsorption",
+            },
+            { label: "Monitoring", value: "Pressure, Flow, Dewpoint" },
+          ],
         },
-        'navigation-equipment': {
-          title: 'Navigation Equipment',
-          description: 'Comprehensive navigation equipment services including GPS, radar, ECDIS, and communication systems. We provide installation, calibration, and maintenance for all marine navigation equipment.',
-          image: 'assets/images/services/service1.jpg',
+        "navigation-equipment": {
+          title: "Navigation Equipment",
+          description:
+            "Comprehensive navigation equipment services including GPS, radar, ECDIS, and communication systems. We provide installation, calibration, and maintenance for all marine navigation equipment.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'GPS system installation and service',
-            'Radar calibration and repair',
-            'ECDIS software updates',
-            'Communication equipment service',
-            'Compass adjustment and calibration'
+            "GPS system installation and service",
+            "Radar calibration and repair",
+            "ECDIS software updates",
+            "Communication equipment service",
+            "Compass adjustment and calibration",
           ],
           benefits: [
-            'Enhanced navigation safety',
-            'Regulatory compliance',
-            'Improved operational efficiency',
-            'Reduced navigation errors',
-            'Expert technical support'
+            "Enhanced navigation safety",
+            "Regulatory compliance",
+            "Improved operational efficiency",
+            "Reduced navigation errors",
+            "Expert technical support",
           ],
           process: [
             {
-              title: 'Equipment Assessment',
-              description: 'Comprehensive assessment of navigation equipment condition and performance.'
+              title: "Equipment Assessment",
+              description:
+                "Comprehensive assessment of navigation equipment condition and performance.",
             },
             {
-              title: 'Calibration & Testing',
-              description: 'Precision calibration and testing of navigation instruments.'
+              title: "Calibration & Testing",
+              description:
+                "Precision calibration and testing of navigation instruments.",
             },
             {
-              title: 'Software Updates',
-              description: 'Installation of latest software updates and chart corrections.'
+              title: "Software Updates",
+              description:
+                "Installation of latest software updates and chart corrections.",
             },
             {
-              title: 'Certification',
-              description: 'Certification and documentation for regulatory compliance.'
-            }
+              title: "Certification",
+              description:
+                "Certification and documentation for regulatory compliance.",
+            },
           ],
           specifications: [
-            { label: 'Equipment Types', value: 'GPS, Radar, ECDIS, AIS, VHF' },
-            { label: 'Standards', value: 'IMO, IEC, ITU Compliance' },
-            { label: 'Brands Serviced', value: 'Furuno, JRC, Sperry Marine' },
-            { label: 'Calibration', value: 'Factory Certified Procedures' },
-            { label: 'Documentation', value: 'Full Compliance Certificates' },
-            { label: 'Support', value: '24/7 Technical Assistance' }
-          ]
+            { label: "Equipment Types", value: "GPS, Radar, ECDIS, AIS, VHF" },
+            { label: "Standards", value: "IMO, IEC, ITU Compliance" },
+            { label: "Brands Serviced", value: "Furuno, JRC, Sperry Marine" },
+            { label: "Calibration", value: "Factory Certified Procedures" },
+            { label: "Documentation", value: "Full Compliance Certificates" },
+            { label: "Support", value: "24/7 Technical Assistance" },
+          ],
         },
-        'pipes-piping-systems': {
-          title: 'Pipes & Piping Systems',
-          description: 'Complete piping system services including design, installation, repair, and maintenance for marine and industrial applications. We handle all types of piping materials and systems.',
-          image: 'assets/images/services/service1.jpg',
+        "pipes-piping-systems": {
+          title: "Pipes & Piping Systems",
+          description:
+            "Complete piping system services including design, installation, repair, and maintenance for marine and industrial applications. We handle all types of piping materials and systems.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Piping system design and layout',
-            'Pipe installation and fitting',
-            'Leak detection and repair',
-            'Pipe insulation services',
-            'Pressure testing and certification'
+            "Piping system design and layout",
+            "Pipe installation and fitting",
+            "Leak detection and repair",
+            "Pipe insulation services",
+            "Pressure testing and certification",
           ],
           benefits: [
-            'Custom piping solutions',
-            'Quality materials and fittings',
-            'Code compliant installations',
-            'Leak-free systems',
-            'Extended system life'
+            "Custom piping solutions",
+            "Quality materials and fittings",
+            "Code compliant installations",
+            "Leak-free systems",
+            "Extended system life",
           ],
           process: [
             {
-              title: 'System Design',
-              description: 'Custom piping system design based on application requirements.'
+              title: "System Design",
+              description:
+                "Custom piping system design based on application requirements.",
             },
             {
-              title: 'Material Selection',
-              description: 'Selection of appropriate materials and fittings for the application.'
+              title: "Material Selection",
+              description:
+                "Selection of appropriate materials and fittings for the application.",
             },
             {
-              title: 'Installation',
-              description: 'Professional installation with proper support and routing.'
+              title: "Installation",
+              description:
+                "Professional installation with proper support and routing.",
             },
             {
-              title: 'Testing & Commissioning',
-              description: 'Pressure testing and system commissioning for safe operation.'
-            }
+              title: "Testing & Commissioning",
+              description:
+                "Pressure testing and system commissioning for safe operation.",
+            },
           ],
           specifications: [
-            { label: 'Materials', value: 'Steel, Stainless Steel, Copper, PVC' },
-            { label: 'Pipe Sizes', value: '1/2" to 48" Diameter' },
-            { label: 'Pressure Ratings', value: 'Up to 2500 PSI' },
-            { label: 'Standards', value: 'ASME B31.1, B31.3, B31.4' },
-            { label: 'Welding', value: 'ASME IX Certified Welders' },
-            { label: 'Testing', value: 'Hydrostatic, Pneumatic, NDT' }
-          ]
+            {
+              label: "Materials",
+              value: "Steel, Stainless Steel, Copper, PVC",
+            },
+            { label: "Pipe Sizes", value: '1/2" to 48" Diameter' },
+            { label: "Pressure Ratings", value: "Up to 2500 PSI" },
+            { label: "Standards", value: "ASME B31.1, B31.3, B31.4" },
+            { label: "Welding", value: "ASME IX Certified Welders" },
+            { label: "Testing", value: "Hydrostatic, Pneumatic, NDT" },
+          ],
         },
-        'painting-surface-preparation': {
-          title: 'Painting & Surface Preparation',
-          description: 'Professional painting and surface preparation services for marine and industrial applications. We provide complete coating solutions including surface preparation, primer, and finish coats.',
-          image: 'assets/images/services/service1.jpg',
+        "painting-surface-preparation": {
+          title: "Painting & Surface Preparation",
+          description:
+            "Professional painting and surface preparation services for marine and industrial applications. We provide complete coating solutions including surface preparation, primer, and finish coats.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Abrasive blasting services',
-            'Surface preparation and cleaning',
-            'Primer and coating application',
-            'Protective coating systems',
-            'Quality control and inspection'
+            "Abrasive blasting services",
+            "Surface preparation and cleaning",
+            "Primer and coating application",
+            "Protective coating systems",
+            "Quality control and inspection",
           ],
           benefits: [
-            'Extended asset life',
-            'Corrosion protection',
-            'Improved appearance',
-            'Environmental compliance',
-            'Cost-effective solutions'
+            "Extended asset life",
+            "Corrosion protection",
+            "Improved appearance",
+            "Environmental compliance",
+            "Cost-effective solutions",
           ],
           process: [
             {
-              title: 'Surface Assessment',
-              description: 'Assessment of surface condition and coating requirements.'
+              title: "Surface Assessment",
+              description:
+                "Assessment of surface condition and coating requirements.",
             },
             {
-              title: 'Surface Preparation',
-              description: 'Professional surface preparation including blasting and cleaning.'
+              title: "Surface Preparation",
+              description:
+                "Professional surface preparation including blasting and cleaning.",
             },
             {
-              title: 'Coating Application',
-              description: 'Application of primer and finish coats using proper techniques.'
+              title: "Coating Application",
+              description:
+                "Application of primer and finish coats using proper techniques.",
             },
             {
-              title: 'Quality Inspection',
-              description: 'Quality control inspection and coating thickness verification.'
-            }
+              title: "Quality Inspection",
+              description:
+                "Quality control inspection and coating thickness verification.",
+            },
           ],
           specifications: [
-            { label: 'Blast Media', value: 'Steel Grit, Garnet, Glass Beads' },
-            { label: 'Surface Prep', value: 'SSPC-SP6 to SP10 Standards' },
-            { label: 'Coating Types', value: 'Epoxy, Polyurethane, Zinc Rich' },
-            { label: 'Application Methods', value: 'Spray, Brush, Roller' },
-            { label: 'Thickness Control', value: 'Digital Thickness Gauges' },
-            { label: 'Environmental', value: 'VOC Compliant Coatings' }
-          ]
+            { label: "Blast Media", value: "Steel Grit, Garnet, Glass Beads" },
+            { label: "Surface Prep", value: "SSPC-SP6 to SP10 Standards" },
+            { label: "Coating Types", value: "Epoxy, Polyurethane, Zinc Rich" },
+            { label: "Application Methods", value: "Spray, Brush, Roller" },
+            { label: "Thickness Control", value: "Digital Thickness Gauges" },
+            { label: "Environmental", value: "VOC Compliant Coatings" },
+          ],
         },
-        'reconditioning-engine-parts': {
-          title: 'Reconditioning Engine Parts',
-          description: 'Expert reconditioning services for marine engine components including pistons, cylinders, crankshafts, and other critical engine parts. We restore components to OEM specifications.',
-          image: 'assets/images/services/service1.jpg',
+        "reconditioning-engine-parts": {
+          title: "Reconditioning Engine Parts",
+          description:
+            "Expert reconditioning services for marine engine components including pistons, cylinders, crankshafts, and other critical engine parts. We restore components to OEM specifications.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Cylinder head reconditioning',
-            'Piston and ring replacement',
-            'Crankshaft grinding and balancing',
-            'Valve seat cutting and grinding',
-            'Engine block machining'
+            "Cylinder head reconditioning",
+            "Piston and ring replacement",
+            "Crankshaft grinding and balancing",
+            "Valve seat cutting and grinding",
+            "Engine block machining",
           ],
           benefits: [
-            'Cost-effective alternative to new parts',
-            'OEM specification restoration',
-            'Extended engine life',
-            'Improved performance',
-            'Warranty on reconditioned parts'
+            "Cost-effective alternative to new parts",
+            "OEM specification restoration",
+            "Extended engine life",
+            "Improved performance",
+            "Warranty on reconditioned parts",
           ],
           process: [
             {
-              title: 'Component Inspection',
-              description: 'Detailed inspection and assessment of engine component condition.'
+              title: "Component Inspection",
+              description:
+                "Detailed inspection and assessment of engine component condition.",
             },
             {
-              title: 'Machining & Repair',
-              description: 'Precision machining and repair to restore original specifications.'
+              title: "Machining & Repair",
+              description:
+                "Precision machining and repair to restore original specifications.",
             },
             {
-              title: 'Quality Testing',
-              description: 'Comprehensive testing to ensure component meets OEM standards.'
+              title: "Quality Testing",
+              description:
+                "Comprehensive testing to ensure component meets OEM standards.",
             },
             {
-              title: 'Assembly & Delivery',
-              description: 'Professional assembly and delivery with warranty coverage.'
-            }
+              title: "Assembly & Delivery",
+              description:
+                "Professional assembly and delivery with warranty coverage.",
+            },
           ],
           specifications: [
-            { label: 'Engine Types', value: 'Diesel, Gas, Marine Engines' },
-            { label: 'Machining Tolerance', value: '±0.001" Precision' },
-            { label: 'Testing Equipment', value: 'CMM, Surface Roughness' },
-            { label: 'Materials', value: 'OEM Equivalent Components' },
-            { label: 'Warranty', value: '12 Month Parts Warranty' },
-            { label: 'Turnaround', value: '5-10 Business Days' }
-          ]
+            { label: "Engine Types", value: "Diesel, Gas, Marine Engines" },
+            { label: "Machining Tolerance", value: '±0.001" Precision' },
+            { label: "Testing Equipment", value: "CMM, Surface Roughness" },
+            { label: "Materials", value: "OEM Equivalent Components" },
+            { label: "Warranty", value: "12 Month Parts Warranty" },
+            { label: "Turnaround", value: "5-10 Business Days" },
+          ],
         },
-        'diving-underwater-services': {
-          title: 'Diving & Underwater Services',
-          description: 'Professional commercial diving and underwater services for marine construction, inspection, and repair. Our certified divers provide safe and efficient underwater solutions.',
-          image: 'assets/images/services/service1.jpg',
+        "diving-underwater-services": {
+          title: "Diving & Underwater Services",
+          description:
+            "Professional commercial diving and underwater services for marine construction, inspection, and repair. Our certified divers provide safe and efficient underwater solutions.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Underwater hull inspection',
-            'Propeller and rudder repair',
-            'Underwater welding and cutting',
-            'Salvage and recovery operations',
-            'Marine growth removal'
+            "Underwater hull inspection",
+            "Propeller and rudder repair",
+            "Underwater welding and cutting",
+            "Salvage and recovery operations",
+            "Marine growth removal",
           ],
           benefits: [
-            'Certified commercial divers',
-            'Advanced diving equipment',
-            'Safety-first approach',
-            'Reduced dry dock time',
-            'Emergency response capability'
+            "Certified commercial divers",
+            "Advanced diving equipment",
+            "Safety-first approach",
+            "Reduced dry dock time",
+            "Emergency response capability",
           ],
           process: [
             {
-              title: 'Dive Planning',
-              description: 'Comprehensive dive planning and safety assessment.'
+              title: "Dive Planning",
+              description: "Comprehensive dive planning and safety assessment.",
             },
             {
-              title: 'Underwater Inspection',
-              description: 'Detailed underwater inspection and documentation.'
+              title: "Underwater Inspection",
+              description: "Detailed underwater inspection and documentation.",
             },
             {
-              title: 'Repair Operations',
-              description: 'Professional underwater repair and maintenance work.'
+              title: "Repair Operations",
+              description:
+                "Professional underwater repair and maintenance work.",
             },
             {
-              title: 'Quality Verification',
-              description: 'Post-work inspection and quality verification.'
-            }
+              title: "Quality Verification",
+              description: "Post-work inspection and quality verification.",
+            },
           ],
           specifications: [
-            { label: 'Diving Depth', value: 'Up to 200 feet' },
-            { label: 'Certifications', value: 'ADCI, IMCA Certified' },
-            { label: 'Equipment', value: 'Surface Supply, Mixed Gas' },
-            { label: 'Welding', value: 'Underwater Wet/Dry Welding' },
-            { label: 'Safety', value: 'Full Dive Team Support' },
-            { label: 'Documentation', value: 'Video/Photo Reports' }
-          ]
+            { label: "Diving Depth", value: "Up to 200 feet" },
+            { label: "Certifications", value: "ADCI, IMCA Certified" },
+            { label: "Equipment", value: "Surface Supply, Mixed Gas" },
+            { label: "Welding", value: "Underwater Wet/Dry Welding" },
+            { label: "Safety", value: "Full Dive Team Support" },
+            { label: "Documentation", value: "Video/Photo Reports" },
+          ],
         },
-        'insulation-lagging': {
-          title: 'Insulation & Lagging',
-          description: 'Professional insulation and lagging services for marine and industrial applications. We provide thermal insulation, acoustic insulation, and protective lagging systems.',
-          image: 'assets/images/services/service1.jpg',
+        "insulation-lagging": {
+          title: "Insulation & Lagging",
+          description:
+            "Professional insulation and lagging services for marine and industrial applications. We provide thermal insulation, acoustic insulation, and protective lagging systems.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Thermal insulation installation',
-            'Acoustic insulation systems',
-            'Pipe and equipment lagging',
-            'Fire-resistant insulation',
-            'Removable insulation covers'
+            "Thermal insulation installation",
+            "Acoustic insulation systems",
+            "Pipe and equipment lagging",
+            "Fire-resistant insulation",
+            "Removable insulation covers",
           ],
           benefits: [
-            'Energy efficiency improvement',
-            'Temperature control',
-            'Noise reduction',
-            'Fire protection',
-            'Condensation prevention'
+            "Energy efficiency improvement",
+            "Temperature control",
+            "Noise reduction",
+            "Fire protection",
+            "Condensation prevention",
           ],
           process: [
             {
-              title: 'Thermal Analysis',
-              description: 'Analysis of thermal requirements and insulation specifications.'
+              title: "Thermal Analysis",
+              description:
+                "Analysis of thermal requirements and insulation specifications.",
             },
             {
-              title: 'Material Selection',
-              description: 'Selection of appropriate insulation materials for the application.'
+              title: "Material Selection",
+              description:
+                "Selection of appropriate insulation materials for the application.",
             },
             {
-              title: 'Installation',
-              description: 'Professional installation of insulation and protective covering.'
+              title: "Installation",
+              description:
+                "Professional installation of insulation and protective covering.",
             },
             {
-              title: 'Performance Testing',
-              description: 'Testing and verification of insulation performance.'
-            }
+              title: "Performance Testing",
+              description:
+                "Testing and verification of insulation performance.",
+            },
           ],
           specifications: [
-            { label: 'Materials', value: 'Mineral Wool, Ceramic Fiber, Foam' },
-            { label: 'Temperature Range', value: '-200°F to 2000°F' },
-            { label: 'Thickness', value: '1" to 6" Standard' },
-            { label: 'Cladding', value: 'Aluminum, Stainless Steel' },
-            { label: 'Fire Rating', value: 'A1, A2 Non-Combustible' },
-            { label: 'Standards', value: 'ASTM, IMO SOLAS Compliant' }
-          ]
+            { label: "Materials", value: "Mineral Wool, Ceramic Fiber, Foam" },
+            { label: "Temperature Range", value: "-200°F to 2000°F" },
+            { label: "Thickness", value: '1" to 6" Standard' },
+            { label: "Cladding", value: "Aluminum, Stainless Steel" },
+            { label: "Fire Rating", value: "A1, A2 Non-Combustible" },
+            { label: "Standards", value: "ASTM, IMO SOLAS Compliant" },
+          ],
         },
-        'accommodation-sanitary': {
-          title: 'Accommodation & Sanitary Works',
-          description: 'Complete accommodation and sanitary system services for marine vessels including cabin refurbishment, plumbing, and sanitary equipment installation and repair.',
-          image: 'assets/images/services/service1.jpg',
+        "accommodation-sanitary": {
+          title: "Accommodation & Sanitary Works",
+          description:
+            "Complete accommodation and sanitary system services for marine vessels including cabin refurbishment, plumbing, and sanitary equipment installation and repair.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Cabin refurbishment and renovation',
-            'Plumbing system installation',
-            'Sanitary equipment repair',
-            'Water system maintenance',
-            'Waste management systems'
+            "Cabin refurbishment and renovation",
+            "Plumbing system installation",
+            "Sanitary equipment repair",
+            "Water system maintenance",
+            "Waste management systems",
           ],
           benefits: [
-            'Improved crew comfort',
-            'Regulatory compliance',
-            'Hygienic conditions',
-            'Water conservation',
-            'Modern amenities'
+            "Improved crew comfort",
+            "Regulatory compliance",
+            "Hygienic conditions",
+            "Water conservation",
+            "Modern amenities",
           ],
           process: [
             {
-              title: 'Space Assessment',
-              description: 'Assessment of accommodation spaces and sanitary requirements.'
+              title: "Space Assessment",
+              description:
+                "Assessment of accommodation spaces and sanitary requirements.",
             },
             {
-              title: 'Design & Planning',
-              description: 'Design and planning of accommodation and sanitary improvements.'
+              title: "Design & Planning",
+              description:
+                "Design and planning of accommodation and sanitary improvements.",
             },
             {
-              title: 'Installation & Renovation',
-              description: 'Professional installation and renovation work.'
+              title: "Installation & Renovation",
+              description: "Professional installation and renovation work.",
             },
             {
-              title: 'Testing & Commissioning',
-              description: 'System testing and commissioning for proper operation.'
-            }
+              title: "Testing & Commissioning",
+              description:
+                "System testing and commissioning for proper operation.",
+            },
           ],
           specifications: [
-            { label: 'Cabin Types', value: 'Officer, Crew, Guest Cabins' },
-            { label: 'Plumbing', value: 'Fresh Water, Grey Water, Black Water' },
-            { label: 'Fixtures', value: 'Marine Grade Sanitary Ware' },
-            { label: 'Standards', value: 'IMO, Flag State Requirements' },
-            { label: 'Materials', value: 'Corrosion Resistant, Fire Safe' },
-            { label: 'Ventilation', value: 'HVAC Integration Available' }
-          ]
+            { label: "Cabin Types", value: "Officer, Crew, Guest Cabins" },
+            {
+              label: "Plumbing",
+              value: "Fresh Water, Grey Water, Black Water",
+            },
+            { label: "Fixtures", value: "Marine Grade Sanitary Ware" },
+            { label: "Standards", value: "IMO, Flag State Requirements" },
+            { label: "Materials", value: "Corrosion Resistant, Fire Safe" },
+            { label: "Ventilation", value: "HVAC Integration Available" },
+          ],
         },
-        'bwts': {
-          title: 'BWTS (Ballast Water Treatment Systems)',
-          description: 'Ballast Water Treatment System installation, commissioning, and maintenance services. We ensure compliance with IMO BWM Convention requirements for all vessel types.',
-          image: 'assets/images/services/service1.jpg',
+        bwts: {
+          title: "BWTS (Ballast Water Treatment Systems)",
+          description:
+            "Ballast Water Treatment System installation, commissioning, and maintenance services. We ensure compliance with IMO BWM Convention requirements for all vessel types.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'BWTS system installation',
-            'Commissioning and testing',
-            'Maintenance and service',
-            'Compliance documentation',
-            'Crew training programs'
+            "BWTS system installation",
+            "Commissioning and testing",
+            "Maintenance and service",
+            "Compliance documentation",
+            "Crew training programs",
           ],
           benefits: [
-            'IMO BWM Convention compliance',
-            'Environmental protection',
-            'Regulatory approval',
-            'Operational efficiency',
-            'Technical support'
+            "IMO BWM Convention compliance",
+            "Environmental protection",
+            "Regulatory approval",
+            "Operational efficiency",
+            "Technical support",
           ],
           process: [
             {
-              title: 'System Selection',
-              description: 'Selection of appropriate BWTS based on vessel requirements.'
+              title: "System Selection",
+              description:
+                "Selection of appropriate BWTS based on vessel requirements.",
             },
             {
-              title: 'Installation Planning',
-              description: 'Detailed installation planning and engineering design.'
+              title: "Installation Planning",
+              description:
+                "Detailed installation planning and engineering design.",
             },
             {
-              title: 'Installation & Integration',
-              description: 'Professional installation and system integration.'
+              title: "Installation & Integration",
+              description: "Professional installation and system integration.",
             },
             {
-              title: 'Commissioning & Certification',
-              description: 'System commissioning and regulatory certification.'
-            }
+              title: "Commissioning & Certification",
+              description: "System commissioning and regulatory certification.",
+            },
           ],
           specifications: [
-            { label: 'System Types', value: 'UV, Electrochlorination, Ozone' },
-            { label: 'Capacity Range', value: '50 - 5000 m³/h' },
-            { label: 'Compliance', value: 'IMO BWM Convention' },
-            { label: 'Certification', value: 'Type Approval Certificate' },
-            { label: 'Monitoring', value: 'Automated Control Systems' },
-            { label: 'Maintenance', value: 'Scheduled Service Programs' }
-          ]
+            { label: "System Types", value: "UV, Electrochlorination, Ozone" },
+            { label: "Capacity Range", value: "50 - 5000 m³/h" },
+            { label: "Compliance", value: "IMO BWM Convention" },
+            { label: "Certification", value: "Type Approval Certificate" },
+            { label: "Monitoring", value: "Automated Control Systems" },
+            { label: "Maintenance", value: "Scheduled Service Programs" },
+          ],
         },
-        'egcs': {
-          title: 'EGCS (Exhaust Gas Cleaning Systems)',
-          description: 'Exhaust Gas Cleaning System (Scrubber) installation, maintenance, and compliance services. We ensure SOx emission compliance with IMO 2020 sulfur regulations.',
-          image: 'assets/images/services/service1.jpg',
+        egcs: {
+          title: "EGCS (Exhaust Gas Cleaning Systems)",
+          description:
+            "Exhaust Gas Cleaning System (Scrubber) installation, maintenance, and compliance services. We ensure SOx emission compliance with IMO 2020 sulfur regulations.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Scrubber system installation',
-            'Open/closed loop systems',
-            'Maintenance and service',
-            'Compliance monitoring',
-            'Water treatment systems'
+            "Scrubber system installation",
+            "Open/closed loop systems",
+            "Maintenance and service",
+            "Compliance monitoring",
+            "Water treatment systems",
           ],
           benefits: [
-            'IMO 2020 compliance',
-            'Fuel cost savings',
-            'Environmental compliance',
-            'Operational flexibility',
-            'Technical expertise'
+            "IMO 2020 compliance",
+            "Fuel cost savings",
+            "Environmental compliance",
+            "Operational flexibility",
+            "Technical expertise",
           ],
           process: [
             {
-              title: 'Feasibility Study',
-              description: 'Technical and economic feasibility study for scrubber installation.'
+              title: "Feasibility Study",
+              description:
+                "Technical and economic feasibility study for scrubber installation.",
             },
             {
-              title: 'System Design',
-              description: 'Custom system design and engineering for vessel integration.'
+              title: "System Design",
+              description:
+                "Custom system design and engineering for vessel integration.",
             },
             {
-              title: 'Installation',
-              description: 'Professional installation and system commissioning.'
+              title: "Installation",
+              description:
+                "Professional installation and system commissioning.",
             },
             {
-              title: 'Compliance Testing',
-              description: 'Emission testing and regulatory compliance verification.'
-            }
+              title: "Compliance Testing",
+              description:
+                "Emission testing and regulatory compliance verification.",
+            },
           ],
           specifications: [
-            { label: 'System Types', value: 'Open Loop, Closed Loop, Hybrid' },
-            { label: 'Engine Power', value: '1 MW to 50+ MW' },
-            { label: 'Compliance', value: 'IMO MARPOL Annex VI' },
-            { label: 'Efficiency', value: '>98% SOx Removal' },
-            { label: 'Monitoring', value: 'Continuous Emission Monitoring' },
-            { label: 'Certification', value: 'Type Approval & EIAPP' }
-          ]
+            { label: "System Types", value: "Open Loop, Closed Loop, Hybrid" },
+            { label: "Engine Power", value: "1 MW to 50+ MW" },
+            { label: "Compliance", value: "IMO MARPOL Annex VI" },
+            { label: "Efficiency", value: ">98% SOx Removal" },
+            { label: "Monitoring", value: "Continuous Emission Monitoring" },
+            { label: "Certification", value: "Type Approval & EIAPP" },
+          ],
         },
-        'anchor-windlass-winches': {
-          title: 'Anchor & Windlass Winches',
-          description: 'Complete overhaul, brake system repair, and load testing of mooring and anchor equipment. OEM parts sourcing for reliability and performance.',
-          image: 'assets/images/services/service1.jpg',
+        "anchor-windlass-winches": {
+          title: "Anchor & Windlass Winches",
+          description:
+            "Complete overhaul, brake system repair, and load testing of mooring and anchor equipment. OEM parts sourcing for reliability and performance.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Windlass overhaul and repair',
-            'Brake system maintenance',
-            'Chain and anchor inspection',
-            'Load testing services',
-            'Motor and gearbox service'
+            "Windlass overhaul and repair",
+            "Brake system maintenance",
+            "Chain and anchor inspection",
+            "Load testing services",
+            "Motor and gearbox service",
           ],
           benefits: [
-            'Reliable anchoring systems',
-            'Enhanced safety',
-            'Reduced maintenance costs',
-            'Extended equipment life',
-            'OEM parts availability'
+            "Reliable anchoring systems",
+            "Enhanced safety",
+            "Reduced maintenance costs",
+            "Extended equipment life",
+            "OEM parts availability",
           ],
           process: [
             {
-              title: 'Equipment Inspection',
-              description: 'Comprehensive inspection of windlass and anchor equipment.'
+              title: "Equipment Inspection",
+              description:
+                "Comprehensive inspection of windlass and anchor equipment.",
             },
             {
-              title: 'Component Service',
-              description: 'Service and repair of motors, gearboxes, and brake systems.'
+              title: "Component Service",
+              description:
+                "Service and repair of motors, gearboxes, and brake systems.",
             },
             {
-              title: 'Load Testing',
-              description: 'Load testing to verify safe working load capacity.'
+              title: "Load Testing",
+              description: "Load testing to verify safe working load capacity.",
             },
             {
-              title: 'Certification',
-              description: 'Certification and documentation for regulatory compliance.'
-            }
+              title: "Certification",
+              description:
+                "Certification and documentation for regulatory compliance.",
+            },
           ],
           specifications: [
-            { label: 'Windlass Types', value: 'Electric, Hydraulic, Manual' },
-            { label: 'Load Capacity', value: '1 ton to 50+ tons' },
-            { label: 'Chain Sizes', value: '12mm to 120mm diameter' },
-            { label: 'Testing', value: '125% SWL Load Testing' },
-            { label: 'Standards', value: 'ABS, DNV, LR Classification' },
-            { label: 'Parts', value: 'OEM and Approved Equivalent' }
-          ]
+            { label: "Windlass Types", value: "Electric, Hydraulic, Manual" },
+            { label: "Load Capacity", value: "1 ton to 50+ tons" },
+            { label: "Chain Sizes", value: "12mm to 120mm diameter" },
+            { label: "Testing", value: "125% SWL Load Testing" },
+            { label: "Standards", value: "ABS, DNV, LR Classification" },
+            { label: "Parts", value: "OEM and Approved Equivalent" },
+          ],
         },
-        'auxiliary-machinery-pumps': {
-          title: 'Auxiliary Machinery – Pumps Division',
-          description: 'Overhaul, seal replacement, and performance testing for cargo, ballast, bilge, and fire pumps. Flow and pressure calibration to OEM specifications.',
-          image: 'assets/images/services/service1.jpg',
+        "auxiliary-machinery-pumps": {
+          title: "Auxiliary Machinery – Pumps Division",
+          description:
+            "Overhaul, seal replacement, and performance testing for cargo, ballast, bilge, and fire pumps. Flow and pressure calibration to OEM specifications.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Centrifugal pump overhaul',
-            'Seal and bearing replacement',
-            'Impeller balancing',
-            'Performance testing',
-            'Alignment and coupling service'
+            "Centrifugal pump overhaul",
+            "Seal and bearing replacement",
+            "Impeller balancing",
+            "Performance testing",
+            "Alignment and coupling service",
           ],
           benefits: [
-            'Improved pump efficiency',
-            'Reduced energy consumption',
-            'Extended pump life',
-            'Reliable operation',
-            'OEM specification compliance'
+            "Improved pump efficiency",
+            "Reduced energy consumption",
+            "Extended pump life",
+            "Reliable operation",
+            "OEM specification compliance",
           ],
           process: [
             {
-              title: 'Pump Assessment',
-              description: 'Complete assessment of pump condition and performance.'
+              title: "Pump Assessment",
+              description:
+                "Complete assessment of pump condition and performance.",
             },
             {
-              title: 'Disassembly & Inspection',
-              description: 'Careful disassembly and detailed component inspection.'
+              title: "Disassembly & Inspection",
+              description:
+                "Careful disassembly and detailed component inspection.",
             },
             {
-              title: 'Repair & Rebuild',
-              description: 'Professional repair and rebuilding to OEM standards.'
+              title: "Repair & Rebuild",
+              description:
+                "Professional repair and rebuilding to OEM standards.",
             },
             {
-              title: 'Testing & Commissioning',
-              description: 'Performance testing and system commissioning.'
-            }
+              title: "Testing & Commissioning",
+              description: "Performance testing and system commissioning.",
+            },
           ],
           specifications: [
-            { label: 'Pump Types', value: 'Centrifugal, Positive Displacement' },
-            { label: 'Flow Range', value: '10 GPM to 10,000 GPM' },
-            { label: 'Head Range', value: '10 ft to 1000 ft' },
-            { label: 'Materials', value: 'Cast Iron, Bronze, Stainless Steel' },
-            { label: 'Testing', value: 'Flow, Pressure, Efficiency' },
-            { label: 'Standards', value: 'API 610, ISO 5199' }
-          ]
+            {
+              label: "Pump Types",
+              value: "Centrifugal, Positive Displacement",
+            },
+            { label: "Flow Range", value: "10 GPM to 10,000 GPM" },
+            { label: "Head Range", value: "10 ft to 1000 ft" },
+            { label: "Materials", value: "Cast Iron, Bronze, Stainless Steel" },
+            { label: "Testing", value: "Flow, Pressure, Efficiency" },
+            { label: "Standards", value: "API 610, ISO 5199" },
+          ],
         },
-        'auxiliary-machinery-purifiers': {
-          title: 'Auxiliary Machinery – Purifiers & Separators',
-          description: 'Servicing of fuel and lube oil purifiers. Bowl balancing, spindle renewal, and automation checks. Ensures clean fuel supply and engine protection.',
-          image: 'assets/images/services/service1.jpg',
+        "auxiliary-machinery-purifiers": {
+          title: "Auxiliary Machinery – Purifiers & Separators",
+          description:
+            "Servicing of fuel and lube oil purifiers. Bowl balancing, spindle renewal, and automation checks. Ensures clean fuel supply and engine protection.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Centrifuge overhaul',
-            'Bowl balancing service',
-            'Spindle and bearing replacement',
-            'Automation system service',
-            'Performance optimization'
+            "Centrifuge overhaul",
+            "Bowl balancing service",
+            "Spindle and bearing replacement",
+            "Automation system service",
+            "Performance optimization",
           ],
           benefits: [
-            'Clean fuel and oil supply',
-            'Engine protection',
-            'Improved separation efficiency',
-            'Reduced maintenance costs',
-            'Extended equipment life'
+            "Clean fuel and oil supply",
+            "Engine protection",
+            "Improved separation efficiency",
+            "Reduced maintenance costs",
+            "Extended equipment life",
           ],
           process: [
             {
-              title: 'Purifier Inspection',
-              description: 'Detailed inspection of purifier condition and performance.'
+              title: "Purifier Inspection",
+              description:
+                "Detailed inspection of purifier condition and performance.",
             },
             {
-              title: 'Component Service',
-              description: 'Service of bowl, spindle, and drive components.'
+              title: "Component Service",
+              description: "Service of bowl, spindle, and drive components.",
             },
             {
-              title: 'Balancing & Testing',
-              description: 'Precision balancing and performance testing.'
+              title: "Balancing & Testing",
+              description: "Precision balancing and performance testing.",
             },
             {
-              title: 'Automation Check',
-              description: 'Automation system check and calibration.'
-            }
+              title: "Automation Check",
+              description: "Automation system check and calibration.",
+            },
           ],
           specifications: [
-            { label: 'Purifier Types', value: 'Fuel Oil, Lube Oil, Bilge Water' },
-            { label: 'Capacity Range', value: '500 L/h to 10,000 L/h' },
-            { label: 'Brands Serviced', value: 'Alfa Laval, Mitsubishi, GEA' },
-            { label: 'Balancing', value: 'Dynamic Balancing Equipment' },
-            { label: 'Automation', value: 'PLC and Control System Service' },
-            { label: 'Testing', value: 'Separation Efficiency Testing' }
-          ]
+            {
+              label: "Purifier Types",
+              value: "Fuel Oil, Lube Oil, Bilge Water",
+            },
+            { label: "Capacity Range", value: "500 L/h to 10,000 L/h" },
+            { label: "Brands Serviced", value: "Alfa Laval, Mitsubishi, GEA" },
+            { label: "Balancing", value: "Dynamic Balancing Equipment" },
+            { label: "Automation", value: "PLC and Control System Service" },
+            { label: "Testing", value: "Separation Efficiency Testing" },
+          ],
         },
-        'ac-refrigeration': {
-          title: 'AC & Refrigeration',
-          description: 'Complete air conditioning and refrigeration services for marine and industrial applications. We provide installation, maintenance, and repair of HVAC systems.',
-          image: 'assets/images/services/service1.jpg',
+        "ac-refrigeration": {
+          title: "AC & Refrigeration",
+          description:
+            "Complete air conditioning and refrigeration services for marine and industrial applications. We provide installation, maintenance, and repair of HVAC systems.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'HVAC system installation',
-            'Refrigeration unit service',
-            'Compressor overhaul',
-            'Ductwork installation',
-            'Temperature control systems'
+            "HVAC system installation",
+            "Refrigeration unit service",
+            "Compressor overhaul",
+            "Ductwork installation",
+            "Temperature control systems",
           ],
           benefits: [
-            'Comfortable working environment',
-            'Energy efficient systems',
-            'Reliable temperature control',
-            'Improved air quality',
-            'Reduced operating costs'
+            "Comfortable working environment",
+            "Energy efficient systems",
+            "Reliable temperature control",
+            "Improved air quality",
+            "Reduced operating costs",
           ],
           process: [
             {
-              title: 'System Assessment',
-              description: 'Assessment of HVAC and refrigeration system requirements.'
+              title: "System Assessment",
+              description:
+                "Assessment of HVAC and refrigeration system requirements.",
             },
             {
-              title: 'Design & Planning',
-              description: 'System design and installation planning.'
+              title: "Design & Planning",
+              description: "System design and installation planning.",
             },
             {
-              title: 'Installation',
-              description: 'Professional installation of equipment and ductwork.'
+              title: "Installation",
+              description:
+                "Professional installation of equipment and ductwork.",
             },
             {
-              title: 'Commissioning',
-              description: 'System commissioning and performance testing.'
-            }
+              title: "Commissioning",
+              description: "System commissioning and performance testing.",
+            },
           ],
           specifications: [
-            { label: 'System Types', value: 'Split, Central, Package Units' },
-            { label: 'Capacity Range', value: '1 TR to 500 TR' },
-            { label: 'Refrigerants', value: 'R134a, R410A, R404A' },
-            { label: 'Controls', value: 'Digital, Programmable Thermostats' },
-            { label: 'Efficiency', value: 'High SEER Rating Systems' },
-            { label: 'Maintenance', value: 'Preventive Maintenance Programs' }
-          ]
+            { label: "System Types", value: "Split, Central, Package Units" },
+            { label: "Capacity Range", value: "1 TR to 500 TR" },
+            { label: "Refrigerants", value: "R134a, R410A, R404A" },
+            { label: "Controls", value: "Digital, Programmable Thermostats" },
+            { label: "Efficiency", value: "High SEER Rating Systems" },
+            { label: "Maintenance", value: "Preventive Maintenance Programs" },
+          ],
         },
-        'instrumentation': {
-          title: 'Instrumentation',
-          description: 'Professional instrumentation services including calibration, installation, and maintenance of measuring and control instruments for marine and industrial applications.',
-          image: 'assets/images/services/service1.jpg',
+        instrumentation: {
+          title: "Instrumentation",
+          description:
+            "Professional instrumentation services including calibration, installation, and maintenance of measuring and control instruments for marine and industrial applications.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Instrument calibration',
-            'Sensor installation',
-            'Control loop testing',
-            'Data acquisition systems',
-            'Safety instrumented systems'
+            "Instrument calibration",
+            "Sensor installation",
+            "Control loop testing",
+            "Data acquisition systems",
+            "Safety instrumented systems",
           ],
           benefits: [
-            'Accurate measurements',
-            'Process optimization',
-            'Safety compliance',
-            'Regulatory compliance',
-            'Improved efficiency'
+            "Accurate measurements",
+            "Process optimization",
+            "Safety compliance",
+            "Regulatory compliance",
+            "Improved efficiency",
           ],
           process: [
             {
-              title: 'Instrument Survey',
-              description: 'Survey of existing instrumentation and calibration requirements.'
+              title: "Instrument Survey",
+              description:
+                "Survey of existing instrumentation and calibration requirements.",
             },
             {
-              title: 'Calibration',
-              description: 'Precision calibration using certified reference standards.'
+              title: "Calibration",
+              description:
+                "Precision calibration using certified reference standards.",
             },
             {
-              title: 'Installation',
-              description: 'Professional installation of new instruments and sensors.'
+              title: "Installation",
+              description:
+                "Professional installation of new instruments and sensors.",
             },
             {
-              title: 'Documentation',
-              description: 'Complete calibration certificates and documentation.'
-            }
+              title: "Documentation",
+              description:
+                "Complete calibration certificates and documentation.",
+            },
           ],
           specifications: [
-            { label: 'Instrument Types', value: 'Pressure, Temperature, Flow, Level' },
-            { label: 'Accuracy', value: '±0.1% to ±0.01% of Reading' },
-            { label: 'Standards', value: 'NIST Traceable Calibration' },
-            { label: 'Communication', value: '4-20mA, HART, Fieldbus' },
-            { label: 'Certification', value: 'ISO 17025 Accredited Lab' },
-            { label: 'Documentation', value: 'Digital Calibration Certificates' }
-          ]
+            {
+              label: "Instrument Types",
+              value: "Pressure, Temperature, Flow, Level",
+            },
+            { label: "Accuracy", value: "±0.1% to ±0.01% of Reading" },
+            { label: "Standards", value: "NIST Traceable Calibration" },
+            { label: "Communication", value: "4-20mA, HART, Fieldbus" },
+            { label: "Certification", value: "ISO 17025 Accredited Lab" },
+            {
+              label: "Documentation",
+              value: "Digital Calibration Certificates",
+            },
+          ],
         },
-        'tank-cleaning': {
-          title: 'Tank Cleaning',
-          description: 'Professional tank cleaning services for cargo tanks, fuel tanks, and storage vessels. We provide safe and efficient cleaning using specialized equipment and procedures.',
-          image: 'assets/images/services/service1.jpg',
+        "tank-cleaning": {
+          title: "Tank Cleaning",
+          description:
+            "Professional tank cleaning services for cargo tanks, fuel tanks, and storage vessels. We provide safe and efficient cleaning using specialized equipment and procedures.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Cargo tank cleaning',
-            'Fuel tank cleaning',
-            'Chemical tank cleaning',
-            'Tank inspection services',
-            'Waste disposal management'
+            "Cargo tank cleaning",
+            "Fuel tank cleaning",
+            "Chemical tank cleaning",
+            "Tank inspection services",
+            "Waste disposal management",
           ],
           benefits: [
-            'Safe cleaning procedures',
-            'Environmental compliance',
-            'Contamination removal',
-            'Tank inspection capability',
-            'Waste management services'
+            "Safe cleaning procedures",
+            "Environmental compliance",
+            "Contamination removal",
+            "Tank inspection capability",
+            "Waste management services",
           ],
           process: [
             {
-              title: 'Tank Assessment',
-              description: 'Assessment of tank condition and cleaning requirements.'
+              title: "Tank Assessment",
+              description:
+                "Assessment of tank condition and cleaning requirements.",
             },
             {
-              title: 'Safety Planning',
-              description: 'Comprehensive safety planning and risk assessment.'
+              title: "Safety Planning",
+              description: "Comprehensive safety planning and risk assessment.",
             },
             {
-              title: 'Cleaning Operations',
-              description: 'Professional cleaning using appropriate methods and equipment.'
+              title: "Cleaning Operations",
+              description:
+                "Professional cleaning using appropriate methods and equipment.",
             },
             {
-              title: 'Inspection & Certification',
-              description: 'Post-cleaning inspection and certification.'
-            }
+              title: "Inspection & Certification",
+              description: "Post-cleaning inspection and certification.",
+            },
           ],
           specifications: [
-            { label: 'Tank Types', value: 'Cargo, Fuel, Ballast, Fresh Water' },
-            { label: 'Cleaning Methods', value: 'High Pressure, Chemical, Steam' },
-            { label: 'Safety', value: 'Confined Space Entry Certified' },
-            { label: 'Waste Management', value: 'Licensed Waste Disposal' },
-            { label: 'Inspection', value: 'Visual, NDT, Gas Testing' },
-            { label: 'Certification', value: 'Tank Cleanliness Certificates' }
-          ]
+            { label: "Tank Types", value: "Cargo, Fuel, Ballast, Fresh Water" },
+            {
+              label: "Cleaning Methods",
+              value: "High Pressure, Chemical, Steam",
+            },
+            { label: "Safety", value: "Confined Space Entry Certified" },
+            { label: "Waste Management", value: "Licensed Waste Disposal" },
+            { label: "Inspection", value: "Visual, NDT, Gas Testing" },
+            { label: "Certification", value: "Tank Cleanliness Certificates" },
+          ],
         },
-        'fire-safety-systems': {
-          title: 'Fire & Safety Systems',
-          description: 'Complete fire and safety system services including installation, testing, and maintenance of fire detection, suppression, and emergency systems.',
-          image: 'assets/images/services/service1.jpg',
+        "fire-safety-systems": {
+          title: "Fire & Safety Systems",
+          description:
+            "Complete fire and safety system services including installation, testing, and maintenance of fire detection, suppression, and emergency systems.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Fire detection system installation',
-            'Suppression system service',
-            'Emergency lighting systems',
-            'Safety equipment inspection',
-            'Compliance testing'
+            "Fire detection system installation",
+            "Suppression system service",
+            "Emergency lighting systems",
+            "Safety equipment inspection",
+            "Compliance testing",
           ],
           benefits: [
-            'Life safety protection',
-            'Property protection',
-            'Regulatory compliance',
-            'Insurance compliance',
-            'Peace of mind'
+            "Life safety protection",
+            "Property protection",
+            "Regulatory compliance",
+            "Insurance compliance",
+            "Peace of mind",
           ],
           process: [
             {
-              title: 'Safety Assessment',
-              description: 'Comprehensive fire and safety system assessment.'
+              title: "Safety Assessment",
+              description: "Comprehensive fire and safety system assessment.",
             },
             {
-              title: 'System Design',
-              description: 'Design of fire detection and suppression systems.'
+              title: "System Design",
+              description: "Design of fire detection and suppression systems.",
             },
             {
-              title: 'Installation',
-              description: 'Professional installation of safety systems.'
+              title: "Installation",
+              description: "Professional installation of safety systems.",
             },
             {
-              title: 'Testing & Certification',
-              description: 'System testing and regulatory certification.'
-            }
+              title: "Testing & Certification",
+              description: "System testing and regulatory certification.",
+            },
           ],
           specifications: [
-            { label: 'Detection Types', value: 'Smoke, Heat, Flame, Gas' },
-            { label: 'Suppression', value: 'Water, Foam, CO2, Clean Agent' },
-            { label: 'Standards', value: 'NFPA, IMO SOLAS, Local Codes' },
-            { label: 'Control Panels', value: 'Addressable, Conventional' },
-            { label: 'Testing', value: 'Annual, Semi-annual Inspections' },
-            { label: 'Certification', value: 'Authority Having Jurisdiction' }
-          ]
+            { label: "Detection Types", value: "Smoke, Heat, Flame, Gas" },
+            { label: "Suppression", value: "Water, Foam, CO2, Clean Agent" },
+            { label: "Standards", value: "NFPA, IMO SOLAS, Local Codes" },
+            { label: "Control Panels", value: "Addressable, Conventional" },
+            { label: "Testing", value: "Annual, Semi-annual Inspections" },
+            { label: "Certification", value: "Authority Having Jurisdiction" },
+          ],
         },
-        'lifeboats-davits': {
-          title: 'Lifeboats & Davits',
-          description: 'Lifeboat and davit system maintenance, testing, and certification services. We ensure compliance with SOLAS requirements for life-saving appliances.',
-          image: 'assets/images/services/service1.jpg',
+        "lifeboats-davits": {
+          title: "Lifeboats & Davits",
+          description:
+            "Lifeboat and davit system maintenance, testing, and certification services. We ensure compliance with SOLAS requirements for life-saving appliances.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Lifeboat overhaul and service',
-            'Davit system maintenance',
-            'Load testing services',
-            'Engine and equipment service',
-            'Safety equipment inspection'
+            "Lifeboat overhaul and service",
+            "Davit system maintenance",
+            "Load testing services",
+            "Engine and equipment service",
+            "Safety equipment inspection",
           ],
           benefits: [
-            'SOLAS compliance',
-            'Life safety assurance',
-            'Regulatory certification',
-            'Reliable operation',
-            'Emergency preparedness'
+            "SOLAS compliance",
+            "Life safety assurance",
+            "Regulatory certification",
+            "Reliable operation",
+            "Emergency preparedness",
           ],
           process: [
             {
-              title: 'System Inspection',
-              description: 'Comprehensive inspection of lifeboats and davit systems.'
+              title: "System Inspection",
+              description:
+                "Comprehensive inspection of lifeboats and davit systems.",
             },
             {
-              title: 'Maintenance & Repair',
-              description: 'Professional maintenance and repair of equipment.'
+              title: "Maintenance & Repair",
+              description: "Professional maintenance and repair of equipment.",
             },
             {
-              title: 'Load Testing',
-              description: 'Load testing of davits and launching systems.'
+              title: "Load Testing",
+              description: "Load testing of davits and launching systems.",
             },
             {
-              title: 'Certification',
-              description: 'Certification and documentation for compliance.'
-            }
+              title: "Certification",
+              description: "Certification and documentation for compliance.",
+            },
           ],
           specifications: [
-            { label: 'Lifeboat Types', value: 'Open, Enclosed, Free-fall' },
-            { label: 'Capacity', value: '6 to 150 persons' },
-            { label: 'Davit Types', value: 'Gravity, Luffing, Free-fall' },
-            { label: 'Testing', value: '5-year Overhaul, Annual Inspection' },
-            { label: 'Standards', value: 'IMO SOLAS, LSA Code' },
-            { label: 'Certification', value: 'Class Society Approved' }
-          ]
+            { label: "Lifeboat Types", value: "Open, Enclosed, Free-fall" },
+            { label: "Capacity", value: "6 to 150 persons" },
+            { label: "Davit Types", value: "Gravity, Luffing, Free-fall" },
+            { label: "Testing", value: "5-year Overhaul, Annual Inspection" },
+            { label: "Standards", value: "IMO SOLAS, LSA Code" },
+            { label: "Certification", value: "Class Society Approved" },
+          ],
         },
-        'valves-mechanical-seals': {
-          title: 'Valves & Mechanical Seals',
-          description: 'Professional valve and mechanical seal services including repair, replacement, and maintenance for marine and industrial applications.',
-          image: 'assets/images/services/service1.jpg',
+        "valves-mechanical-seals": {
+          title: "Valves & Mechanical Seals",
+          description:
+            "Professional valve and mechanical seal services including repair, replacement, and maintenance for marine and industrial applications.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Valve repair and overhaul',
-            'Mechanical seal replacement',
-            'Valve testing and calibration',
-            'Seat and disc machining',
-            'Actuator service'
+            "Valve repair and overhaul",
+            "Mechanical seal replacement",
+            "Valve testing and calibration",
+            "Seat and disc machining",
+            "Actuator service",
           ],
           benefits: [
-            'Leak-free operation',
-            'Extended service life',
-            'Improved reliability',
-            'Reduced maintenance costs',
-            'Enhanced performance'
+            "Leak-free operation",
+            "Extended service life",
+            "Improved reliability",
+            "Reduced maintenance costs",
+            "Enhanced performance",
           ],
           process: [
             {
-              title: 'Component Assessment',
-              description: 'Assessment of valve and seal condition and performance.'
+              title: "Component Assessment",
+              description:
+                "Assessment of valve and seal condition and performance.",
             },
             {
-              title: 'Repair & Machining',
-              description: 'Professional repair and precision machining services.'
+              title: "Repair & Machining",
+              description:
+                "Professional repair and precision machining services.",
             },
             {
-              title: 'Assembly & Testing',
-              description: 'Careful assembly and comprehensive testing.'
+              title: "Assembly & Testing",
+              description: "Careful assembly and comprehensive testing.",
             },
             {
-              title: 'Installation',
-              description: 'Professional installation and commissioning.'
-            }
+              title: "Installation",
+              description: "Professional installation and commissioning.",
+            },
           ],
           specifications: [
-            { label: 'Valve Types', value: 'Gate, Globe, Ball, Butterfly, Check' },
-            { label: 'Size Range', value: '1/2" to 48" diameter' },
-            { label: 'Pressure Rating', value: '150# to 2500# ANSI' },
-            { label: 'Materials', value: 'Carbon Steel, Stainless, Bronze' },
-            { label: 'Seal Types', value: 'Single, Double, Cartridge' },
-            { label: 'Testing', value: 'Hydrostatic, Seat Leakage' }
-          ]
+            {
+              label: "Valve Types",
+              value: "Gate, Globe, Ball, Butterfly, Check",
+            },
+            { label: "Size Range", value: '1/2" to 48" diameter' },
+            { label: "Pressure Rating", value: "150# to 2500# ANSI" },
+            { label: "Materials", value: "Carbon Steel, Stainless, Bronze" },
+            { label: "Seal Types", value: "Single, Double, Cartridge" },
+            { label: "Testing", value: "Hydrostatic, Seat Leakage" },
+          ],
         },
-        'boiler-repair': {
-          title: 'Boiler Repair',
-          description: 'Complete boiler repair and maintenance services including tube replacement, refractory repair, and efficiency optimization for marine and industrial boilers.',
-          image: 'assets/images/services/service1.jpg',
+        "boiler-repair": {
+          title: "Boiler Repair",
+          description:
+            "Complete boiler repair and maintenance services including tube replacement, refractory repair, and efficiency optimization for marine and industrial boilers.",
+          image: "assets/images/services/service1.jpg",
           features: [
-            'Boiler tube replacement',
-            'Refractory repair',
-            'Burner service and adjustment',
-            'Control system maintenance',
-            'Efficiency testing'
+            "Boiler tube replacement",
+            "Refractory repair",
+            "Burner service and adjustment",
+            "Control system maintenance",
+            "Efficiency testing",
           ],
           benefits: [
-            'Improved efficiency',
-            'Reduced fuel consumption',
-            'Extended boiler life',
-            'Safety compliance',
-            'Reliable operation'
+            "Improved efficiency",
+            "Reduced fuel consumption",
+            "Extended boiler life",
+            "Safety compliance",
+            "Reliable operation",
           ],
           process: [
             {
-              title: 'Boiler Inspection',
-              description: 'Comprehensive boiler inspection and condition assessment.'
+              title: "Boiler Inspection",
+              description:
+                "Comprehensive boiler inspection and condition assessment.",
             },
             {
-              title: 'Repair Planning',
-              description: 'Detailed planning of repair work and material requirements.'
+              title: "Repair Planning",
+              description:
+                "Detailed planning of repair work and material requirements.",
             },
             {
-              title: 'Repair Execution',
-              description: 'Professional repair work including welding and refractory.'
+              title: "Repair Execution",
+              description:
+                "Professional repair work including welding and refractory.",
             },
             {
-              title: 'Testing & Commissioning',
-              description: 'Pressure testing and performance commissioning.'
-            }
+              title: "Testing & Commissioning",
+              description: "Pressure testing and performance commissioning.",
+            },
           ],
           specifications: [
-            { label: 'Boiler Types', value: 'Fire Tube, Water Tube, Steam' },
-            { label: 'Capacity Range', value: '10 HP to 1000 HP' },
-            { label: 'Pressure Range', value: '15 PSI to 600 PSI' },
-            { label: 'Fuel Types', value: 'Gas, Oil, Dual Fuel' },
-            { label: 'Standards', value: 'ASME Section I, IV' },
-            { label: 'Testing', value: 'Hydrostatic, Efficiency Testing' }
-          ]
-        }
+            { label: "Boiler Types", value: "Fire Tube, Water Tube, Steam" },
+            { label: "Capacity Range", value: "10 HP to 1000 HP" },
+            { label: "Pressure Range", value: "15 PSI to 600 PSI" },
+            { label: "Fuel Types", value: "Gas, Oil, Dual Fuel" },
+            { label: "Standards", value: "ASME Section I, IV" },
+            { label: "Testing", value: "Hydrostatic, Efficiency Testing" },
+          ],
+        },
       };
 
       // Get all services for sidebar
       const allServices = [
-        { id: 'ship-repairs', title: 'Ship Repairs' },
-        { id: 'tug-barge-repairs', title: 'Tug & Barge Repairs' },
-        { id: 'fabrication-erection', title: 'Fabrication & Erection' },
-        { id: 'industrial-jobs', title: 'Industrial Jobs' },
-        { id: 'storage-tanks', title: 'Storage Tanks' },
-        { id: 'automation-control-systems', title: 'Automation & Control Systems' },
-        { id: 'hydraulic-systems', title: 'Hydraulic Systems' },
-        { id: 'pneumatic-systems', title: 'Pneumatic Systems' },
-        { id: 'navigation-equipment', title: 'Navigation Equipment' },
-        { id: 'pipes-piping-systems', title: 'Pipes & Piping Systems' },
-        { id: 'painting-surface-preparation', title: 'Painting & Surface Preparation' },
-        { id: 'reconditioning-engine-parts', title: 'Reconditioning Engine Parts' },
-        { id: 'diving-underwater-services', title: 'Diving & Underwater Services' },
-        { id: 'insulation-lagging', title: 'Insulation & Lagging' },
-        { id: 'accommodation-sanitary', title: 'Accommodation & Sanitary' },
-        { id: 'bwts', title: 'BWTS (Ballast Water Treatment Systems)' },
-        { id: 'egcs', title: 'EGCS (Exhaust Gas Cleaning Systems)' },
-        { id: 'anchor-windlass-winches', title: 'Anchor & Windlass Winches' },
-        { id: 'auxiliary-machinery-pumps', title: 'Auxiliary Machinery – Pumps Division' },
-        { id: 'auxiliary-machinery-purifiers', title: 'Auxiliary Machinery – Purifiers & Separators' },
-        { id: 'ac-refrigeration', title: 'AC & Refrigeration' },
-        { id: 'instrumentation', title: 'Instrumentation' },
-        { id: 'tank-cleaning', title: 'Tank Cleaning' },
-        { id: 'fire-safety-systems', title: 'Fire & Safety Systems' },
-        { id: 'lifeboats-davits', title: 'Lifeboats & Davits' },
-        { id: 'valves-mechanical-seals', title: 'Valves & Mechanical Seals' },
-        { id: 'boiler-repair', title: 'Boiler Repair' }
+        { id: "ship-repairs", title: "Ship Repairs" },
+        { id: "tug-barge-repairs", title: "Tug & Barge Repairs" },
+        { id: "fabrication-erection", title: "Fabrication & Erection" },
+        { id: "industrial-jobs", title: "Industrial Jobs" },
+        { id: "storage-tanks", title: "Storage Tanks" },
+        {
+          id: "automation-control-systems",
+          title: "Automation & Control Systems",
+        },
+        { id: "hydraulic-systems", title: "Hydraulic Systems" },
+        { id: "pneumatic-systems", title: "Pneumatic Systems" },
+        { id: "navigation-equipment", title: "Navigation Equipment" },
+        { id: "pipes-piping-systems", title: "Pipes & Piping Systems" },
+        {
+          id: "painting-surface-preparation",
+          title: "Painting & Surface Preparation",
+        },
+        {
+          id: "reconditioning-engine-parts",
+          title: "Reconditioning Engine Parts",
+        },
+        {
+          id: "diving-underwater-services",
+          title: "Diving & Underwater Services",
+        },
+        { id: "insulation-lagging", title: "Insulation & Lagging" },
+        { id: "accommodation-sanitary", title: "Accommodation & Sanitary" },
+        { id: "bwts", title: "BWTS (Ballast Water Treatment Systems)" },
+        { id: "egcs", title: "EGCS (Exhaust Gas Cleaning Systems)" },
+        { id: "anchor-windlass-winches", title: "Anchor & Windlass Winches" },
+        {
+          id: "auxiliary-machinery-pumps",
+          title: "Auxiliary Machinery – Pumps Division",
+        },
+        {
+          id: "auxiliary-machinery-purifiers",
+          title: "Auxiliary Machinery – Purifiers & Separators",
+        },
+        { id: "ac-refrigeration", title: "AC & Refrigeration" },
+        { id: "instrumentation", title: "Instrumentation" },
+        { id: "tank-cleaning", title: "Tank Cleaning" },
+        { id: "fire-safety-systems", title: "Fire & Safety Systems" },
+        { id: "lifeboats-davits", title: "Lifeboats & Davits" },
+        { id: "valves-mechanical-seals", title: "Valves & Mechanical Seals" },
+        { id: "boiler-repair", title: "Boiler Repair" },
       ];
 
       // Function to get URL parameter
       function getUrlParameter(name) {
-        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-        const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        const regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
         const results = regex.exec(location.search);
-        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        return results === null
+          ? ""
+          : decodeURIComponent(results[1].replace(/\+/g, " "));
       }
 
       // Function to load service content
       function loadServiceContent(serviceId) {
         const service = serviceData[serviceId];
-        
+
         if (!service) {
           // If service not found, show default content
-          document.getElementById('service-title').textContent = 'Service Not Found';
-          document.getElementById('service-details-title').textContent = 'Service Not Found';
-          document.getElementById('breadcrumb-service').textContent = 'Service Not Found';
-          document.getElementById('service-description').textContent = 'The requested service could not be found. Please select a service from the list below.';
+          document.getElementById("service-title").textContent =
+            "Service Not Found";
+          document.getElementById("service-details-title").textContent =
+            "Service Not Found";
+          document.getElementById("breadcrumb-service").textContent =
+            "Service Not Found";
+          document.getElementById("service-description").textContent =
+            "The requested service could not be found. Please select a service from the list below.";
           return;
         }
 
         // Update page title and breadcrumb
-        document.getElementById('service-title').textContent = service.title;
-        document.getElementById('service-details-title').textContent = service.title;
-        document.getElementById('breadcrumb-service').textContent = service.title;
+        document.getElementById("service-title").textContent = service.title;
+        document.getElementById("service-details-title").textContent =
+          service.title;
+        document.getElementById("breadcrumb-service").textContent =
+          service.title;
         document.title = `AMRS || ${service.title}`;
 
         // Update service image
-        document.getElementById('service-image').src = service.image;
-        document.getElementById('service-image').alt = service.title;
+        document.getElementById("service-image").src = service.image;
+        document.getElementById("service-image").alt = service.title;
 
         // Update description
-        document.getElementById('service-description').textContent = service.description;
+        document.getElementById("service-description").textContent =
+          service.description;
 
         // Update features
-        const featuresContainer = document.getElementById('service-features');
-        featuresContainer.innerHTML = '';
-        service.features.forEach(feature => {
-          const li = document.createElement('li');
+        const featuresContainer = document.getElementById("service-features");
+        featuresContainer.innerHTML = "";
+        service.features.forEach((feature) => {
+          const li = document.createElement("li");
           li.innerHTML = `<i class="fa-regular fa-check"></i> ${feature}`;
           featuresContainer.appendChild(li);
         });
 
         // Update benefits
-        const benefitsContainer = document.getElementById('service-benefits');
-        benefitsContainer.innerHTML = '';
-        service.benefits.forEach(benefit => {
-          const li = document.createElement('li');
+        const benefitsContainer = document.getElementById("service-benefits");
+        benefitsContainer.innerHTML = "";
+        service.benefits.forEach((benefit) => {
+          const li = document.createElement("li");
           li.innerHTML = `<i class="fa-regular fa-star"></i> ${benefit}`;
           benefitsContainer.appendChild(li);
         });
 
         // Update process steps
-        const processContainer = document.getElementById('service-process');
-        processContainer.innerHTML = '';
+        const processContainer = document.getElementById("service-process");
+        processContainer.innerHTML = "";
         service.process.forEach((step, index) => {
-          const stepDiv = document.createElement('div');
-          stepDiv.className = 'rs-process-step';
+          const stepDiv = document.createElement("div");
+          stepDiv.className = "rs-process-step";
           stepDiv.innerHTML = `
             <div class="rs-process-step-number">${index + 1}</div>
             <div class="rs-process-step-content">
@@ -2395,11 +2614,13 @@
         });
 
         // Update specifications
-        const specificationsContainer = document.getElementById('service-specifications');
-        specificationsContainer.innerHTML = '<ul></ul>';
-        const specsList = specificationsContainer.querySelector('ul');
-        service.specifications.forEach(spec => {
-          const li = document.createElement('li');
+        const specificationsContainer = document.getElementById(
+          "service-specifications"
+        );
+        specificationsContainer.innerHTML = "<ul></ul>";
+        const specsList = specificationsContainer.querySelector("ul");
+        service.specifications.forEach((spec) => {
+          const li = document.createElement("li");
           li.innerHTML = `<strong>${spec.label}:</strong> <span>${spec.value}</span>`;
           specsList.appendChild(li);
         });
@@ -2407,11 +2628,11 @@
 
       // Function to load all services in sidebar
       function loadAllServices() {
-        const servicesList = document.getElementById('all-services-list');
-        servicesList.innerHTML = '';
-        
-        allServices.forEach(service => {
-          const li = document.createElement('li');
+        const servicesList = document.getElementById("all-services-list");
+        servicesList.innerHTML = "";
+
+        allServices.forEach((service) => {
+          const li = document.createElement("li");
           li.innerHTML = `
             <a href="services-details.html?service=${service.id}">
               ${service.title}
@@ -2424,21 +2645,25 @@
 
       // Function to load related services
       function loadRelatedServices(currentServiceId) {
-        const relatedContainer = document.getElementById('related-services');
-        relatedContainer.innerHTML = '';
-        
+        const relatedContainer = document.getElementById("related-services");
+        relatedContainer.innerHTML = "";
+
         // Get 3 random services excluding current one
-        const otherServices = allServices.filter(s => s.id !== currentServiceId);
+        const otherServices = allServices.filter(
+          (s) => s.id !== currentServiceId
+        );
         const shuffled = otherServices.sort(() => 0.5 - Math.random());
         const related = shuffled.slice(0, 3);
-        
-        related.forEach(service => {
-          const serviceDiv = document.createElement('a');
-          serviceDiv.className = 'rs-related-service-item';
+
+        related.forEach((service) => {
+          const serviceDiv = document.createElement("a");
+          serviceDiv.className = "rs-related-service-item";
           serviceDiv.href = `services-details.html?service=${service.id}`;
           serviceDiv.innerHTML = `
             <div class="rs-related-service-thumb">
-              <img src="assets/images/services/service1.jpg" alt="${service.title}">
+              <img src="assets/images/services/service1.jpg" alt="${
+                service.title
+              }">
             </div>
             <div class="rs-related-service-content">
               <h5>${service.title}</h5>
@@ -2450,9 +2675,9 @@
       }
 
       // Initialize page when DOM is loaded
-      document.addEventListener('DOMContentLoaded', function() {
-        const serviceId = getUrlParameter('service') || 'ship-repairs';
-        
+      document.addEventListener("DOMContentLoaded", function () {
+        const serviceId = getUrlParameter("service") || "ship-repairs";
+
         loadServiceContent(serviceId);
         loadAllServices();
         loadRelatedServices(serviceId);
