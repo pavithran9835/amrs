@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>AMRS || Calibrations</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/plugins/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/vendor/odometer.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/vendor/spacing.css" />
+    <link rel="stylesheet" href="assets/css/vendor/remixicon.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .rs-banner-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.15) 0%,
+          rgba(234, 85, 1, 0.1) 100%
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .rs-banner-bg-thumb {
+        position: relative;
+        filter: brightness(1.2) contrast(1.1);
+      }
+
+      .rs-banner-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Header Styles */
+      .rs-header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
+      }
+
+      .rs-header-logo a {
+        text-decoration: none;
+      }
+
+      .rs-logo-text {
+        font-size: 32px;
+        font-weight: 700;
+        color: #ea5501;
+        letter-spacing: 2px;
+      }
+
+      .rs-header-menu {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .multipage-menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 40px;
+      }
+
+      .multipage-menu li a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 10px 0;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .multipage-menu li a:hover,
+      .multipage-menu li.active a {
+        color: #ea5501;
+      }
+
+      .multipage-menu li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #ea5501;
+        transition: width 0.3s ease;
+      }
+
+      .multipage-menu li a:hover::after,
+      .multipage-menu li.active a::after {
+        width: 100%;
+      }
+
+      @media (max-width: 991px) {
+        .rs-header-menu {
+          display: none;
+        }
+
+        .rs-header-contact {
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .rs-logo-text {
+          font-size: 24px;
+        }
+
+        .rs-header-inner {
+          padding: 12px 0;
+        }
+      }
+
+      /* Calibrations Page Styles */
+      .rs-calibrations-area {
+        padding: 100px 0;
+        background: #f8f9fa;
+      }
+
+      .rs-calibrations-sidebar {
+        background: #fff;
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 120px;
+      }
+
+      .rs-calibrations-sidebar h3 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: #333;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #ea5501;
+      }
+
+      .rs-calibrations-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .rs-calibrations-menu li {
+        margin-bottom: 10px;
+      }
+
+      .rs-calibrations-menu li a {
+        display: block;
+        padding: 12px 20px;
+        color: #666;
+        text-decoration: none;
+        font-weight: 500;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border-left: 3px solid transparent;
+      }
+
+      .rs-calibrations-menu li a:hover,
+      .rs-calibrations-menu li a.active {
+        background: #fff3ed;
+        color: #ea5501;
+        border-left-color: #ea5501;
+        padding-left: 25px;
+      }
+
+      .rs-calibration-content {
+        background: #fff;
+        border-radius: 16px;
+        padding: 50px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        margin-bottom: 40px;
+      }
+
+      .rs-calibration-content h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: #333;
+      }
+
+      .rs-calibration-content p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #666;
+        margin-bottom: 30px;
+      }
+
+      .rs-calibration-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .rs-calibration-list ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .rs-calibration-list li {
+        padding: 10px 0;
+        padding-left: 30px;
+        position: relative;
+        color: #666;
+        font-size: 15px;
+      }
+
+      .rs-calibration-list li::before {
+        content: "\f00c";
+        font-family: "Font Awesome 6 Pro";
+        position: absolute;
+        left: 0;
+        color: #ea5501;
+        font-weight: 600;
+      }
+
+      .rs-calibration-image {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .rs-calibration-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      @media (max-width: 991px) {
+        .rs-calibrations-area {
+          padding: 80px 0;
+        }
+
+        .rs-calibrations-sidebar {
+          margin-bottom: 40px;
+          position: relative;
+          top: 0;
+        }
+
+        .rs-calibration-content {
+          padding: 35px 25px;
+        }
+
+        .rs-calibration-content h2 {
+          font-size: 28px;
+        }
+
+        .rs-calibration-list {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .rs-calibrations-area {
+          padding: 60px 0;
+        }
+
+        .rs-calibration-content {
+          padding: 25px 20px;
+        }
+
+        .rs-calibration-content h2 {
+          font-size: 24px;
+        }
+
+        .rs-calibration-content p {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="rs-smoother-yes">
+    <!-- Header area start -->
+    <header>
+        <div class="rs-header-area rs-header-one" id="header-sticky">
+            <div class="container">
+                <div class="rs-header-inner">
+                    <div class="rs-header-left">
+                        <div class="rs-header-logo">
+                            <a href="index.html">
+                                <h3 class="rs-logo-text">AMRS</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="rs-header-menu">
+                        <nav id="mobile-menu" class="main-menu">
+                            <ul class="multipage-menu">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="about.html">About</a>
+                                </li>
+                                <li>
+                                    <a href="services.html">Services</a>
+                                </li>
+                                <li>
+                                    <a href="calibrations.html">Calibrations</a>
+                                </li>
+                                <li>
+                                    <a href="turnkey-projects.html">Turnkey Projects</a>
+                                </li>
+                                <li class="active">
+                                    <a href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="rs-header-right">
+                        <div class="rs-header-contact">
+                            <a href="tel:+998765456321" class="rs-header-phone">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+998 765 456 321</span>
+                            </a>
+                        </div>
+                        <div class="rs-header-btn d-none d-lg-block">
+                            <a class="rs-btn has-theme-orange has-icon has-bg" href="contact.html">
+                                Get Quote
+                                <span class="icon-box">
+                                    <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z" fill="#fff"></path>
+                                    </svg>
+                                    <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z" fill="#fff"></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="rs-mobile-menu-toggle d-lg-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>    <!-- Header area end -->
+
+    <!-- Banner area start -->
+    <section class="rs-banner-area rs-banner-style-six">
+      <div class="rs-banner-bg-thumb">
+        <div class="rs-banner-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12">
+            <div class="rs-banner-content text-center">
+              <h1 class="rs-banner-title">
+                Calibration <span class="rs-theme-orange">Services</span>
+              </h1>
+              <p class="rs-banner-description">
+                Precision calibration services ensuring accuracy and reliability across all measurement instruments
+              </p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner area end -->
+
+    <!-- Calibrations area start -->
+    <section class="rs-calibrations-area">
+      <div class="container">
+        <div class="row">
+          <!-- Sidebar -->
+          <div class="col-lg-3">
+            <div class="rs-calibrations-sidebar">
+              <h3>Calibration Types</h3>
+              <ul class="rs-calibrations-menu">
+                <li>
+                  <a href="#electrical" class="active">Electrical</a>
+                </li>
+                <li>
+                  <a href="#mechanical">Mechanical</a>
+                </li>
+                <li>
+                  <a href="#temperature">Temperature</a>
+                </li>
+                <li>
+                  <a href="#pressure">Pressure</a>
+                </li>
+                <li>
+                  <a href="#flow">Flow Instruments</a>
+                </li>
+                <li>
+                  <a href="#vibration">Vibration</a>
+                </li>
+                <li>
+                  <a href="#mass">Mass</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="col-lg-9">
+            <!-- Electrical -->
+            <div id="electrical" class="rs-calibration-content">
+              <h2>Electrical</h2>
+              <p>
+                We provide electrical calibration services that focus on verifying and fine-tuning the precision and dependability of electrical measurement equipment. Our skilled calibration technicians utilize advanced calibration standards and methodologies to ensure the accuracy of various electrical devices, such as multimeters, oscilloscopes, and power supplies. By conducting meticulous calibration, we assist our clients in adhering to industry standards, enhancing measurement accuracy, and improving the overall reliability of their electrical systems and operations. Our electrical calibration services instill confidence in measurement results, mitigate the risk of errors, and support the efficiency and effectiveness of electrical processes.
+              </p>
+
+              <div class="rs-calibration-list">
+                <ul>
+                  <li>Multimeter</li>
+                  <li>Clampmeter</li>
+                  <li>High Voltage Tester</li>
+                  <li>RCD Tester</li>
+                  <li>Earth Leakage Tester</li>
+                  <li>Micro Ohm Meter</li>
+                  <li>PAT Tester</li>
+                  <li>Insulation Resistance Meters</li>
+                  <li>Holiday Detector</li>
+                  <li>Milli Amp clamp meter</li>
+                </ul>
+                <ul>
+                  <li>Circuit Break Analyzer</li>
+                  <li>DC Hipot</li>
+                  <li>ACHipot</li>
+                  <li>Primary Current Injector</li>
+                  <li>Secondary Current Injector</li>
+                  <li>Ammeter</li>
+                  <li>Voltmeter</li>
+                  <li>Mega Ohm meter</li>
+                  <li>Power meter</li>
+                </ul>
+              </div>
+
+              <div class="rs-calibration-image">
+                <img src="assets/images/services/service1.jpg" alt="Electrical Calibration" />
+              </div>
+            </div>
+
+            <!-- Mechanical -->
+            <div id="mechanical" class="rs-calibration-content">
+              <h2>Mechanical</h2>
+              <p>
+                We offer comprehensive mechanical calibration services to ensure the accuracy and performance of mechanical measurement instruments and equipment. Our skilled technicians utilize advanced calibration standards and methodologies to verify and adjust the precision of various mechanical devices, including torque wrenches, pressure gauges, dimensional instruments, and more. Through meticulous calibration, we help our clients maintain compliance with industry standards and regulations while optimizing the reliability and accuracy of their mechanical instruments. Our mechanical calibration services provide assurance in measurement results, reduce the risk of errors, and support the overall quality and efficiency of mechanical systems and processes.
+              </p>
+
+              <div class="rs-calibration-image">
+                <img src="assets/images/services/service2.jpg" alt="Mechanical Calibration" />
+              </div>
+            </div>
+
+            <!-- Temperature -->
+            <div id="temperature" class="rs-calibration-content">
+              <h2>Temperature</h2>
+              <p>
+                We provide comprehensive temperature calibration services to ensure the accuracy and reliability of temperature measurement instruments and systems. Our skilled technicians utilize advanced calibration equipment and techniques to verify and adjust the performance of various temperature sensors, thermometers, and temperature control systems. Through meticulous calibration, we help our clients maintain compliance with industry standards and regulations while optimizing the accuracy and consistency of their temperature measurements. Our temperature calibration services provide confidence in temperature readings, reduce risks of errors, and support the overall quality and reliability of temperature-sensitive processes and operations.
+              </p>
+
+              <div class="rs-calibration-image">
+                <img src="assets/images/services/service3.jpg" alt="Temperature Calibration" />
+              </div>
+            </div>
+
+            <!-- Pressure -->
+            <div id="pressure" class="rs-calibration-content">
+              <h2>Pressure</h2>
+              <p>
+                We provide comprehensive pressure calibration services to ensure the accuracy and reliability of pressure measurement instruments and devices. Our skilled technicians utilize advanced calibration equipment and techniques to verify and adjust the performance of various pressure gauges, transmitters, and sensors. Through meticulous calibration, we help our clients maintain compliance with industry standards and regulations while optimizing the accuracy and consistency of their pressure measurements. Our pressure calibration services provide confidence in pressure readings, reduce risks of errors, and support the overall quality and reliability of pressure-sensitive processes and systems.
+              </p>
+
+              <div class="rs-calibration-image">
+                <img src="assets/images/services/service4.jpg" alt="Pressure Calibration" />
+              </div>
+            </div>
+
+            <!-- Flow Instruments -->
+            <div id="flow" class="rs-calibration-content">
+              <h2>Flow Instruments</h2>
+              <p>
+                Our skilled technicians employ advanced calibration equipment and techniques to ensure the precision of various flow meters, controllers, and sensors. Through thorough calibration procedures, we assist our clients in meeting industry standards, enhancing the accuracy of their flow measurements, and ensuring the reliability of flow-dependent processes and operations. Our flow calibration services guarantee reliable flow readings, minimize the likelihood of errors, and promote the overall effectiveness and efficiency of flow-related operations.
+              </p>
+
+              <div class="rs-calibration-image">
+                <img src="assets/images/services/service5.jpg" alt="Flow Instruments Calibration" />
+              </div>
+            </div>
+
+            <!-- Vibration -->
+            <div id="vibration" class="rs-calibration-content">
+              <h2>Vibration</h2>
+              <p>
+                We offer comprehensive vibration calibration services to ensure the accuracy and reliability of vibration measurement instruments and systems. Our experienced technicians utilize advanced calibration equipment and techniques to verify and adjust the performance of various vibration sensors, analyzers, and monitoring systems. Through meticulous calibration, we help our clients maintain compliance with industry standards and regulations while optimizing the accuracy and consistency of their vibration measurements. Our vibration calibration services provide confidence in vibration readings, reduce risks of errors, and support the overall quality and reliability of vibration analysis and condition monitoring processes.
+              </p>
+
+              <div class="rs-calibration-image">
+                <img src="assets/images/services/service1.jpg" alt="Vibration Calibration" />
+              </div>
+            </div>
+
+            <!-- Mass -->
+            <div id="mass" class="rs-calibration-content">
+              <h2>Mass</h2>
+              <p>
+                We offer expert mass calibration services to ensure the accuracy and dependability of mass measurement instruments and equipment. Our skilled technicians use advanced calibration techniques to check and adjust the performance of various weighing scales, mass balances, and weights. Through precise calibration, we help our clients meet industry standards, improve the accuracy of their mass measurements, and ensure reliable weighing processes. Our mass calibration services provide trustworthy results, minimize errors, and enhance the quality and reliability of weighing operations.
+              </p>
+
+              <div class="rs-calibration-image">
+                <img src="assets/images/services/service2.jpg" alt="Mass Calibration" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Calibrations area end -->
+
+    <!-- Footer area start -->
+    <footer>
+        <div class="rs-footer-area rs-footer-two has-space has-theme-orange has-bg-thumb">
+            <div class="rs-footer-bg-thumb" data-background="assets/images/bg/footer-bg-06.png"></div>
+            <div class="rs-footer-top">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="rs-footer-widget footer-2-col-1">
+                                <h5 class="rs-footer-widget-title">About Company</h5>
+                                <div class="rs-footer-widget-content">
+                                    <p class="rs-footer-widget-description">
+                                        We provide end-to-end solutions in repairs, projects, and retrofit works,  
+                                        including dry dock attendance, steel renewal, automation, electrical, and naval architecture.  
+                                        Our expertise also covers engine repairs, hydraulics, pneumatics, instrumentation, inspections, cleaning, tank and boiler works, and air conditioning services.
+                                      </p>
+                                    <div class="rs-footer-widget-stroke-text">
+                                        <h3 class="rs-footer-stroke-text">Since 1996</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="rs-footer-widget footer-2-col-2">
+                                <h5 class="rs-footer-widget-title">Useful Links</h5>
+                                <div class="rs-footer-widget-content">
+                                    <div class="rs-footer-widget-links">
+                                        <ul>
+                                            <li> <a href="#">About Us</a> </li>
+                                            <li><a href="#"></a></li>
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#"></a></li>
+                                            <li><a href="#">Contact Us</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="rs-footer-widget footer-2-col-3">
+                                <h5 class="rs-footer-widget-title">Office Address</h5>
+                                <div class="rs-footer-widget-content">
+                                    <div class="rs-footer-widget-meta">
+                                        <div class="rs-footer-widget-address">
+                                            <a target="_blank" href="https://www.google.com/maps">1200 Harbor Drive, Atlantic Ship Repairs & Services, Miami, FL, USA</a>
+                                        </div>
+                                        <h5 class="rs-footer-widget-title">Email Address</h5>
+                                        <p> Interested in working with us?</p>
+                                        <div class="rs-footer-widget-email">
+                                            <a href="mailto:industrie@gmail.com"
+                                              >technical@amrs.com</a
+                                            >
+                                            <a href="mailto:industrie@gmail.com"
+                                              >spares@amrs.com</a
+                                            >
+                                            <a href="mailto:industrie@gmail.com"
+                                              >service@amrs.com</a
+                                            >
+                                            <a href="mailto:industrie@gmail.com"
+                                              >support@amrs.com</a
+                                            >
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="rs-footer-widget footer-2-col-4">
+                                <h5 class="rs-footer-widget-title">Phone Number</h5>
+                                <div class="rs-footer-widget-content">
+                                    <div class="rs-footer-widget-contact-info">
+                                        <div class="rs-footer-widget-number">
+                                            <span>
+                                    <a href="tel:971551579261">+998 765 456 321</a>
+                                 </span>
+                                            <span>
+                                    <a href="tel:971551579261">+998 765 456 321</a>
+                                 </span>
+                                        </div>
+                                    </div>
+                                    <h5 class="rs-footer-widget-title">Follow Us</h5>
+                                    <div class="rs-footer-widget-social">
+                                        <div class="rs-theme-social">
+                                            <a href="#"><i class="ri-twitter-x-line"></i></a>
+                                            <a href="#"><i class="ri-facebook-fill"></i></a>
+                                            <a href="#"><i class="ri-linkedin-fill"></i></a>
+                                            <a href="#"><i class="ri-instagram-line"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rs-footer-copyright-area rs-copyright-one">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-12">
+                            <div class="rs-footer-copyright has-theme-orange text-center">
+                                <p class="underline">© <span id="year">2025</span> All Rights Reserved by <a href="https://rstheme.com/">AMRS</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer area end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/plugins/meanmenu.min.js"></script>
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <script src="assets/js/plugins/magnific-popup.min.js"></script>
+    <script src="assets/js/plugins/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      // Smooth scroll to sections
+      document.querySelectorAll('.rs-calibrations-menu a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          // Remove active class from all links
+          document.querySelectorAll('.rs-calibrations-menu a').forEach(link => {
+            link.classList.remove('active');
+          });
+          
+          // Add active class to clicked link
+          this.classList.add('active');
+          
+          // Scroll to section
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            const offsetTop = targetSection.offsetTop - 100;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Update active link on scroll
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('.rs-calibration-content');
+        const scrollPos = window.scrollY + 150;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute('id');
+
+          if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            document.querySelectorAll('.rs-calibrations-menu a').forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === '#' + sectionId) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>AMRS || Turnkey Projects</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css" />
+    <link rel="stylesheet" href="assets/css/plugins/nouislider.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/css/vendor/odometer.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css" />
+    <link rel="stylesheet" href="assets/css/vendor/spacing.css" />
+    <link rel="stylesheet" href="assets/css/vendor/remixicon.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .rs-banner-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.15) 0%,
+          rgba(234, 85, 1, 0.1) 100%
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .rs-banner-bg-thumb {
+        position: relative;
+        filter: brightness(1.2) contrast(1.1);
+      }
+
+      .rs-banner-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Header Styles */
+      .rs-header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
+      }
+
+      .rs-header-logo a {
+        text-decoration: none;
+      }
+
+      .rs-logo-text {
+        font-size: 32px;
+        font-weight: 700;
+        color: #ea5501;
+        letter-spacing: 2px;
+      }
+
+      .rs-header-menu {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .multipage-menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 40px;
+      }
+
+      .multipage-menu li a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 10px 0;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .multipage-menu li a:hover,
+      .multipage-menu li.active a {
+        color: #ea5501;
+      }
+
+      .multipage-menu li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #ea5501;
+        transition: width 0.3s ease;
+      }
+
+      .multipage-menu li a:hover::after,
+      .multipage-menu li.active a::after {
+        width: 100%;
+      }
+
+      @media (max-width: 991px) {
+        .rs-header-menu {
+          display: none;
+        }
+
+        .rs-header-contact {
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .rs-logo-text {
+          font-size: 24px;
+        }
+
+        .rs-header-inner {
+          padding: 12px 0;
+        }
+      }
+
+      /* Turnkey Projects Page Styles */
+      .rs-turnkey-area {
+        padding: 100px 0;
+        background: #f8f9fa;
+      }
+
+      .rs-turnkey-intro {
+        background: #fff;
+        border-radius: 16px;
+        padding: 40px;
+        margin-bottom: 60px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      .rs-turnkey-intro p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .rs-turnkey-intro p:last-child {
+        margin-bottom: 0;
+      }
+
+      .rs-turnkey-sidebar {
+        background: #fff;
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 120px;
+        max-height: calc(100vh - 140px);
+        overflow-y: auto;
+      }
+
+      .rs-turnkey-sidebar h3 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: #333;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #ea5501;
+      }
+
+      .rs-turnkey-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .rs-turnkey-menu li {
+        margin-bottom: 8px;
+      }
+
+      .rs-turnkey-menu li a {
+        display: block;
+        padding: 12px 20px;
+        color: #666;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 15px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border-left: 3px solid transparent;
+      }
+
+      .rs-turnkey-menu li a:hover,
+      .rs-turnkey-menu li a.active {
+        background: #fff3ed;
+        color: #ea5501;
+        border-left-color: #ea5501;
+        padding-left: 25px;
+      }
+
+      .rs-turnkey-content {
+        background: #fff;
+        border-radius: 16px;
+        padding: 50px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        margin-bottom: 40px;
+      }
+
+      .rs-turnkey-content h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        color: #333;
+      }
+
+      .rs-turnkey-content p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #666;
+        margin-bottom: 30px;
+      }
+
+      .rs-turnkey-image {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .rs-turnkey-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Scrollbar Styles */
+      .rs-turnkey-sidebar::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .rs-turnkey-sidebar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+
+      .rs-turnkey-sidebar::-webkit-scrollbar-thumb {
+        background: #ea5501;
+        border-radius: 10px;
+      }
+
+      .rs-turnkey-sidebar::-webkit-scrollbar-thumb:hover {
+        background: #d14a01;
+      }
+
+      @media (max-width: 991px) {
+        .rs-turnkey-area {
+          padding: 80px 0;
+        }
+
+        .rs-turnkey-sidebar {
+          margin-bottom: 40px;
+          position: relative;
+          top: 0;
+          max-height: none;
+        }
+
+        .rs-turnkey-content {
+          padding: 35px 25px;
+        }
+
+        .rs-turnkey-content h2 {
+          font-size: 28px;
+        }
+
+        .rs-turnkey-intro {
+          padding: 30px 25px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .rs-turnkey-area {
+          padding: 60px 0;
+        }
+
+        .rs-turnkey-content {
+          padding: 25px 20px;
+        }
+
+        .rs-turnkey-content h2 {
+          font-size: 24px;
+        }
+
+        .rs-turnkey-content p {
+          font-size: 15px;
+        }
+
+        .rs-turnkey-intro {
+          padding: 25px 20px;
+        }
+
+        .rs-turnkey-intro p {
+          font-size: 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="rs-smoother-yes">
+    <!-- Header area start -->
+    <header>
+      <div class="rs-header-area rs-header-one" id="header-sticky">
+          <div class="container">
+              <div class="rs-header-inner">
+                  <div class="rs-header-left">
+                      <div class="rs-header-logo">
+                          <a href="index.html">
+                              <h3 class="rs-logo-text">AMRS</h3>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="rs-header-menu">
+                      <nav id="mobile-menu" class="main-menu">
+                          <ul class="multipage-menu">
+                              <li>
+                                  <a href="index.html">Home</a>
+                              </li>
+                              <li>
+                                  <a href="about.html">About</a>
+                              </li>
+                              <li>
+                                  <a href="services.html">Services</a>
+                              </li>
+                              <li>
+                                  <a href="calibrations.html">Calibrations</a>
+                              </li>
+                              <li>
+                                  <a href="turnkey-projects.html">Turnkey Projects</a>
+                              </li>
+                              <li class="active">
+                                  <a href="contact.html">Contact</a>
+                              </li>
+                          </ul>
+                      </nav>
+                  </div>
+                  <div class="rs-header-right">
+                      <div class="rs-header-contact">
+                          <a href="tel:+998765456321" class="rs-header-phone">
+                              <i class="fa-solid fa-phone"></i>
+                              <span>+998 765 456 321</span>
+                          </a>
+                      </div>
+                      <div class="rs-header-btn d-none d-lg-block">
+                          <a class="rs-btn has-theme-orange has-icon has-bg" href="contact.html">
+                              Get Quote
+                              <span class="icon-box">
+                                  <svg class="icon-first" xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z" fill="#fff"></path>
+                                  </svg>
+                                  <svg class="icon-second" xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5C0 4.60551 0.319797 4.28571 0.714286 4.28571L8.98985 4.28571L5.92349 1.21936C5.64455 0.940417 5.64455 0.488155 5.92349 0.209209C6.20244 -0.0697365 6.6547 -0.0697365 6.93365 0.209209L11.2194 4.49492C11.4983 4.77387 11.4983 5.22613 11.2194 5.50508L6.93365 9.79079C6.6547 10.0697 6.20244 10.0697 5.92349 9.79079C5.64455 9.51184 5.64455 9.05958 5.92349 8.78064L8.98985 5.71429L0.714286 5.71429C0.319797 5.71429 0 5.39449 0 5Z" fill="#fff"></path>
+                                  </svg>
+                              </span>
+                          </a>
+                      </div>
+                      <div class="rs-mobile-menu-toggle d-lg-none">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+    <!-- Header area end -->
+
+    <!-- Banner area start -->
+    <section class="rs-banner-area rs-banner-style-six">
+      <div class="rs-banner-bg-thumb">
+        <div class="rs-banner-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12">
+            <div class="rs-banner-content text-center">
+              <h1 class="rs-banner-title">
+                Turnkey <span class="rs-theme-orange">Projects</span>
+              </h1>
+              <p class="rs-banner-description">
+                Comprehensive end-to-end solutions for marine automation and systems integration
+              </p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner area end -->
+
+    <!-- Turnkey Projects area start -->
+    <section class="rs-turnkey-area">
+      <div class="container">
+        <!-- Introduction -->
+        <div class="rs-turnkey-intro">
+          <p>
+            We have extensive experience in handling turnkey projects, and we work closely with our clients to understand their unique needs and requirements. We provide a full range of services including project management and engineering, procurement and supply chain management, inspection and testing, maintenance and repair, and construction and installation.
+          </p>
+          <p>
+            We ensure that all of our solutions and services comply with industry standards and regulations, and we work closely with our clients to ensure that their projects are completed on time and within budget. Our team of highly skilled and experienced professionals is dedicated to providing the highest level of service and support to our clients.
+          </p>
+        </div>
+
+        <div class="row">
+          <!-- Sidebar -->
+          <div class="col-lg-3">
+            <div class="rs-turnkey-sidebar">
+              <h3>Project Types</h3>
+              <ul class="rs-turnkey-menu">
+                <li>
+                  <a href="#vessel-digitalization" class="active">Vessel Digitalization System</a>
+                </li>
+                <li>
+                  <a href="#engine-maneuvering">Engine Maneuvering System</a>
+                </li>
+                <li>
+                  <a href="#steering-gear">Steering Gear System</a>
+                </li>
+                <li>
+                  <a href="#thruster-control">Thruster Control</a>
+                </li>
+                <li>
+                  <a href="#power-management">Power Management System</a>
+                </li>
+                <li>
+                  <a href="#alarm-monitoring">Integrated Alarm Monitoring and Control System</a>
+                </li>
+                <li>
+                  <a href="#dp-system">DP System</a>
+                </li>
+                <li>
+                  <a href="#tank-level">Tank Level Gauging System</a>
+                </li>
+                <li>
+                  <a href="#emission-control">Emission Control</a>
+                </li>
+                <li>
+                  <a href="#scrubber">Scrubber</a>
+                </li>
+                <li>
+                  <a href="#ballast-water">Ballast Water Management</a>
+                </li>
+                <li>
+                  <a href="#vrc-system">VRC System (VRCS)</a>
+                </li>
+                <li>
+                  <a href="#mgps">MGPS</a>
+                </li>
+                <li>
+                  <a href="#hull-monitoring">Hull Monitoring</a>
+                </li>
+                <li>
+                  <a href="#fuel-monitoring">Fuel Monitoring</a>
+                </li>
+                <li>
+                  <a href="#fire-gas">Fire & Gas</a>
+                </li>
+                <li>
+                  <a href="#condition-monitoring">Condition Monitoring</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="col-lg-9">
+            <!-- Vessel Digitalization System -->
+            <div id="vessel-digitalization" class="rs-turnkey-content">
+              <h2>Vessel Digitalization System</h2>
+              <p>
+                Integration of advanced digital technologies for enhanced vessel performance and efficiency. Vessel digitalization systems revolutionize the maritime industry by leveraging advanced technologies to enhance efficiency, safety, and operational performance of vessels. These systems integrate various digital technologies, such as sensors, connectivity, data analytics, and automation, to collect and analyze real-time data from different onboard systems. By digitizing key processes and systems, vessel digitalization systems enable better decision-making, predictive maintenance, optimized fuel consumption, improved navigation, and enhanced overall operational efficiency for ship owners and operators.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service1.jpg" alt="Vessel Digitalization System" />
+              </div>
+            </div>
+
+            <!-- Engine Maneuvering System -->
+            <div id="engine-maneuvering" class="rs-turnkey-content">
+              <h2>Engine Maneuvering System</h2>
+              <p>
+                Comprehensive control systems for optimized engine performance and maneuverability.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service2.jpg" alt="Engine Maneuvering System" />
+              </div>
+            </div>
+
+            <!-- Steering Gear System -->
+            <div id="steering-gear" class="rs-turnkey-content">
+              <h2>Steering Gear System</h2>
+              <p>
+                The steering gear system is a vital component of ships and vessels, responsible for controlling the direction and maneuverability of the vessel. It allows the captain or helmsman to change the course of the ship by adjusting the rudder angle. The steering gear system typically consists of hydraulic or electric mechanisms that convert the input from the steering control into the necessary movement of the rudder, ensuring precise and responsive steering control for safe and efficient navigation.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service3.jpg" alt="Steering Gear System" />
+              </div>
+            </div>
+
+            <!-- Thruster Control -->
+            <div id="thruster-control" class="rs-turnkey-content">
+              <h2>Thruster Control</h2>
+              <p>
+                Precise control of propulsion thrusters for maneuvering and station-keeping.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service4.jpg" alt="Thruster Control" />
+              </div>
+            </div>
+
+            <!-- Power Management System -->
+            <div id="power-management" class="rs-turnkey-content">
+              <h2>Power Management System</h2>
+              <p>
+                The power management system (PMS) is a critical component in ships, offshore platforms, and power distribution systems. It regulates and optimizes the flow of electrical power to ensure efficient and reliable operation. PMS monitors and controls various aspects such as power generation, distribution, load balancing, and backup power sources, allowing for seamless operation, energy efficiency, and the ability to respond to changing power demands. By intelligently managing and prioritizing power sources and loads, the power management system contributes to enhanced safety, reduced energy consumption, and improved overall system performance.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service5.jpg" alt="Power Management System" />
+              </div>
+            </div>
+
+            <!-- Integrated Alarm Monitoring and Control System -->
+            <div id="alarm-monitoring" class="rs-turnkey-content">
+              <h2>Integrated Alarm Monitoring and Control System</h2>
+              <p>
+                The Integrated Alarm Monitoring and Control System (IAMCS) enables operators to have a centralized monitoring and control of alarm conditions, allowing for quick identification of issues, prompt decision-making, and effective control of systems for enhanced safety and operational efficiency.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service1.jpg" alt="Integrated Alarm Monitoring and Control System" />
+              </div>
+            </div>
+
+            <!-- DP System -->
+            <div id="dp-system" class="rs-turnkey-content">
+              <h2>DP System</h2>
+              <p>
+                Voyage Marine Group excels in the seamless integration of dynamic positioning systems, empowering vessels with advanced control and operational capabilities. By combining cutting-edge technologies, rigorous engineering, and industry expertise, we deliver tailored solutions that enhance vessel stability, optimize performance, and ensure safety at sea. Our integrated dynamic positioning systems provide precise positioning, real-time data integration, and adaptive control algorithms, empowering maritime operators to navigate challenging environments with utmost precision and confidence.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service2.jpg" alt="DP System" />
+              </div>
+            </div>
+
+            <!-- Tank Level Gauging System -->
+            <div id="tank-level" class="rs-turnkey-content">
+              <h2>Tank Level Gauging System</h2>
+              <p>
+                Voyage Marine Group plays a pivotal role in the implementation of advanced tank level gauging systems for the maritime industry. Leveraging our expertise and technological prowess, we integrate state-of-the-art tank level gauging technologies to provide accurate and reliable measurement solutions. Our comprehensive approach ensures seamless integration, calibration, and ongoing support, allowing vessel operators to efficiently monitor and manage fuel and liquid levels, optimize cargo handling, and maintain regulatory compliance.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service3.jpg" alt="Tank Level Gauging System" />
+              </div>
+            </div>
+
+            <!-- Emission Control -->
+            <div id="emission-control" class="rs-turnkey-content">
+              <h2>Emission Control</h2>
+              <p>
+                Voyage Marine Group assumes a crucial role in the deployment of emission control systems within the maritime sector. With our extensive knowledge in vessel automation and environmental solutions, Voyage Marine Group integrates cutting-edge technologies for emissions control, promoting a greener and more sustainable maritime industry. Through our comprehensive approach, we assist ship operators in achieving regulatory compliance, improving fuel efficiency, and mitigating the environmental footprint of their operations.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service4.jpg" alt="Emission Control" />
+              </div>
+            </div>
+
+            <!-- Scrubber -->
+            <div id="scrubber" class="rs-turnkey-content">
+              <h2>Scrubber</h2>
+              <p>
+                Voyage Marine Group plays a vital role in integrating and deploying scrubber systems for ships. Utilizing our expertise and deep understanding of the industry, we incorporate state-of-the-art scrubber technologies to reduce emissions and meet stringent environmental standards. Through our comprehensive approach and seamless integration, we assist vessel operators in achieving cleaner emissions and environmental sustainability while optimizing their operational efficiency.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service5.jpg" alt="Scrubber" />
+              </div>
+            </div>
+
+            <!-- Ballast Water Management -->
+            <div id="ballast-water" class="rs-turnkey-content">
+              <h2>Ballast Water Management</h2>
+              <p>
+                Voyage Marine Group takes pride in its successful implementation of numerous ballast water treatment system projects within the maritime sector. By skillfully integrating advanced technologies, we have facilitated effective and environmentally conscious treatment of ballast water. Through our wide range of projects, we have consistently supported vessel operators in meeting regulatory standards, preserving marine ecosystems, and promoting sustainable practices in ballast water management.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service1.jpg" alt="Ballast Water Management" />
+              </div>
+            </div>
+
+            <!-- VRC System (VRCS) -->
+            <div id="vrc-system" class="rs-turnkey-content">
+              <h2>VRC System (VRCS)</h2>
+              <p>
+                We deliver advanced solutions that enable remote monitoring and control of valves on ships. Our VRCS solutions enhance operational efficiency, safety, and maintenance procedures by enabling centralized control and ensuring precise and reliable valve operations. With our VRCS, vessel operators can streamline valve management, minimize manual intervention, and optimize overall system performance.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service2.jpg" alt="VRC System" />
+              </div>
+            </div>
+
+            <!-- MGPS -->
+            <div id="mgps" class="rs-turnkey-content">
+              <h2>MGPS</h2>
+              <p>
+                Voyage Marine Group is a trusted provider of Marine Growth Prevention Systems (MGPS). We offer comprehensive MGPS solutions that effectively control and prevent marine fouling on vessel surfaces. Through the implementation of advanced technologies and proven methodologies, we ensure the long-term protection and optimal performance of vessels. With our MGPS solutions, ship operators can confidently navigate waters while minimizing the risks and complications associated with marine growth.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service3.jpg" alt="MGPS" />
+              </div>
+            </div>
+
+            <!-- Hull Monitoring -->
+            <div id="hull-monitoring" class="rs-turnkey-content">
+              <h2>Hull Monitoring</h2>
+              <p>
+                Voyage Marine Group specializes in hull monitoring solutions for the maritime industry. We provide comprehensive systems that enable real-time monitoring of hull stress levels. By leveraging sensors, data analysis, and structural integrity assessment techniques, our hull stress monitoring solutions help vessel operators proactively detect and manage stress factors, ensuring the safety and structural integrity of the hull, and minimizing the risk of fatigue-related failures.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service4.jpg" alt="Hull Monitoring" />
+              </div>
+            </div>
+
+            <!-- Fuel Monitoring -->
+            <div id="fuel-monitoring" class="rs-turnkey-content">
+              <h2>Fuel Monitoring</h2>
+              <p>
+                Fuel monitoring systems are a key area of expertise for Voyage Marine Group in the maritime industry. We provides customized solutions for precise and efficient monitoring of fuel on vessels. Our comprehensive systems incorporate advanced sensors, real-time data analysis, and monitoring capabilities to accurately track fuel consumption, optimize efficiency, and facilitate informed decision-making in fuel management. With our fuel monitoring systems, ship operators can effectively monitor fuel levels, identify deviations, and implement strategies to reduce fuel consumption, leading to cost savings and improved environmental sustainability.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service5.jpg" alt="Fuel Monitoring" />
+              </div>
+            </div>
+
+            <!-- Fire & Gas -->
+            <div id="fire-gas" class="rs-turnkey-content">
+              <h2>Fire & Gas</h2>
+              <p>
+                Voyage Group is a leading provider of turnkey projects for fire and gas detection systems in the oil and gas and marine industries. We offer end-to-end solutions for designing, installing, and commissioning advanced fire and gas detection systems. With our commitment to safety, adherence to industry standards, and integration of cutting-edge technologies, Voyage Group delivers reliable and efficient fire and gas detection solutions that protect personnel, assets, and the environment in these demanding sectors.
+              </p>
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service1.jpg" alt="Fire & Gas" />
+              </div>
+            </div>
+
+            <!-- Condition Monitoring -->
+            <div id="condition-monitoring" class="rs-turnkey-content">
+              <h2>Condition Monitoring</h2>
+              <h3 style="font-size: 24px; font-weight: 600; margin-bottom: 20px; color: #ea5501;">The Importance of Regular Monitoring of Diesel and Gas Engines</h3>
+              <p>
+                To ensure reliable engine performance and determine the optimum time for overhaul, regular monitoring of diesel and gas engines is necessary. Monitoring helps to determine when it is time for maintenance and what type of maintenance needs to be done.
+              </p>
+              
+              <h4 style="font-size: 20px; font-weight: 600; margin: 30px 0 20px 0; color: #333;">The Monitoring Portfolio Includes Instruments To:</h4>
+              <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+                <li style="padding: 10px 0; padding-left: 30px; position: relative; color: #666;">
+                  <i class="fa-regular fa-check" style="position: absolute; left: 0; color: #ea5501; font-weight: 600;"></i>
+                  Measure surface roughness, liner diameter and coating thickness
+                </li>
+                <li style="padding: 10px 0; padding-left: 30px; position: relative; color: #666;">
+                  <i class="fa-regular fa-check" style="position: absolute; left: 0; color: #ea5501; font-weight: 600;"></i>
+                  Take pictures of the liner to visualize potential wear and damage
+                </li>
+                <li style="padding: 10px 0; padding-left: 30px; position: relative; color: #666;">
+                  <i class="fa-regular fa-check" style="position: absolute; left: 0; color: #ea5501; font-weight: 600;"></i>
+                  Analyze shaft power efficiency
+                </li>
+                <li style="padding: 10px 0; padding-left: 30px; position: relative; color: #666;">
+                  <i class="fa-regular fa-check" style="position: absolute; left: 0; color: #ea5501; font-weight: 600;"></i>
+                  Measure cylinder pressure
+                </li>
+              </ul>
+
+              <p>
+                In addition, the portfolio contains various precision instruments like calibrators, gauges, and a combustion chamber tester.
+              </p>
+
+              <h3 style="font-size: 24px; font-weight: 600; margin: 40px 0 20px 0; color: #ea5501;">Cylinder Condition Monitoring Portfolio for 2-Stroke Engines</h3>
+              <p>
+                Cylinder condition monitoring portfolio facilitates the collection of cylinder liner data and piston ring data. All tools can be used without removing the cylinder cover.
+              </p>
+
+              <div style="margin: 40px 0;">
+                <div style="background: #f8f9fa; border-left: 4px solid #ea5501; padding: 25px; border-radius: 8px; margin-bottom: 25px;">
+                  <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: #333;">Liner Diameter Measuring Instrument (LDM)</h4>
+                  <p style="margin-bottom: 10px;">LDM measures cylinder liner wear/remaining lifetime, ovality and clover leafing.</p>
+                  <p style="margin-bottom: 5px; font-size: 15px;"><strong>Liner time scale:</strong> ~1000 Rh</p>
+                  <p style="margin-bottom: 0; font-size: 15px;"><strong>Measurement time:</strong> ~1 h/liner</p>
+                </div>
+
+                <div style="background: #f8f9fa; border-left: 4px solid #ea5501; padding: 25px; border-radius: 8px; margin-bottom: 25px;">
+                  <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: #333;">Coating Thickness Measurement Tool (CTM)</h4>
+                  <p style="margin-bottom: 10px;">The Coating Thickness Measurement Tool measures the wear rate/remaining life time for coated piston rings.</p>
+                  <p style="margin-bottom: 5px; font-size: 15px;"><strong>Liner time scale:</strong> ~1000 Rh</p>
+                  <p style="margin-bottom: 0; font-size: 15px;"><strong>Measurement time:</strong> ~15 mins/liner</p>
+                </div>
+
+                <div style="background: #f8f9fa; border-left: 4px solid #ea5501; padding: 25px; border-radius: 8px; margin-bottom: 25px;">
+                  <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: #333;">Liner Condition Camera (LCC)</h4>
+                  <p style="margin-bottom: 10px;">Liner Condition Camera documents the condition of cylinder liner surface, exhaust valve, piston rings and piston crown.</p>
+                  <p style="margin-bottom: 5px; font-size: 15px;"><strong>Liner time scale:</strong> ~100 Rh</p>
+                  <p style="margin-bottom: 0; font-size: 15px;"><strong>Measurement time:</strong> ~15 mins/liner</p>
+                </div>
+
+                <div style="background: #f8f9fa; border-left: 4px solid #ea5501; padding: 25px; border-radius: 8px; margin-bottom: 25px;">
+                  <h4 style="font-size: 20px; font-weight: 600; margin-bottom: 15px; color: #333;">Replica Analysis & Microscopy</h4>
+                  <p style="margin-bottom: 10px;">Takes an imprint of the liner for analysis with microscope in Chris-Marine's laboratory.</p>
+                  <p style="margin-bottom: 5px; font-size: 15px;"><strong>Liner time scale:</strong> ~100 Rh</p>
+                  <p style="margin-bottom: 0; font-size: 15px;"><strong>Measurement time:</strong> ~15 mins/liner</p>
+                </div>
+              </div>
+
+              <h3 style="font-size: 24px; font-weight: 600; margin: 40px 0 20px 0; color: #ea5501;">Cylinder Condition Monitoring Reporting Service</h3>
+              <p>
+                Chris-Marine's cylinder condition monitoring reporting service introduced a cost-effective reporting service that allows customers to collect data on their own and send it to Chris-Marine for processing. Chris-Marine reverts with a report summarizing the findings and comparing the results to other engines of similar type.
+              </p>
+
+              <h4 style="font-size: 20px; font-weight: 600; margin: 30px 0 20px 0; color: #333;">A Report Can Include:</h4>
+              <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+                <li style="padding: 10px 0; padding-left: 30px; position: relative; color: #666;">
+                  <i class="fa-regular fa-check" style="position: absolute; left: 0; color: #ea5501; font-weight: 600;"></i>
+                  Cylinder liner wear, life expectancy and clover data collected with the LDM, with recommended cylinder maintenance actions based on findings
+                </li>
+                <li style="padding: 10px 0; padding-left: 30px; position: relative; color: #666;">
+                  <i class="fa-regular fa-check" style="position: absolute; left: 0; color: #ea5501; font-weight: 600;"></i>
+                  Cylinder liner and piston ring pictures taken with the LCC and analysis of the cylinder condition (under-lubricated / over-lubricated / critical)
+                </li>
+                <li style="padding: 10px 0; padding-left: 30px; position: relative; color: #666;">
+                  <i class="fa-regular fa-check" style="position: absolute; left: 0; color: #ea5501; font-weight: 600;"></i>
+                  Piston ring wear and life expectancy from data collected with the CTM
+                </li>
+                <li style="padding: 10px 0; padding-left: 30px; position: relative; color: #666;">
+                  <i class="fa-regular fa-check" style="position: absolute; left: 0; color: #ea5501; font-weight: 600;"></i>
+                  Cylinder condition and cat fine analysis though microscopic images from replica imprints collected through scavenge air port. This method is especially useful when changing from high-S fuel oil to low-S fuel oil after 2020
+                </li>
+              </ul>
+
+              <div class="rs-turnkey-image">
+                <img src="assets/images/services/service2.jpg" alt="Condition Monitoring" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Turnkey Projects area end -->
+
+    <!-- Footer area start -->
+    <footer>
+      <div class="rs-footer-area rs-footer-two has-space has-theme-orange has-bg-thumb">
+          <div class="rs-footer-bg-thumb" data-background="assets/images/bg/footer-bg-06.png"></div>
+          <div class="rs-footer-top">
+              <div class="container">
+                  <div class="row g-5">
+                      <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                          <div class="rs-footer-widget footer-2-col-1">
+                              <h5 class="rs-footer-widget-title">About Company</h5>
+                              <div class="rs-footer-widget-content">
+                                  <p class="rs-footer-widget-description">
+                                      We provide end-to-end solutions in repairs, projects, and retrofit works,  
+                                      including dry dock attendance, steel renewal, automation, electrical, and naval architecture.  
+                                      Our expertise also covers engine repairs, hydraulics, pneumatics, instrumentation, inspections, cleaning, tank and boiler works, and air conditioning services.
+                                    </p>
+                                  <div class="rs-footer-widget-stroke-text">
+                                      <h3 class="rs-footer-stroke-text">Since 1996</h3>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                          <div class="rs-footer-widget footer-2-col-2">
+                              <h5 class="rs-footer-widget-title">Useful Links</h5>
+                              <div class="rs-footer-widget-content">
+                                  <div class="rs-footer-widget-links">
+                                      <ul>
+                                          <li> <a href="#">About Us</a> </li>
+                                          <li><a href="#"></a></li>
+                                          <li><a href="#">Services</a></li>
+                                          <li><a href="#"></a></li>
+                                          <li><a href="#">Contact Us</a></li>
+
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                          <div class="rs-footer-widget footer-2-col-3">
+                              <h5 class="rs-footer-widget-title">Office Address</h5>
+                              <div class="rs-footer-widget-content">
+                                  <div class="rs-footer-widget-meta">
+                                      <div class="rs-footer-widget-address">
+                                          <a target="_blank" href="https://www.google.com/maps">1200 Harbor Drive, Atlantic Ship Repairs & Services, Miami, FL, USA</a>
+                                      </div>
+                                      <h5 class="rs-footer-widget-title">Email Address</h5>
+                                      <p> Interested in working with us?</p>
+                                      <div class="rs-footer-widget-email">
+                                          <a href="mailto:industrie@gmail.com"
+                                            >technical@amrs.com</a
+                                          >
+                                          <a href="mailto:industrie@gmail.com"
+                                            >spares@amrs.com</a
+                                          >
+                                          <a href="mailto:industrie@gmail.com"
+                                            >service@amrs.com</a
+                                          >
+                                          <a href="mailto:industrie@gmail.com"
+                                            >support@amrs.com</a
+                                          >
+                                        </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                          <div class="rs-footer-widget footer-2-col-4">
+                              <h5 class="rs-footer-widget-title">Phone Number</h5>
+                              <div class="rs-footer-widget-content">
+                                  <div class="rs-footer-widget-contact-info">
+                                      <div class="rs-footer-widget-number">
+                                          <span>
+                                  <a href="tel:971551579261">+998 765 456 321</a>
+                               </span>
+                                          <span>
+                                  <a href="tel:971551579261">+998 765 456 321</a>
+                               </span>
+                                      </div>
+                                  </div>
+                                  <h5 class="rs-footer-widget-title">Follow Us</h5>
+                                  <div class="rs-footer-widget-social">
+                                      <div class="rs-theme-social">
+                                          <a href="#"><i class="ri-twitter-x-line"></i></a>
+                                          <a href="#"><i class="ri-facebook-fill"></i></a>
+                                          <a href="#"><i class="ri-linkedin-fill"></i></a>
+                                          <a href="#"><i class="ri-instagram-line"></i></a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="rs-footer-copyright-area rs-copyright-one">
+              <div class="container">
+                  <div class="row justify-content-center">
+                      <div class="col-xl-12">
+                          <div class="rs-footer-copyright has-theme-orange text-center">
+                              <p class="underline">© <span id="year">2025</span> All Rights Reserved by <a href="https://rstheme.com/">AMRS</a></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+    <!-- Footer area end -->
+
+    <!-- JS here -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/swiper.min.js"></script>
+    <script src="assets/js/plugins/meanmenu.min.js"></script>
+    <script src="assets/js/plugins/nice-select.min.js"></script>
+    <script src="assets/js/plugins/magnific-popup.min.js"></script>
+    <script src="assets/js/plugins/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      // Smooth scroll to sections
+      document.querySelectorAll('.rs-turnkey-menu a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          // Remove active class from all links
+          document.querySelectorAll('.rs-turnkey-menu a').forEach(link => {
+            link.classList.remove('active');
+          });
+          
+          // Add active class to clicked link
+          this.classList.add('active');
+          
+          // Scroll to section
+          const targetId = this.getAttribute('href');
+          const targetSection = document.querySelector(targetId);
+          if (targetSection) {
+            const offsetTop = targetSection.offsetTop - 100;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Update active link on scroll
+      window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('.rs-turnkey-content');
+        const scrollPos = window.scrollY + 150;
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute('id');
+
+          if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            document.querySelectorAll('.rs-turnkey-menu a').forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === '#' + sectionId) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
